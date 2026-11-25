@@ -11,8 +11,8 @@ const shuffle=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1])
 const EN=()=>store.get("lang","zh")==="en";
 const T=(en,zh)=>EN()?en:zh;
 const PG=(y,p)=>RAW+"pages/"+String(y).toLowerCase()+"-p1-"+String(p).padStart(2,"0")+".jpg";
-const TOPIC={A1:["Information processing & data representation","A 资讯处理与数据表示"],A2:["Spreadsheet & database","A 试算表与数据库"],B:["Computer system fundamentals","B 电脑系统基础"],C1:["Networks & Internet","C 网络与互联网"],C2:["Web, security & privacy","C 网页、保安与私隐"],D1:["Algorithms & problem solving","D 算法与解难"],D2:["Programming & testing","D 编程与测试"],E:["Social implications","E 社会影响"]};
-const tName=t=>TOPIC[t]?T(TOPIC[t][0],TOPIC[t][1]):t;
+const TOPIC={A1:"A Information Processing: Data Representation & Office Software",A2:"A Information Processing: Spreadsheet & Database",B:"B Computer System Fundamentals",C1:"C Internet and its Applications: Networking & Internet Basics",C2:"C Internet and its Applications: Web Authoring, Security & Privacy",D1:"D Basic Programming Concepts: Problem Solving & Algorithm Design",D2:"D Basic Programming Concepts: Programming, Testing & Debugging",E:"E Social Implications"};
+const tName=t=>TOPIC[t]||t;
 
 // ---------- data model ----------
 let BK=[];const IT={};const LQ=[];const DQ=[]; // books, item registry, DSE long, DSE MC
