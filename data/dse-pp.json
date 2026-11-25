@@ -1,0 +1,1029 @@
+{
+ "year": "pp",
+ "mc": [
+  {
+   "n": 1,
+   "q": "After editing a document file, Jenny sends it to Peter for further editing. They use different word processors. In order to keep the document format the same, which of the following file formats should Jenny use?",
+   "o": [
+    "TXT",
+    "PDF",
+    "RTF",
+    "TIF"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "RTF keeps formatting and can be opened and edited in different word processors. PDF keeps format but is not meant for editing; TXT loses format.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 2,
+   "q": "Mary wants to convert an audio file, abc.wav, to mp3 format. What should she do?",
+   "o": [
+    "Use audio editing software to export the file in mp3 format.",
+    "Rename the file as abc.mp3.",
+    "Open the file with audio recognition software and save it as another file, abc.mp3.",
+    "Copy the file to an mp3 player."
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "Changing format needs re-encoding by software; renaming the extension does not change the data.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 3,
+   "q": "A colour photo is scanned using a scanner with 24-bit colours instead of 8-bit colours. This means that, in the chosen scanner,",
+   "st": [
+    "the resolution is higher.",
+    "the file size is larger.",
+    "more different colours can be scanned."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "Colour depth affects number of colours (2^24 vs 2^8) and file size, not resolution (dpi).",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 4,
+   "q": "A machine adopts two’s complement for the representation of 4-bit integer. Which of the following calculations is more likely to have an overflow error?",
+   "o": [
+    "3+3+2–4",
+    "2–4+3+3",
+    "3+3–4+2",
+    "–4–2–2"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "4-bit range is −8 to 7. A: 3+3=6, +2=8 overflows. Others stay within −8..7 at every step.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 5,
+   "q": "Which of the following statements about character representation is/are correct?",
+   "st": [
+    "GB code supports both traditional and simplified Chinese characters.",
+    "Unicode represents more characters than GB code does.",
+    "The concept of ASCII is no longer applicable because of the use of Unicode."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "GB is for simplified Chinese; Unicode covers far more characters; ASCII is still used (and is the first 128 code points of Unicode).",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 6,
+   "q": "Peter wants to extract records with a data item within a range of values from a database. Which of the following SQL operators should he use?",
+   "o": [
+    "LIKE",
+    "IN",
+    "DISTINCT",
+    "BETWEEN"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "A2",
+   "exp": "BETWEEN x AND y selects values in a range.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 7,
+   "q": "Answer Questions 7 and 8 with reference to the following spreadsheet.<br><table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr><tr><td>1</td><td>Full name</td><td>Last name</td><td>First name</td><td>Date of birth</td><td>Age</td></tr><tr><td>2</td><td>CHAN TAI MAN</td><td>CHAN</td><td>TAI MAN</td><td>14/03/1980</td><td>31.0</td></tr><tr><td>3</td><td>CHEUNG MEI LAI</td><td>CHEUNG</td><td>MEI LAI</td><td>20/06/1978</td><td>32.7</td></tr><tr><td>4</td><td>SO SIU MING</td><td>SO</td><td>SIU MING</td><td>15/12/1985</td><td>25.5</td></tr></table><br>Which of the following formulae is used in C2?",
+   "o": [
+    "=A2-B2",
+    "=LEFT(A2, LEN(A2)-LEN(B2)-1)",
+    "=MID(A2, LEN(A2)-LEN(B2)+1, 1)",
+    "=RIGHT(A2, LEN(A2)-LEN(B2)-1)"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "A2",
+   "exp": "First name is the right part of the full name: total length minus last name minus the space.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 8,
+   "q": "(Refer to the spreadsheet in Question 7.) Which of the following formulae can be used to calculate the approximate age in E2?",
+   "o": [
+    "=NOW(1980,3,14)",
+    "=NOW(1980,3,14)/365",
+    "=(NOW()-D2)/365",
+    "=DATE(1980,3,14)-NOW()"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "A2",
+   "exp": "NOW() takes no arguments; today minus date of birth gives days, divide by 365 for years.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 9,
+   "q": "Some sales records are stored in spreadsheet software, as shown below:<br><table><tr><th>Product</th><th>Month</th><th>Quantity</th></tr><tr><td>DVD</td><td>2</td><td>5</td></tr><tr><td>Mobile Phone</td><td>2</td><td>4</td></tr><tr><td>DVD</td><td>1</td><td>23</td></tr><tr><td>DVD</td><td>2</td><td>13</td></tr><tr><td>.</td><td>.</td><td>.</td></tr><tr><td>TV</td><td>3</td><td>8</td></tr></table><br>A pivot table is generated based on the sales records, as shown below:<br><table><tr><th>Sum of Quantity</th><th>Product</th><th></th><th></th><th></th></tr><tr><td>Month</td><td>DVD</td><td>Mobile Phone</td><td>TV</td><td>Grand Total</td></tr><tr><td>1</td><td>43</td><td>18</td><td>5</td><td>66</td></tr><tr><td>2</td><td>18</td><td>20</td><td>6</td><td>44</td></tr><tr><td>3</td><td>15</td><td>18</td><td>9</td><td>42</td></tr><tr><td>Grand Total</td><td>76</td><td>56</td><td>20</td><td>152</td></tr></table><br>What are the settings of the fields?",
+   "o": [
+    "Row Field: Month, Column Field: Product",
+    "Row Field: Product, Month, Column Field: Quantity",
+    "Row Field: Quantity, Column Field: Product, Month",
+    "Row Field: Product, Column Field: Month"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "A2",
+   "exp": "Months run down the rows, products across the columns; Quantity is the data (summed) field.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 10,
+   "q": "Ms Lee wants to find students in Class 1A from a list of all students stored in a spreadsheet.<br>(Left: full list — 1A CHAN TAI MAN, 2C CHEUNG MEI LAI, 1A SO SIU MING, …, 3B LI KA MAN, 4D YIP HIU YEE, 1A WONG HO YIN, … Right: result — 1A CHAN TAI MAN, 1A SO SIU MING, 1A WONG HO YIN, …)<br>Which of the following functions should she use?",
+   "o": [
+    "Copy and paste",
+    "Delete",
+    "Filter",
+    "Find"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "A2",
+   "exp": "Filter shows only rows meeting a criterion (Class = 1A).",
+   "pg": 4,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 11,
+   "q": "Peter wants to replace the short form, ‘LAN’, with the full name, ‘Local Area Network’ in a document, as shown below.<br>Before: “The High Land School wants to build a LAN to ...”<br>After: “The High Land School wants to build a Local Area Network to ...”<br>Which of the following search options in the REPLACE function of a word processor should Peter choose?",
+   "st": [
+    "Use wildcards",
+    "Find whole word only",
+    "Match case",
+    "Sounds like"
+   ],
+   "o": [
+    "(2) and (3) only",
+    "(2) and (4) only",
+    "(1), (2) and (4) only",
+    "(1), (3) and (4) only"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "Whole word stops 'Land' matching; match case stops 'lan' in other words. No wildcards or sounds-like needed.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 12,
+   "q": "Which of the following are common ways of showing record information in a database report?",
+   "st": [
+    "Records in a particular order",
+    "Records that meet certain criteria",
+    "Records with a table of contents",
+    "Summary information of records"
+   ],
+   "o": [
+    "(2) and (3) only",
+    "(1) and (3) only",
+    "(1) and (4) only",
+    "(1), (2) and (4) only"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "A2",
+   "exp": "Reports sort, filter and summarise records; a table of contents is not a typical report feature.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 13,
+   "q": "Which of the following attributes of an object will be saved when using Object Linking and Embedding with a document?",
+   "o": [
+    "Object Linking: Path of the object, Object Embedding: Path of the object",
+    "Object Linking: Object content, Object Embedding: Path of the object",
+    "Object Linking: Path of the object, Object Embedding: Object content",
+    "Object Linking: Object content, Object Embedding: Object content"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "A1",
+   "exp": "Linking stores only a reference (path) to the source; embedding stores a copy of the content.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 14,
+   "q": "In which of the following hardware components can files be accessed in direct access mode?",
+   "st": [
+    "Flash memory card",
+    "DVD-RW",
+    "Hard disk",
+    "Magnetic tape"
+   ],
+   "o": [
+    "(1) and (3) only",
+    "(2) and (4) only",
+    "(3) and (4) only",
+    "(1), (2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "B",
+   "exp": "Only magnetic tape is sequential access.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 15,
+   "q": "A device is installed in a vehicle to record the traffic using a camera. Which file format and storage medium are appropriate for the device?",
+   "o": [
+    "File format: AVI, Storage medium: DVD-RW",
+    "File format: AVI, Storage medium: Flash memory card",
+    "File format: WMA, Storage medium: DVD-RW",
+    "File format: WMA, Storage medium: Flash memory card"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "B",
+   "exp": "AVI is video (WMA is audio only). Flash cards are small, shock-resistant and rewritable in a moving car.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 16,
+   "q": "Which of the following programs is used to improve the access time of files in a hard disk?",
+   "o": [
+    "Virus checker",
+    "Defragmentation program",
+    "Backup program",
+    "File encryption program"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "B",
+   "exp": "Defragmentation puts file pieces together so the head moves less.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 17,
+   "q": "In a commercial building, the security system will activate the alarm if one of the main doors is opened between 12 a.m. and 6 a.m. What kind of system is this?",
+   "o": [
+    "Batch processing system",
+    "Real-time system",
+    "On-line interactive system",
+    "Multi-user system"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "B",
+   "exp": "It must respond immediately to an event: real-time.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 18,
+   "q": "Which of the following data will be stored in the program counter in a machine cycle?",
+   "o": [
+    "Memory address",
+    "Memory data",
+    "Instruction",
+    "Number of instructions"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "B",
+   "exp": "The PC holds the address of the next instruction.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 19,
+   "q": "Which of the following are the main functions of a CPU?",
+   "st": [
+    "Performing arithmetic and logical operations.",
+    "Storing system data permanently.",
+    "Executing instructions of computer programs.",
+    "Providing an interface between user and system."
+   ],
+   "o": [
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(2) and (4) only",
+    "(1), (3) and (4) only"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "B",
+   "exp": "CPU does ALU work and executes instructions. Permanent storage is secondary storage; user interface is the OS.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 20,
+   "q": "Which of the following statements about registers in a CPU is/are correct?",
+   "st": [
+    "They are 8 bits long.",
+    "Cache memory is a kind of register.",
+    "Accumulator is a kind of register."
+   ],
+   "o": [
+    "(1) only",
+    "(1) and (2) only",
+    "(3) only",
+    "(2) and (3) only"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "B",
+   "exp": "Register size depends on the CPU (not fixed at 8 bits); cache is separate memory, not a register.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 21,
+   "q": "If the Government establishes an ‘Anti-drugs Authority’ in Hong Kong, which of the following domain names would be appropriate for it?",
+   "o": [
+    "ada.com.hk",
+    "ADA.idv",
+    "ADA.edu.hk",
+    "ada.gov.hk"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "C1",
+   "exp": ".gov.hk is for HK government bodies.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 22,
+   "q": "A company establishes a WAN instead of a LAN mainly because of the _____________ .",
+   "o": [
+    "cost",
+    "coverage",
+    "data transmission rate",
+    "number of users supported"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "C1",
+   "exp": "A WAN covers a larger geographical area.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 23,
+   "q": "When browsing a simple web page over the Internet, how will the content of the web page normally be transmitted?",
+   "o": [
+    "The content will be divided into several packets that are probably sent through a single physical path.",
+    "The content will be divided into several packets that are probably sent through different physical paths.",
+    "The content will be encrypted and sent through a single physical path.",
+    "The content will be encrypted and sent through different physical paths."
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "C1",
+   "exp": "Packet switching: packets may take different routes. A simple page (HTTP) is not encrypted.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 24,
+   "q": "A company subscribes for a 10M leased line instead of a 10M broadband connection because _________ .",
+   "o": [
+    "the maximum data transfer rate is higher",
+    "it is cheaper",
+    "it is more secure",
+    "it is for commercial use only"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "C1",
+   "exp": "A leased line is a dedicated private line, so it is more secure (and stable); same 10M speed, more expensive.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 25,
+   "q": "Which of the following statements about the use of video streaming technology is/are correct?",
+   "st": [
+    "The data transfer rate can be increased.",
+    "The video can be watched before the file is completely downloaded.",
+    "The video quality can be enhanced."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "C1",
+   "exp": "Streaming lets you play while downloading; it does not speed up the link or improve quality.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 26,
+   "q": "Which of the following statements about constructing traditional frames in a web page is/are correct?",
+   "st": [
+    "More than one HTML file is needed.",
+    "A table with more than one column or row is needed.",
+    "More than one background colour is needed."
+   ],
+   "o": [
+    "(1) only",
+    "(1) and (2) only",
+    "(2) and (3) only",
+    "(3) only"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "C2",
+   "exp": "Each frame shows a separate HTML file, plus a frameset file. No table or colours needed.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 27,
+   "q": "Tom wants to upgrade the bandwidth of a school network from 100 Mbps to 10 Gbps. Which of the following upgrade plans do you suggest?",
+   "o": [
+    "Current: Internal network interface card, Suggested upgrade: USB network interface card",
+    "Current: wired connection, Suggested upgrade: wireless connection",
+    "Current: CAT 5 cable, Suggested upgrade: Optical fibre",
+    "Current: switch, Suggested upgrade: hub"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "C1",
+   "exp": "CAT 5 tops out around 100 Mbps; optical fibre supports 10 Gbps.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 28,
+   "q": "A research company estimates that in 2012 China has over 500 million Internet users. China’s Internet population becomes the largest in the world. Which of the following statements about China is/are correct?",
+   "st": [
+    "The growth in e-commerce will be greatly accelerated.",
+    "The number of computers per person is the largest in the world.",
+    "The broadband quality is the best in the world."
+   ],
+   "o": [
+    "(1) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(2) only"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "E",
+   "exp": "Many users drive e-commerce; a large total does not mean most computers per person or best broadband.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 29,
+   "q": "P and Q represent A ≥ 18 and A ≤ 60 respectively. For which of the following values of A will the Boolean expression, NOT(P AND Q), be true?",
+   "st": [
+    "0",
+    "18",
+    "30",
+    "80"
+   ],
+   "o": [
+    "(3) only",
+    "(2) and (3) only",
+    "(1) and (4) only",
+    "(1), (2) and (4) only"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "D1",
+   "exp": "NOT(P AND Q) is true when A is outside 18..60: 0 and 80.",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 30,
+   "q": "What kind of information is stated in the user manual of a software package?",
+   "o": [
+    "Algorithm design",
+    "Algorithm testing",
+    "Source codes",
+    "System requirements"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "D2",
+   "exp": "User manuals tell users system requirements, installation and usage; the others are technical documentation.",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 31,
+   "q": "Which of the following sequences of tasks in problem solving procedures is correct?",
+   "st": [
+    "Outline the input and output requirements of the problem.",
+    "Define the scope of the problem.",
+    "Evaluate the output of the solution to the problem.",
+    "Complete the testing and debugging."
+   ],
+   "o": [
+    "(1) → (2) → (3) → (4)",
+    "(1) → (2) → (4) → (3)",
+    "(2) → (1) → (3) → (4)",
+    "(2) → (1) → (4) → (3)"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "D2",
+   "exp": "Define the problem, then I/O, then test/debug, then evaluate.",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 32,
+   "q": "What is the final value of A in the following pseudo codes?\n\nA ← 5\nB ← 10\nIF (2×A) > 8\nTHEN IF A > (5+B)\n     THEN  A ← B\n     ELSE  B ← A\nELSE A ← A + 8",
+   "o": [
+    "5",
+    "8",
+    "10",
+    "13"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "D1",
+   "exp": "2×5=10>8 is true; 5>15 is false, so B←A. A stays 5.",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 33,
+   "q": "Consider the following pseudo codes.\n\nS ← 1\nINPUT A\nWHILE (S < 10)\n    S ← S + A\n\nWhich kind of input values will prevent the occurrence of an infinite loop?",
+   "o": [
+    "Any integer",
+    "Negative number",
+    "Zero",
+    "Positive number"
+   ],
+   "a": "D",
+   "pct": "-",
+   "topic": "D1",
+   "exp": "S must grow to reach 10, so A must be positive.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 34,
+   "q": "A web site adopts an encryption key 2048 bits long instead of 1024 bits long. Why does this increase the security level?",
+   "o": [
+    "Hackers take more time to crack the system.",
+    "The time for data transmission increases.",
+    "It is more difficult to memorise the key.",
+    "The size of an encrypted data packet increases."
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "C2",
+   "exp": "A longer key means far more possible keys, so brute force takes much longer.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 35,
+   "q": "Which of the following examples can effectively reduce theft of digital intellectual property?",
+   "st": [
+    "Use of digital watermarks",
+    "Setting up firewalls",
+    "Updating virus definition files frequently"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "E",
+   "exp": "Watermarks mark ownership of digital works. Firewalls and virus definitions protect systems, not IP.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 36,
+   "q": "In the following HTML code, what are the six digits after ‘#’?\n\n<BODY BGCOLOR=\"#112233\">",
+   "st": [
+    "They represent three values for the colours red, green and blue.",
+    "They are used to transfer to DNS for web browsing.",
+    "They refer to three hexadecimal values."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "C2",
+   "exp": "#RRGGBB: three hex values for red, green, blue. Nothing to do with DNS.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 37,
+   "q": "Mrs Lee does not allow her son to use Bit Torrent freeware on her home computer because",
+   "st": [
+    "her son may download illegal software.",
+    "it is illegal to use the software.",
+    "his school does not install this software."
+   ],
+   "o": [
+    "(1) only",
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "-",
+   "topic": "E",
+   "exp": "BitTorrent itself is legal; the risk is downloading pirated material.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 38,
+   "q": "Which of the following equipment can help to minimise repetitive strain injury to fingers and wrists during typing?",
+   "o": [
+    "A footrest",
+    "An armrest",
+    "A large screen",
+    "A large desk"
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "E",
+   "exp": "An armrest (wrist support) reduces strain on wrists and fingers.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 39,
+   "q": "The disconnected security token illustrated below is commonly used for online authentication. Which of the following statements about such authentication is correct?\n[Figure: token showing 174049]",
+   "o": [
+    "No username and password are needed.",
+    "The six-digit number changes regularly.",
+    "Once the button is pressed, a six-digit number is imported from a server to the token.",
+    "Digits are used because they can be converted into ASCII code."
+   ],
+   "a": "B",
+   "pct": "-",
+   "topic": "C2",
+   "exp": "It generates a one-time password that changes regularly; it is used together with username/password and is not connected to the server.",
+   "pg": 10,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 40,
+   "q": "Computer Assisted Diagnosis (CADx) helps doctors interpret medical images of the human body. It combines the elements of artificial intelligence and digital image processing. Which of the following domains of knowledge is the most important to CADx?",
+   "o": [
+    "Office automation software",
+    "Web authoring",
+    "Algorithm design",
+    "Machine organisation"
+   ],
+   "a": "C",
+   "pct": "-",
+   "topic": "E",
+   "exp": "AI and image processing are built on algorithm design.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  }
+ ],
+ "lq": [
+  {
+   "n": 1,
+   "topic": "A2",
+   "pg": [
+    12,
+    13
+   ],
+   "stem": "Mr Wong is responsible for setting up an inventory system in a supermarket. He creates a database table, INVENTORY, to store the information on products for sale. Part of INVENTORY is shown below:<br>INVENTORY<br><table><tr><th>CAT<br>(Category)</th><th>CODE<br>(Product code)</th><th>NAME<br>(Product Name)</th><th>PRICE<br>(Price of product)</th><th>QTY<br>(Number of items in stock)</th></tr><tr><td>Beverage</td><td>B163</td><td>BEST juice</td><td>10.0</td><td>10</td></tr><tr><td>Snack</td><td>S968</td><td>좋은감자칩</td><td>12.2</td><td>40</td></tr><tr><td>Noodle</td><td>N042</td><td>乐乐浓汤鸡面</td><td>20.2</td><td>20</td></tr><tr><td>Beverage</td><td>B482</td><td>FRESH tea</td><td>25.9</td><td>80</td></tr><tr><td>Noodle</td><td>N091</td><td>QQ noodle</td><td>8.4</td><td>50</td></tr></table>",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Which field, CAT, CODE, NAME, PRICE or QTY, should be used as a key field?",
+     "m": 1,
+     "ms": "CODE"
+    },
+    {
+     "l": "(b)",
+     "q": "The data type of QTY is integer. Judy, Mr Wong’s colleague, suggests changing it to real number or string. Mr Wong disagrees with Judy’s suggestion. Why?",
+     "m": 2,
+     "ms": "Since the numbers of items in stock are whole numbers, there is no need to use real number data type to store them, which would require extra storage space. (1)<br>Calculation on the numbers of items in stock is likely to be necessary and string data type is not appropriate. (1)"
+    },
+    {
+     "l": "(c)",
+     "q": "For storing data under NAME, which character encoding system is most suitable? Explain briefly.",
+     "m": 2,
+     "ms": "Unicode should be used (1) because the product names are in different languages. (1)"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Mr Wong writes the following SQL command. Based on the five given records in INVENTORY above, what is the query result?<pre>Select CODE, PRICE from INVENTORY where PRICE > 10 and QTY < 40</pre>",
+     "m": 2,
+     "ms": "N042   20.2 (2) (1 for incomplete answer or typo mistakes)"
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "INVENTORY is imported into a spreadsheet file. Describe, with steps, how to use the functions of spreadsheet software to extract the same data as the query result in (d)(i).",
+     "m": 2,
+     "ms": "Use the filter function. (1)<br>Specify criteria “larger than 10” on PRICE and “less than 40” on QTY. (1)"
+    },
+    {
+     "l": "(e)",
+     "q": "Mr Wong considers replacing the existing barcode system with a Radio Frequency Identification (RFID) system, to capture product information. State one advantage and one disadvantage of using the RFID system over the barcode system.",
+     "m": 2,
+     "ms": "Advantage: Speeds up the input process. (1)<br>Disadvantage: It is expensive to implement an RFID system. (1)"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "topic": "B",
+   "pg": [
+    13,
+    14
+   ],
+   "stem": "Susan buys a tablet PC for her work. The specifications of the PC are shown below.<br><table><tr><td>CPU</td><td>1.2 GHz dual-core processor</td></tr><tr><td>Display unit</td><td>8-inch LED touch screen</td></tr><tr><td>Memory and storage</td><td>512 MB (ROM), 64 GB flash memory</td></tr><tr><td>Input / Output</td><td>USB 2.0, Built-in speaker</td></tr><tr><td>Connectivity</td><td>Wi-Fi, Bluetooth</td></tr><tr><td>Battery (life time)</td><td>14 hours</td></tr><tr><td>Weight</td><td>0.5 kg</td></tr><tr><td>Dimension</td><td>190×130×10 mm</td></tr></table>",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "State two features of the tablet PC that are mainly designed for mobility.",
+     "m": 2,
+     "ms": "Light weight (0.5 kg) (1)<br>wireless Internet connection (1)"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "The tablet PC has 64 GB flash memory installed, which is quite different from an ordinary notebook computer. Why?",
+     "m": 1,
+     "ms": "Because of the absence of hard disk, it is lighter. / has lower power consumption. (1)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Should SDRAM replace the flash memory in the tablet PC? Explain briefly.",
+     "m": 2,
+     "ms": "No, (1) it is because flash memory is non-volatile whereas SDRAM is volatile. (1)"
+    },
+    {
+     "l": "(c)",
+     "q": "What is the most important program stored in the ROM of the tablet PC?",
+     "m": 1,
+     "ms": "BIOS / POST / Bootstrap program / Startup program (1)"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Susan finds that her desktop computer at work is infected with a computer virus.<br>State two possible ways that the computer virus can be spread to other computers through the Internet.",
+     "m": 2,
+     "ms": "It is spread via e-mail (attachment). (1)<br>It is spread via web browsing. (1)"
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Sometimes even state-of-the-art antivirus software cannot remove some computer viruses. Explain briefly why this is the case.",
+     "m": 1,
+     "ms": "A new computer virus is created and the technology used in the existing antivirus software cannot handle it. / The virus definition file is outdated. (1)"
+    },
+    {
+     "l": "(e)(i)",
+     "q": "Susan suggests that Patrick, a technician in the company, install photo editing shareware with a 30-day trial period on the office computers.<br>Before the installation, what copyright issue should Patrick know about? What document should he read?",
+     "m": 2,
+     "ms": "Patrick should read the license agreement (1) to find out what the rights/limitations of use of the software are. (1)"
+    },
+    {
+     "l": "(e)(ii)",
+     "q": "Susan downloads and installs a pirated copy of photo editing software on her computer. What is the possible legal consequence of her action?",
+     "m": 1,
+     "ms": "She may be punished by fine / imprisonment. (1)"
+    },
+    {
+     "l": "(f)",
+     "q": "Patrick installs a software package on all computers such that the system in each computer will be automatically restored to its original state on every reboot. Give one advantage and one disadvantage of this software package.",
+     "m": 2,
+     "ms": "Advantage: Even though the computer is infected with a virus, it can be cleaned up after a restart. (1)<br>Disadvantage: All data/software updates / OS updates and new software installed may be removed after a restart. (1)"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "topic": "D1",
+   "pg": [
+    15,
+    16,
+    17
+   ],
+   "stem": "Mr Law develops a computer system with the help of Ada and Ben. The system is used to find the equivalent grade for an input mark.",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "Ada uses the following pseudocode to represent her algorithm.<pre>Step 1: Input a value into MARK\nStep 2: If MARK < 40 Then GRADE ← 'Unattained'\nStep 3: If MARK >= 40 Then GRADE ← 'Attained'\nStep 4: If MARK >= 80 Then GRADE ← 'Distinction'\nStep 5: Output GRADE</pre>What is the value of GRADE for each of the following values of MARK?<br>(1) MARK = 40   GRADE = ______<br>(2) MARK = 200   GRADE = ______",
+     "m": 2,
+     "ms": "(1) Attained (1)<br>(2) Distinction (1)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Ada modifies the pseudocode by applying iteration control structure in Step 1 so that the value of MARK is between 0 and 100 inclusive as shown below.<pre>Step 1: Repeat the input of values into MARK when the value of MARK is smaller than 0 or\n        larger than 100</pre>(1) Other than 0 and 100, give another test datum that can be used to identify the boundary cases of the algorithm.<br>(2) Which type of iteration control structure, pre-test, post-test or for loop, is used by Ada?",
+     "m": 2,
+     "ms": "(1) -1 or 101 (1)<br>(2) pre-test / post-test (1)"
+    },
+    {
+     "l": "(b)",
+     "q": "Ben uses the following flowchart to represent his algorithm. Write down YES, NO and an appropriate operator in the shaded areas for the first decision box.<br>[Flowchart: START → Input MARK → decision (MARK >= 0 [shaded] MARK <= 100) → MARK >= 80? Yes: GRADE ← 'Distinction'; No → MARK >= 40? Yes: GRADE ← 'Attained'; No (Label X): GRADE ← 'Unattained' → Output GRADE → END]",
+     "m": 2,
+     "ms": "Operator: AND (1)<br>Yes / No placed correctly: Yes leads on to the grade checks, No loops back to Input MARK (1 for Yes+No)"
+    },
+    {
+     "l": "(c)",
+     "q": "Compare the algorithm indicated by Label X with Ada’s algorithm. Which one is more efficient? Explain briefly.",
+     "m": 2,
+     "ms": "The algorithm indicated by Label X is more efficient (1) because it executes a fewer number of comparisons in general. (1)"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "A workstation in the system provides a virtual keyboard on the screen which can be used to enter the marks.<br>Give one advantage and one disadvantage of this design.",
+     "m": 2,
+     "ms": "Advantage: The design is compact. / fewer peripherals (1)<br>Disadvantage: It is not a good ergonomic design. / The keyboard location is rigid. / It occupies a portion of the screen. (1)"
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Suggest a common way to connect a keyboard to the workstation other than using a USB port.",
+     "m": 1,
+     "ms": "Bluetooth (1)"
+    },
+    {
+     "l": "(d)(iii)",
+     "q": "Mr Law wants to connect a USB printer to the workstation but the connection fails. What is the potential software problem?",
+     "m": 1,
+     "ms": "The driver is corrupted. / The driver has not been installed. (1)"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "topic": "C1",
+   "pg": [
+    18,
+    19
+   ],
+   "stem": "Mr Li is the IT manager of a university in Australia. On the campus there are two computer networks located in Building A and Building B which are used by staff and students respectively. The two buildings are 600m apart, as shown below.<br>[Diagram: Building A (Staff) and Building B (Students), each with device X; device Y links the buildings (connection across the buildings, distance 600m) and connects to the Internet]",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "What network connecting devices are X and Y?<br>X: ______  Y: ______",
+     "m": 2,
+     "ms": "X: switch / hub (1)<br>Y: router (firewall ✗) (1)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Suggest a suitable type of network cable for the connection across the buildings and justify your answer.",
+     "m": 1,
+     "ms": "Optical fibre should be used because it supports a distance of 600 m. (1)"
+    },
+    {
+     "l": "(a)(iii)",
+     "q": "Instead of using a wired connection, Mr Li wants to connect two networks by installing microwave dishes on the roofs of the buildings. State two disadvantages of this approach.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>The data transfer rate is low.<br>Its performance is easily affected by the weather.<br>The data transmission is exposed to the air and the security is vulnerable."
+    },
+    {
+     "l": "(b)",
+     "q": "Mr Li subscribes to an Internet connection. A cable modem is needed to connect the campus network to the Internet. What is the function of the cable modem?",
+     "m": 2,
+     "ms": "Cable modems are used to modulate digital signals into radio-frequency signals carried by cable and demodulate the incoming radio-frequency signals into digital signals for computer processing. (2) (1 for presenting only a simple modulation concept)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Mr Li sets up an email server in the university and offers an email account to each student. In each of the following cases, which email protocol for accessing email boxes is preferable? Justify your answer.<br>Each email box only has 5 MB storage space.",
+     "m": 2,
+     "ms": "POP (1)<br>By default, email will be deleted from the email box once it has been downloaded to the client’s machine so as to free up the storage space of the server for receiving more email. (1)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Students can access their email boxes through any computer with Internet access.",
+     "m": 2,
+     "ms": "IMAP (webmail ✗) (1)<br>Any email the students read, move or delete will be updated across different computers (synchronisation). / Set all read and unread email to be stored in the server. (1)"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "A2",
+   "pg": [
+    19,
+    20,
+    21
+   ],
+   "stem": "Peter wants to study the air quality in Shatin and Kwun Tong. He downloads the air quality monitoring data from the website of the Environmental Protection Department, as shown below:<br>[Web page: Air Quality Monitoring Data — You have selected the Shatin Station. Data is available from 1-7-2008 to 30-9-2010. From: Day 01 ▼ Month 01 ▼ Year 2010 ▼ To: Day 31 ▼ Month 01 ▼ Year 2010 ▼ (year list: 2008, 2009, 2010); buttons Display, Download, Reset]",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "In the web page above, how can the use of drop-down lists help with data input?",
+     "m": 1,
+     "ms": "It can minimise the input error. (1)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "There should be two validation rules for checking the input data. Give two different sets of invalid data to illustrate the need for the rules.<br>Set 1  From: Day/Month/Year  To: Day/Month/Year<br>Set 2  From: Day/Month/Year  To: Day/Month/Year",
+     "m": 2,
+     "ms": "Any two (1×2):<br>Unavailable date (i.e. before 1-7-2008 or after 30-9-2010)<br>Illogical date range (e.g. from 1-1-2010 to 1-1-2009)<br>Invalid date (e.g. 30-2-2008)"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "The readings of air pollutants, P1, P2 and P3, are collected every 6 hours. Peter downloads the data collected at Shatin and Kwun Tong in January 2010 and stores them in two worksheets of a spreadsheet file, Sheet1 and Sheet2, respectively. Sheet1 is shown below.<br><table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr><tr><td>1</td><td></td><td></td><td colspan=4>Time</td><td></td></tr><tr><td>2</td><td>Date</td><td>Pollutant</td><td>00 00</td><td>06 00</td><td>12 00</td><td>18 00</td><td>Average</td></tr><tr><td>3</td><td>1-1-2010</td><td>P1</td><td>14</td><td>12</td><td>11</td><td>9</td><td></td></tr><tr><td>4</td><td>1-1-2010</td><td>P2</td><td>116</td><td>103</td><td>102</td><td>78</td><td></td></tr><tr><td>5</td><td>1-1-2010</td><td>P3</td><td>28</td><td>20</td><td>21</td><td>29</td><td></td></tr><tr><td>6</td><td>2-1-2010</td><td>P1</td><td>25</td><td>18</td><td>18</td><td>26</td><td></td></tr><tr><td>7</td><td>2-1-2010</td><td>P2</td><td>87</td><td>90</td><td>86</td><td>63</td><td></td></tr><tr><td>8</td><td>2-1-2010</td><td>P3</td><td>10</td><td>9</td><td>9</td><td>2</td><td></td></tr><tr><td>9</td><td>3-1-2010</td><td>P1</td><td>86</td><td>83</td><td>83</td><td>7</td><td></td></tr><tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr><tr><td>94</td><td>31-1-2010</td><td>P2</td><td>37</td><td>15</td><td>7</td><td>82</td><td></td></tr><tr><td>95</td><td>31-1-2010</td><td>P3</td><td>4</td><td>6</td><td>12</td><td>3</td><td></td></tr><tr><td>96</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>97</td><td></td><td>P1 average:</td><td></td><td></td><td></td><td></td><td></td></tr></table><br>Peter wants to find the average reading of P1 at Shatin in January 2010.<br>To find the daily average readings of the pollutants everyday, a formula is entered into G3 and is then copied into G4 to G95. Write the formula in G3.",
+     "m": 2,
+     "ms": "=AVERAGE(C3:F3) (2)<br>Also accepted: =SUM(C3:F3)/4 / =(C3+D3+E3+F3)/4"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Write the formula in G97 to find the average reading of P1 at Shatin in January 2010.",
+     "m": 2,
+     "ms": "=SUMIF(B3:B95,\"P1\",G3:G95) / 31 (2)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "The same steps in (b) have also been applied to Sheet2 for the data collected at Kwun Tong. Peter creates the following chart to show the average readings of P1 at Shatin and at Kwun Tong in January 2010.<br>[Column chart titled “P1 (January 2010)”, y-axis “Average Readings” 0–70, x-axis “Stations”, two bars: Shatin and Kwun Tong]<br>Describe, with major steps, how to create the chart.",
+     "m": 3,
+     "ms": "Click the chart wizard button (activate the chart function) and select the chart type (1)<br>Select data in Sheet1!G97 (G97 in Sheet1) and Sheet2!G97 (G97 in Sheet2) (data selection) (1)<br>Enter the chart title / axis names / labels (1)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Peter copies the chart into his presentation file. Afterwards he updates some readings of P1 on Sheet1. Will the chart in the presentation file change accordingly? Explain briefly.",
+     "m": 2,
+     "ms": "Yes, the chart will change accordingly provided that there is a dynamic link (OLE) between the original one and the copy. / No, the dynamic link (OLE) between the original one and the copy is deactivated. (2) (1 for showing the simple concept of a dynamic link only)"
+    }
+   ]
+  }
+ ]
+}
