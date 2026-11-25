@@ -164,7 +164,7 @@ V.home=()=>{const chs=allCh();const nc=chs.reduce((a,c)=>a+c.cards.length,0),nm=
  <a href="#tools"><span>${T("Tools","工具")}</span><span>SQL · ${T("base","进制")} · subnet</span></a>
  <a href="#progress"><span>${T("Progress","进度")}</span><span></span></a></div>`};
 function setLang(l){store.set("lang",l);route()}
-V.learn=()=>{const sec=(f,title)=>`<h2>${title}</h2>`+BK.filter(f).map(b=>`<div class="k" style="margin-top:14px">${esc(b.id)} · ${esc(T(b.name,b.nz||b.name))}${b.note?" · "+esc(b.note):""}</div><div class="list">${b.chs.map(c=>{const s=stat(c.mc.map(m=>m.key));return `<a href="#ch/${c.id}"><span>Ch${c.n} ${esc(T(c.t,c.tz||c.t))}</span><span>${s.d?`${s.c}/${s.d}`:""}</span></a>`}).join("")}</div>`).join("");
+V.learn=()=>{const sec=(f,title)=>`<h2>${title}</h2>`+BK.filter(f).map(b=>`<div class="k" style="margin-top:14px">${esc(b.id)} · ${esc(T(b.name,b.nz||b.name))}</div><div class="list">${b.chs.map(c=>{const s=stat(c.mc.map(m=>m.key));return `<a href="#ch/${c.id}"><span>Ch${c.n} ${esc(T(c.t,c.tz||c.t))}</span><span>${s.d?`${s.c}/${s.d}`:""}</span></a>`}).join("")}</div>`).join("");
  return `<h1>${T("Textbook","课本")}</h1>`+sec(b=>!b.elective,T("Compulsory","必修部分"))+sec(b=>b.elective,T("Electives","选修部分"))};
 function chTabs(c,on){return `<p class="k"><a href="#learn">← ${T("Textbook","课本")}</a></p><h1>${esc(chName(c))}</h1><div class="tabs">
  <a class="${on==="c"?"on":""}" href="#cards/${c.id}/0">${T("Cards","知识卡")} ${c.cards.length}</a><a class="${on==="p"?"on":""}" href="#ch/${c.id}">${T("Practice","练习")} ${c.mc.length}</a><a class="${on==="s"?"on":""}" href="#sq/${c.id}">${T("Structured","结构题")} ${c.sq.length}</a>${c.pr.length?`<a class="${on==="r"?"on":""}" href="#pr/${c.id}">${T("Hands-on","实操")} ${c.pr.length}</a>`:""}</div>`}
