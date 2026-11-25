@@ -1,17 +1,18 @@
-function TOOLS(){return `<h1>互动工具</h1><p class="sub">做题时用来自己验算。<span class="tabs"><a href="#tools" onclick="tj('t1')">进制</a><a href="#tools" onclick="tj('t2')">补码</a><a href="#tools" onclick="tj('t3')">子网</a><a href="#tools" onclick="tj('t4')">SQL</a><a href="#tools" onclick="tj('t5')">算法追踪</a></span></p>
-<div class="card glass" id="t1"><h3>进制转换</h3><div class="row"><select id="b-in"><option value="10">十进制</option><option value="2">二进制</option><option value="8">八进制</option><option value="16">十六进制</option></select><input id="b-v" value="182" oninput="baseConv()"></div><div id="b-out" class="code"></div></div>
-<div class="card glass" id="t2"><h3>Two's complement（8-bit）</h3><div class="row">十进制 <input id="tc-d" value="-70" size="6" oninput="tcD()"> 或 二进制 <input id="tc-b" size="10" oninput="tcB()"></div><div id="tc-out" class="code"></div>
-<h3>加法与 overflow</h3><div class="row"><input id="ad-a" value="10111010" size="10" oninput="tcAdd()"> + <input id="ad-b" value="11000100" size="10" oninput="tcAdd()"></div><div id="ad-out" class="code"></div></div>
-<div class="card glass" id="t3"><h3>子网计算</h3><div class="row"><input id="sn-ip" value="192.168.5.77"> / <input id="sn-p" value="26" size="3"> <button class="btn" onclick="subnet()">计算</button></div><div id="sn-out" class="code"></div></div>
-<div class="card glass" id="t4"><h3>SQL 练习场</h3><p class="sub">示例数据库：STUDENT(SID, NAME, CLASS, CID)、CLUB(CID, CNAME, TEACHER)、RESULT(SID, SUBJECT, SCORE)。可以随便改数据或建新表，刷新页面重置。</p>
-<textarea id="sql" rows="5">SELECT S.CLASS, COUNT(*) AS N, AVG(R.SCORE) AS AVG_SCORE
+const TL={base:["进制转换","Number bases","十进制 / 二进制 / 八进制 / 十六进制互换"],twos:["补码与溢出","Two's complement","8-bit two's complement、加法和 overflow 检查"],subnet:["子网计算","Subnet calculator","由 IP 和前缀求 mask、network、broadcast、主机范围"],sql:["SQL 练习场","SQL playground","在示例数据库上运行任何 SQL"],trace:["算法追踪","Trace tables","取余法、bubble sort、binary / linear search 逐步追踪"]};
+function TOOLS(){return `<h1>${T("Tools","工具")}</h1><p class="sub">${T("Check your working while you practise.","做题时用来自己验算。")}</p><div class="list">${Object.entries(TL).map(([k,v])=>`<a href="#tool/${k}"><span>${T(v[1],v[0])}</span><span>${v[2]}</span></a>`).join("")}</div>`}
+const F=(lab,inp)=>`<label style="display:block;margin:12px 0 4px" class="k">${lab}</label>${inp}`;
+const TV={
+base:()=>F("输入的进制",`<select id="b-in" onchange="baseConv()" style="width:100%"><option value="10">十进制 Decimal</option><option value="2">二进制 Binary</option><option value="8">八进制 Octal</option><option value="16">十六进制 Hexadecimal</option></select>`)+F("数值",`<input id="b-v" value="182" oninput="baseConv()" style="width:100%">`)+`<h2>结果</h2><div class="box"><pre id="b-out"></pre></div>`,
+twos:()=>`<h2>十进制 ↔ 8-bit 补码</h2>`+F("十进制（−128 至 127）",`<input id="tc-d" value="-70" oninput="tcD()" style="width:100%">`)+F("或 8 位二进制",`<input id="tc-b" oninput="tcB()" style="width:100%" placeholder="例如 10111010">`)+`<div class="box"><pre id="tc-out"></pre></div><h2>加法与 overflow</h2>`+F("第一个数（8 位）",`<input id="ad-a" value="10111010" oninput="tcAdd()" style="width:100%">`)+F("第二个数（8 位）",`<input id="ad-b" value="11000100" oninput="tcAdd()" style="width:100%">`)+`<div class="box"><pre id="ad-out"></pre></div>`,
+subnet:()=>F("IP 地址",`<input id="sn-ip" value="192.168.5.77" oninput="subnet()" style="width:100%">`)+F("前缀长度 /n",`<input id="sn-p" value="26" type="number" min="0" max="32" oninput="subnet()" style="width:100%">`)+`<h2>结果</h2><div class="box"><pre id="sn-out"></pre></div>`,
+sql:()=>`<div class="box k">示例数据库：STUDENT(SID, NAME, CLASS, CID)、CLUB(CID, CNAME, TEACHER)、RESULT(SID, SUBJECT, SCORE)。可以改数据或建新表，刷新页面重置。</div>`+F("SQL",`<textarea id="sql" class="code" rows="7" spellcheck="false" autocapitalize="off">SELECT S.CLASS, COUNT(*) AS N, AVG(R.SCORE) AS AVG_SCORE
 FROM STUDENT S, RESULT R
 WHERE S.SID = R.SID AND R.SUBJECT = 'ICT'
 GROUP BY S.CLASS
 HAVING COUNT(*) >= 2
-ORDER BY AVG_SCORE DESC;</textarea>
-<div class="row"><button class="btn" onclick="runSQL()">运行</button><button class="btn sec" onclick="sqlEx(0)">JOIN 例</button><button class="btn sec" onclick="sqlEx(1)">LIKE 例</button><button class="btn sec" onclick="sqlEx(2)">子查询例</button><button class="btn sec" onclick="sqlEx(3)">看表</button></div><div id="sql-out"></div></div>
-<div class="card glass" id="t5"><h3>算法追踪（trace table）</h3><div class="row"><select id="al"><option value="bin">十进制 → 二进制（取余法）</option><option value="bub">Bubble sort</option><option value="bs">Binary search</option><option value="lin">Linear search</option></select><input id="al-in" value="5,1,4,2,8" size="18"><input id="al-t" value="4" size="4" placeholder="目标"><button class="btn" onclick="trace()">追踪</button></div><div id="al-out"></div></div>`}
+ORDER BY AVG_SCORE DESC;</textarea>`)+`<p><button class="btn" onclick="runSQL()">运行</button><button class="btn sec" onclick="sqlEx(0)">JOIN 例</button><button class="btn sec" onclick="sqlEx(1)">LIKE 例</button><button class="btn sec" onclick="sqlEx(2)">子查询例</button><button class="btn sec" onclick="sqlEx(3)">看表</button></p><h2>结果</h2><div class="box" id="sql-out"></div>`,
+trace:()=>F("算法",`<select id="al" style="width:100%"><option value="bin">十进制 → 二进制（取余法）</option><option value="bub">Bubble sort</option><option value="bs">Binary search</option><option value="lin">Linear search</option></select>`)+F("数据（十进制数，或用逗号分隔的列表）",`<input id="al-in" value="5,1,4,2,8" style="width:100%">`)+F("查找目标（search 用）",`<input id="al-t" value="4" style="width:100%">`)+`<p><button class="btn" onclick="trace()">追踪</button></p><h2>逐步过程</h2><div class="box" id="al-out"></div>`}
+function TOOL(k){const v=TL[k];if(!v)return TOOLS();return `<p class="k"><a href="#tools">← ${T("Tools","工具")}</a></p><h1>${T(v[1],v[0])}</h1><p class="sub">${v[2]}</p><div style="max-width:560px">${TV[k]()}</div>`}
 function tj(id){setTimeout(()=>document.getElementById(id).scrollIntoView({behavior:"smooth"}),50)}
 function g(i){return document.getElementById(i)}
 function baseConv(){const b=+g("b-in").value,v=g("b-v").value.trim().replace(/\s/g,"");const n=parseInt(v,b);
@@ -32,14 +33,14 @@ function subnet(){const ip=g("sn-ip").value.split(".").map(Number),p=+g("sn-p").
  g("sn-out").textContent=`Subnet mask   ${d(m)}\nNetwork addr  ${d(net)}\nBroadcast     ${d(bc)}\n可用主机       ${p>=31?0:2**(32-p)-2}（${p<31?d(net+1)+" – "+d(bc-1):""}）\n${pr?"这是 private IP，需要 NAT 才能上 Internet":"这是 public IP"}\n二进制 IP     ${ip.map(x=>x.toString(2).padStart(8,"0")).join(".")}\n二进制 mask   ${d(m).split(".").map(x=>(+x).toString(2).padStart(8,"0")).join(".")}`}
 let DB=null;
 const SEED=`CREATE TABLE CLUB(CID TEXT PRIMARY KEY, CNAME TEXT, TEACHER TEXT);
-INSERT INTO CLUB VALUES('C1','Robotics','Mr Fong'),('C2','Orchestra','Ms Lee'),('C3','Coding','Mr Chan');
+INSERT INTO CLUB VALUES('C1','Robotics','Mr Lam'),('C2','Orchestra','Ms Lee'),('C3','Coding','Mr Chan');
 CREATE TABLE STUDENT(SID TEXT PRIMARY KEY, NAME TEXT, CLASS TEXT, CID TEXT REFERENCES CLUB(CID));
 INSERT INTO STUDENT VALUES('S01','Tom Ho','5A','C3'),('S02','Amy Chan','5A','C2'),('S03','Ben Lau','5B','C1'),('S04','Cathy Ho','5B','C3'),('S05','David Ng','5C',NULL),('S06','Eva Lam','5A','C1'),('S07','Kelvin Yip','5C','C2');
 CREATE TABLE RESULT(SID TEXT, SUBJECT TEXT, SCORE INTEGER, PRIMARY KEY(SID,SUBJECT));
 INSERT INTO RESULT VALUES('S01','ICT',88),('S01','M2',75),('S02','ICT',64),('S02','M2',81),('S03','ICT',52),('S04','ICT',91),('S04','M2',60),('S05','ICT',47),('S06','ICT',73),('S07','ICT',69),('S07','M2',58);`;
 const EX=["SELECT S.NAME, C.CNAME, C.TEACHER\nFROM STUDENT S, CLUB C\nWHERE S.CID = C.CID\nORDER BY C.CNAME;","SELECT NAME, CLASS FROM STUDENT WHERE NAME LIKE '_a%';","SELECT NAME FROM STUDENT\nWHERE SID IN (SELECT SID FROM RESULT WHERE SUBJECT='ICT' AND SCORE > (SELECT AVG(SCORE) FROM RESULT WHERE SUBJECT='ICT'));","SELECT * FROM STUDENT;"];
 function sqlEx(i){g("sql").value=EX[i];runSQL()}
-function initTools(){baseConv();tcD();tcAdd();subnet();
+function initTools(){if(g("b-v"))baseConv();if(g("tc-d"))tcD();if(g("ad-a"))tcAdd();if(g("sn-ip"))subnet();if(!g("sql"))return;
  if(!window.initSqlJs){const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js";s.onload=loadDB;document.head.appendChild(s)}else loadDB()}
 function loadDB(){if(DB)return;initSqlJs({locateFile:f=>"https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/"+f}).then(S=>{DB=new S.Database();DB.run(SEED);g("sql-out").innerHTML="<p class='sub'>数据库已就绪。</p>"}).catch(e=>g("sql-out").textContent="SQL 引擎载入失败："+e)}
 function runSQL(){if(!DB){g("sql-out").textContent="SQL 引擎还在载入…";return}try{const r=DB.exec(g("sql").value);g("sql-out").innerHTML=r.length?r.map(t=>`<table><tr>${t.columns.map(c=>`<th>${c}</th>`).join("")}</tr>${t.values.map(v=>`<tr>${v.map(x=>`<td>${x===null?"NULL":x}</td>`).join("")}</tr>`).join("")}</table>`).join(""):"<p class='sub'>执行成功（没有返回行）</p>"}catch(e){g("sql-out").innerHTML=`<p style="color:var(--bad)">错误：${e.message}</p>`}}
