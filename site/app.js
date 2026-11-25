@@ -102,16 +102,16 @@ function prBody(it,id,code,si){const c=it.check||{};const lg=it.lang||"";
  <p><button class="btn" onclick="runPr('${it.key}','${id}',${si??"null"})">${T("Run & check","运行并检查")}</button>${si==null?`<button class="btn sec" onclick="document.getElementById('ed-${id}').value=IT['${it.key}'].solution||'';">${T("Show solution","看参考答案")}</button>`:""}</p>`}
  <div class="out" id="out-${id}"></div>`}
 function tabKey(e){if(e.key==="Tab"){e.preventDefault();const t=e.target,s=t.selectionStart;t.value=t.value.slice(0,s)+"    "+t.value.slice(t.selectionEnd);t.selectionStart=t.selectionEnd=s+4}}
-const tbl=r=>!r||!r.length?"<p class='k'>(no rows)</p>":r.map(x=>`<div class="tw"><table><tr>${x.columns.map(c=>`<th>${esc(c)}</th>`).join("")}</tr>${x.values.slice(0,50).map(v=>`<tr>${v.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</table></div>`).join("");
+const rowsTbl=r=>!r||!r.length?"<p class='k'>(no rows)</p>":r.map(x=>`<div class="tw"><table><tr>${x.columns.map(c=>`<th>${esc(c)}</th>`).join("")}</tr>${x.values.slice(0,50).map(v=>`<tr>${v.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</table></div>`).join("");
 const norm=v=>v==null?"NULL":typeof v==="number"?String(Math.round(v*1e6)/1e6):String(v);
 async function runPr(key,id,si){const it=IT[key];const code=$("#ed-"+id).value;const out=$("#out-"+id);const c=it.check||{};let pass=false,html="";
  out.innerHTML=T("Running…","运行中…");
  try{
  if(it.lang==="sql"){const SQL=await getSQL();const run=(q)=>{const db=new SQL.Database();if(it.setup)db.exec(it.setup);const r=db.exec(q);return{r,db}};
-  const u=run(code);html+=tbl(u.r);
+  const u=run(code);html+=rowsTbl(u.r);
   if(c.type==="sql_result"){const e=run(c.expected_sql).r;const rows=r=>r.length?r[r.length-1].values.map(v=>v.map(norm).join("|")):[];
    let A=rows(u.r),B=rows(e);if(!/order\s+by/i.test(c.expected_sql)){A=A.slice().sort();B=B.slice().sort()}
-   pass=A.length===B.length&&A.every((x,i)=>x===B[i]);if(!pass)html+=`<details><summary>${T("Expected result","应有结果")}</summary>${tbl(e)}</details>`}
+   pass=A.length===B.length&&A.every((x,i)=>x===B[i]);if(!pass)html+=`<details><summary>${T("Expected result","应有结果")}</summary>${rowsTbl(e)}</details>`}
   else if(c.type==="sql_state"){const e=run((it.setup?"":"")+c.expected_sql);pass=true}
  }else if(it.lang==="python"){const py=await getPY();
   py.globals.set("__user",code);py.globals.set("__setup",it.setup||"");py.globals.set("__stdin",c.stdin||"");
