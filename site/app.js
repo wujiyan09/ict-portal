@@ -3,7 +3,7 @@ const $=s=>document.querySelector(s);const app=$("#app");
 const LT="ABCD";
 const RAW="https://raw.githubusercontent.com/wujiyan09/ict-portal/main/";
 const store={get(k,d){try{const v=JSON.parse(localStorage.getItem("ict:"+k));return v==null?d:v}catch(e){return d}},set(k,v){localStorage.setItem("ict:"+k,JSON.stringify(v))}};
-const esc=s=>String(s??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const esc=s=>String(s??"").replace(/&(?!(lt|gt|amp|quot|#\d+);)/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const hasTag=s=>/<(br|b|i|table|tr|td|pre|code|ul|li|p|span|sub|sup|u)\b/i.test(s||"");
 const rich=(s,code)=>code?`<pre>${esc(s)}</pre>`:(hasTag(s)?wrapT(s):esc(s).replace(/\n/g,"<br>"));
 const wrapT=s=>String(s).replace(/<table/g,'<div class="tw"><table').replace(/<\/table>/g,"</table></div>");
@@ -76,7 +76,7 @@ function saveRun(s){const r=store.get("runs",[]);const sc=scoreSess(s);const ix=
 function selfMark(i,j,v){const s=S();s.self[i]=s.self[i]||{};s.self[i][j]=v;store.set("sess",s);saveRun(s);const sc=scoreSess(s);$("#tot").textContent=`${sc.got}/${sc.tot}`;
  const it=IT[s.keys[i]];rec(it.key,it.parts.every((p,jj)=>(+(s.self[i]||{})[jj]||0)>=(+p.m||1)))}
 function vResult(){const s=S();const sc=scoreSess(s);
- let h=`<p class="k"><a href="${s.back}">← ${T("Back","返回")}</a></p><h1>${esc(s.title)}</h1><p style="font-size:28px;margin:4px 0"><b id="tot">${sc.got}/${sc.tot}</b></p><p class="sub">${T("Structured answers: tick the marks you earned against the marking points.","结构题：对照评分要点，自己给分。")}</p>
+ let h=`<p class="k"><a href="${s.back}">← ${T("Back","返回")}</a></p><h1>${esc(s.title)}</h1><p style="font-size:28px;margin:4px 0"><b id="tot">${sc.got}/${sc.tot}</b></p>${s.keys.some(k=>IT[k].type!=="mc")?`<p class="sub">${T("Structured answers: give yourself marks against the marking points.","结构题：对照评分要点，自己给分。")}</p>`:""}
  <p><button class="btn" onclick='startSession(${JSON.stringify(s.title)},${JSON.stringify(shuffle(s.keys))},${JSON.stringify(s.back)})'>${T("Retry (reshuffled)","再做一次（重新洗牌）")}</button>`;
  const wrong=s.keys.filter((k,i)=>IT[k].type==="mc"&&!IT[k].cancel&&s.ans[i]!==IT[k].a);
  if(wrong.length)h+=`<button class="btn sec" onclick='startSession(${JSON.stringify(T("Redo wrong ones","重做错题"))},${JSON.stringify(wrong)},${JSON.stringify(s.back)})'>${T("Redo wrong","只做错题")} (${wrong.length})</button>`;
@@ -158,7 +158,7 @@ V.home=()=>{const chs=allCh();const nc=chs.reduce((a,c)=>a+c.cards.length,0),nm=
  return `<h1>S5 ICT</h1><p class="sub">HKDSE ICT · ICT for iGeneration</p>
  <div class="seg"><button class="${EN()?"on":""}" onclick="setLang('en')">全英文</button><button class="${EN()?"":"on"}" onclick="setLang('zh')">英文知识点 + 中文讲解</button></div>
  <div class="list" style="margin-top:16px">
- <a href="#learn"><span>${T("Textbook: cards & practice","课本：知识卡与练习")}</span><span>${chs.length} ${T("ch","章")} · ${nc} ${T("cards","卡")} · ${nm} MC · ${np} ${T("practicals","实操")}</span></a>
+ <a href="#learn"><span>${T("Textbook: cards & practice","课本：知识卡与练习")}</span><span>${chs.length} ${T("ch","章")} · ${nc} ${T("cards","卡")} · ${nm} MC${np?` · ${np} ${T("practicals","实操")}`:""}</span></a>
  <a href="#dse"><span>${T("DSE past papers","DSE 真题")}</span><span>${DQ.length} MC · ${LQ.length} ${T("long Qs","长题")}</span></a>
  <a href="#quiz"><span>${T("Quiz zone","测验区")}</span><span>${T("build your own","自选范围")}</span></a>
  <a href="#tools"><span>${T("Tools","工具")}</span><span>SQL · ${T("base","进制")} · subnet</span></a>
@@ -172,7 +172,7 @@ V.ch=id=>{const c=chOf(id);if(!c)return"?";const keys=c.mc.map(m=>m.key);const s
  const bySec=c.sec.map(x=>{const n=x.split(" ")[0];const k=c.mc.filter(m=>(m.sec||"")===n).map(m=>m.key);return [x,k]}).filter(x=>x[1].length);
  return chTabs(c,"p")+`<p class="sub">${T("One question per page, marked at the end. Unseen and wrong questions come first.","一页一题，做完统一批改。没做过和做错的题优先出现。")} ${s.d?`${T("Done","已做")} ${s.d}/${s.n} · ${T("correct","答对")} ${s.c}`:""}</p>
  ${[10,20,40].filter(n=>n<keys.length).concat([keys.length]).map(n=>`<button class="btn ${n===10?"":"sec"}" onclick='startSession(${JSON.stringify(chName(c))},prio(${JSON.stringify(keys)}).slice(0,${n}),"#ch/${c.id}")'>${n===keys.length?T("All","全部")+" "+n:n+" "+T("Qs","题")}</button>`).join("")}
- ${bySec.length>1?`<h2>${T("By section","按小节")}</h2><div class="list">${bySec.map(([t,k])=>{const st=stat(k);return `<a href="javascript:void 0" onclick='startSession(${JSON.stringify(t)},prio(${JSON.stringify(k)}).slice(0,10),"#ch/${c.id}")'><span>${esc(t)}</span><span>${k.length} · ${st.d?st.c+"/"+st.d:""}</span></a>`}).join("")}</div>`:""}
+ ${bySec.length>1?`<h2>${T("By section","按小节")}</h2><div class="list">${bySec.map(([t,k])=>{const st=stat(k);return `<a href="javascript:void 0" onclick='startSession(${JSON.stringify(t)},prio(${JSON.stringify(k)}).slice(0,10),"#ch/${c.id}")'><span>${esc(t)}</span><span>${k.length}${st.d?" · "+st.c+"/"+st.d:""}</span></a>`}).join("")}</div>`:""}
  ${relDSE(c)}`};
 function relDSE(c){const t=c.book.elective?null:{A1:"A1",A2:"A2",B:"B",C1:"C1",C2:"C2",D1:"D1",D2:"D2",E:"E"}[c.book.id];if(!t)return"";const k=DQ.filter(q=>q.topic===t).map(q=>q.key);
  return k.length?`<h2>${T("Related DSE questions","相关 DSE 真题")}</h2><button class="btn sec" onclick='startSession(${JSON.stringify(tName(t))},prio(${JSON.stringify(k)}).slice(0,10),"#ch/${c.id}")'>${k.length} ${T("real questions · start 10","题真题 · 做 10 题")}</button>`:""}
@@ -187,8 +187,8 @@ V.pr=id=>{const c=chOf(id);const h=H();return chTabs(c,"r")+`<div class="list">$
 V.p=(id,i)=>{const c=chOf(id);const p=c.pr[+i];if(!p)return"?";return chTabs(c,"r")+`<div class="box">${prBody(p,"x",null,null)}</div><div class="nav2"><span>${+i>0?`<a class="btn sec" href="#p/${id}/${+i-1}">←</a>`:""}</span>${+i<c.pr.length-1?`<a class="btn sec" href="#p/${id}/${+i+1}">→</a>`:""}</div>`};
 
 V.dse=()=>{const tp=Object.keys(TOPIC);
- return `<h1>${T("DSE past papers","DSE 真题")}</h1><p class="sub">${T("Verbatim HKDSE ICT Paper 1 questions. Official keys and % correct;","HKDSE ICT 卷一原题照录。官方答案与当年答对率，")}</p>
- <h2>${T("MC by topic","选择题 · 按课题")}</h2><div class="list">${tp.map(t=>{const k=DQ.filter(q=>q.topic===t).map(q=>q.key);const s=stat(k);return k.length?`<a href="javascript:void 0" onclick='startSession(${JSON.stringify(tName(t))},prio(${JSON.stringify(k)}).slice(0,20),"#dse")'><span>${esc(tName(t))}</span><span>${k.length} · ${s.d?s.c+"/"+s.d:""}</span></a>`:""}).join("")}</div>
+ return `<h1>${T("DSE past papers","DSE 真题")}</h1><p class="sub">${T("Verbatim HKDSE ICT Paper 1 questions. Official keys and % correct;","HKDSE ICT 卷一原题照录，附官方答案与当年答对率。")}</p>
+ <h2>${T("MC by topic","选择题 · 按课题")}</h2><div class="list">${tp.map(t=>{const k=DQ.filter(q=>q.topic===t).map(q=>q.key);const s=stat(k);return k.length?`<a href="javascript:void 0" onclick='startSession(${JSON.stringify(tName(t))},prio(${JSON.stringify(k)}).slice(0,20),"#dse")'><span>${esc(tName(t))}</span><span>${k.length}${s.d?" · "+s.c+"/"+s.d:""}</span></a>`:""}).join("")}</div>
  <h2>${T("Section B long questions by topic","Section B 长题 · 按课题")}</h2><div class="list">${tp.map(t=>{const k=LQ.filter(q=>q.topic===t).map(q=>q.key);return k.length?`<a href="javascript:void 0" onclick='startSession(${JSON.stringify("1B · "+tName(t))},prio(${JSON.stringify(k)}).slice(0,3),"#dse")'><span>${esc(tName(t))}</span><span>${k.length}</span></a>`:""}).join("")}</div>
  <h2>${T("By year","按年份")}</h2><div class="list">${YEARS.map(y=>{const r=store.get("sheet:"+y.y,null);const n=DQ.filter(q=>q.y===y.y).length;return `<a href="#year/${y.y}"><span>${esc(y.label||"HKDSE "+y.y)}</span><span>${n?T("in-site","站内")+" · ":""}${r&&r.done?r.score+"/"+KEYS[y.y].length:""}</span></a>`}).join("")}</div>`};
 V.year=y=>{const Y=YEARS.find(x=>x.y===y);const key=KEYS[y];const pct=PCT[y]||[];const st=store.get("sheet:"+y,{a:{},done:false});
@@ -233,7 +233,7 @@ V.progress=()=>{const h=H();const chs=allCh();const wrong=Object.keys(h).filter(
  <p><button class="btn sec" onclick="if(confirm('Reset?')){Object.keys(localStorage).filter(k=>k.startsWith('ict:')&&k!=='ict:lang').forEach(k=>localStorage.removeItem(k));route()}">${T("Reset all progress","清除全部进度")}</button></p>`};
 V.tools=()=>TOOLS();
 
-function route(){const h=(location.hash||"#home").slice(1).split("/");const f=V[h[0]]||V.home;
+function route(){const nv=document.querySelectorAll("nav a");[["Textbook","课本"],["Past papers","真题"],["Quiz","测验"],["Tools","工具"],["Progress","进度"]].forEach((x,i)=>{if(nv[i])nv[i].textContent=T(x[0],x[1])});const h=(location.hash||"#home").slice(1).split("/");const f=V[h[0]]||V.home;
  if(h[0]==="s"){app.innerHTML=vSess(h[1])}else app.innerHTML=f(h[1],h[2]);
  if(h[0]==="tools"&&window.initTools)initTools();window.scrollTo(0,0)}
 function clean(t){const o=JSON.parse(t);const f=v=>typeof v==="string"?scrub(v):Array.isArray(v)?v.map(f):v&&typeof v==="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,f(x)])):v;return f(o)}
