@@ -1,0 +1,1045 @@
+{
+ "year": "2013",
+ "mc": [
+  {
+   "n": 1,
+   "q": "In a DBMS, a database designer designs a form for a clerk to use to enter data. Why does he choose to design a form?",
+   "o": [
+    "Multimedia files can be imported.",
+    "It simplifies the user interface.",
+    "More data can be entered at the same time.",
+    "The data entry uses less system computation time."
+   ],
+   "a": "B",
+   "pct": "56%",
+   "topic": "A2",
+   "exp": "A form gives the clerk a simple, friendly interface for data entry.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 2,
+   "q": "A public library is going to digitise a collection of valuable antique books. What is the major benefit of digitisation?",
+   "o": [
+    "The library can destroy the books to save storage space.",
+    "More people can easily access the books.",
+    "It promotes good ergonomic practices.",
+    "It improves the protection of intellectual property."
+   ],
+   "a": "B",
+   "pct": "83%",
+   "topic": "A1",
+   "exp": "Digital copies can be read by many people at once without touching the fragile originals.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 3,
+   "q": "In data processing, a clerk in a school types in the examination marks of students from a mark sheet into a computer system. Then he prints out the marks. What should he do next?",
+   "o": [
+    "Destroy the mark sheet.",
+    "Sort the students by mark.",
+    "Find the student with the highest mark.",
+    "Check the printout against the mark sheet."
+   ],
+   "a": "D",
+   "pct": "86%",
+   "topic": "A1",
+   "exp": "Proofreading the printout against the source document is verification of input.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 4,
+   "q": "Mary uses a utility program to group the following 100 document files and combine them into a file named ALL.ZIP, and sends an email with this file. Why does she do this?\nD001.DOC, D002.DOC, D003.DOC, …, D100.DOC → ALL.ZIP",
+   "st": [
+    "(1) It is easier to send and receive the documents.",
+    "(2) The file size of the email is smaller.",
+    "(3) The files become cross-platform."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "78%",
+   "topic": "A1",
+   "exp": "Zipping bundles 100 files into one compressed attachment; it doesn't change platform compatibility.",
+   "pg": 2,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 5,
+   "q": "Arthur inserts a video clip in a presentation file and sends an email with the file to Betty. When Betty opens the file, there is only text and the video is missing. Why?",
+   "o": [
+    "The video is infected with a computer virus and has been removed by an antivirus program.",
+    "The presentation file is password-protected.",
+    "Linking instead of embedding is used when inserting the video in the presentation file.",
+    "The video is in MP4 format instead of AVI format."
+   ],
+   "a": "C",
+   "pct": "87%",
+   "topic": "A1",
+   "exp": "A linked video stays on Arthur's computer; only an embedded one travels with the file.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 6,
+   "q": "A combination lock consists of 5 separate switches. Each switch can be set to either the ‘ON’ or ‘OFF’ state. The lock can only be unlocked when all 5 switches are set to the correct switch states.\nHow many different combinations of switch states does this lock have?",
+   "o": [
+    "5",
+    "10",
+    "25",
+    "32"
+   ],
+   "a": "D",
+   "pct": "53%",
+   "topic": "A1",
+   "exp": "Each switch has 2 states: 2⁵ = 32.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 7,
+   "q": "The following two worksheets, WA1 and WA2, in a spreadsheet file are used to store the test results of Secondary 1 students in a school.\nIn order to find the average scores of Amy and Zoey on WA2, a VLOOKUP formula is entered into B2 and then copied into B3. What is the cell range used in the formula?",
+   "o": [
+    "WA2!$A2:$B3",
+    "WA1!$A2:$K240",
+    "WA2!A$2:B$3",
+    "WA1!A$2:K$240"
+   ],
+   "a": "D",
+   "pct": "32%",
+   "topic": "A2",
+   "exp": "The lookup table is on WA1 (rows 2–240); rows must be absolute ($2, $240) so copying down doesn't shift the range.",
+   "pg": 3,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 8,
+   "q": "Which operations are performed by the following SQL command?\nSELECT * FROM EXAM WHERE CLASS='1A' ORDER BY SCORE DESC",
+   "st": [
+    "(1) Sorting",
+    "(2) Counting",
+    "(3) Filtering",
+    "(4) Updating"
+   ],
+   "o": [
+    "(1) and (3) only",
+    "(1) and (4) only",
+    "(2) and (3) only",
+    "(2) and (4) only"
+   ],
+   "a": "A",
+   "pct": "85%",
+   "topic": "A2",
+   "exp": "WHERE filters, ORDER BY sorts.",
+   "pg": 3,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 9,
+   "q": "In a data transmission system, a parity check is applied. One of the following received codes is invalid. Which one is it?",
+   "o": [
+    "0101 0101",
+    "1000 0100",
+    "1111 0001",
+    "0000 0011"
+   ],
+   "a": "C",
+   "pct": "50%",
+   "topic": "A1",
+   "exp": "A, B, D have an even number of 1s; C has five 1s, so it breaks even parity.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 10,
+   "q": "The following table in a database stores the information on employees.\n<table><tr><th>NAME</th><th>SEX</th><th>DATE OF BIRTH</th><th>PHONE</th></tr><tr><td>KELLY</td><td>F</td><td>18/10/1988</td><td>91234567</td></tr><tr><td>IVAN</td><td>M</td><td>20/11/1989</td><td>99887766</td></tr><tr><td>JADE</td><td>F</td><td>22/10/1990</td><td>98761234</td></tr></table>\nWhy are the employees' dates of birth instead of their ages stored?",
+   "o": [
+    "The employees' privacy can be better protected.",
+    "Less memory is required for the storage.",
+    "No data update is required.",
+    "The related SQL queries are simpler."
+   ],
+   "a": "C",
+   "pct": "88%",
+   "topic": "A2",
+   "exp": "Age changes every year; date of birth never does, so no updating is needed.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 11,
+   "q": "With 8-bit two's complement representation, which of the following operations can produce an overflow error?",
+   "st": [
+    "(1) Addition of two positive integers",
+    "(2) Addition of two negative integers",
+    "(3) Addition of a positive integer and a negative integer"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "37%",
+   "topic": "A1",
+   "exp": "Overflow only happens when both numbers have the same sign; mixed signs can't exceed the range.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 12,
+   "q": "When editing page numbers and hyperlinks in a document, which of the following statements is correct?",
+   "o": [
+    "A browser must be open when clicking the hyperlinks.",
+    "The page numbers are printed as footnotes.",
+    "The hyperlinks facilitate the reading of the document.",
+    "The page numbers must start from 1."
+   ],
+   "a": "C",
+   "pct": "21%",
+   "topic": "A1",
+   "exp": "Hyperlinks let readers jump to related places, helping reading.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 13,
+   "q": "Which of the following features in presentation software can control the transition of slides?",
+   "st": [
+    "(1) Action button",
+    "(2) Hyperlink",
+    "(3) Slide layout"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) only",
+    "(3) only"
+   ],
+   "a": "A",
+   "pct": "29%",
+   "topic": "A1",
+   "exp": "Action buttons and hyperlinks can jump to other slides; layout only arranges content.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 14,
+   "q": "Eliza edits a document with two images. The final outcome is not as expected, as shown below.\nWhat feature in the word processor should Eliza use to correct this?",
+   "o": [
+    "Object grouping",
+    "Paragraph formatting",
+    "Paragraph alignment",
+    "Text wrapping"
+   ],
+   "a": "D",
+   "pct": "64%",
+   "topic": "A1",
+   "exp": "How text flows around an image is controlled by text wrapping.",
+   "pg": 5,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 15,
+   "q": "Ms Wong works in a publishing company and has to create the following three documents.\nFor which document(s) should she adopt the PDF format instead of the DOC format?",
+   "st": [
+    "(1) payment receipt",
+    "(2) electronic book",
+    "(3) template of a sales report"
+   ],
+   "o": [
+    "(1) only",
+    "(1) and (2) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "B",
+   "pct": "42%",
+   "topic": "A1",
+   "exp": "Receipts and e-books should not be edited and must look the same everywhere; a template needs to be editable (DOC).",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 16,
+   "q": "Cathy uses ‘what-if’ analysis in a spreadsheet to solve a problem. Which of the following statements about the analysis is correct?",
+   "o": [
+    "The ‘what-if’ analysis involves different data sets.",
+    "The ‘what-if’ analysis involves different descriptions of the problem.",
+    "The problem involves a database file.",
+    "The problem involves a document file."
+   ],
+   "a": "A",
+   "pct": "39%",
+   "topic": "A2",
+   "exp": "What-if analysis changes input values (data sets) to see how results change.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 17,
+   "q": "Which of the following operations will enlarge the icons and text displayed on a visual display unit?",
+   "o": [
+    "Reduce the number of colours displayed.",
+    "Increase the number of colours displayed.",
+    "Reduce the screen resolution.",
+    "Increase the screen resolution."
+   ],
+   "a": "C",
+   "pct": "63%",
+   "topic": "B",
+   "exp": "Fewer pixels on the same screen means each item takes up more space, so it looks bigger.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 18,
+   "q": "Peter upgrades his desktop computer with a touch screen. Why?",
+   "o": [
+    "This is a good ergonomic practice.",
+    "Many operating systems support touch screens.",
+    "A touch screen can be installed easily.",
+    "A touch screen allows for easier hand eye coordination than a keyboard."
+   ],
+   "a": "D",
+   "pct": "75%",
+   "topic": "B",
+   "exp": "Touching what you see is more direct than typing, so hand-eye coordination is easier.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 19,
+   "q": "A supermarket uses thermal printers instead of dot-matrix printers to print receipts. What are the major reasons for using thermal printers?",
+   "st": [
+    "(1) Less printing noise",
+    "(2) Shorter printing time",
+    "(3) More durable receipts"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "71%",
+   "topic": "B",
+   "exp": "Thermal printers are quiet and fast, but thermal receipts fade, so they're less durable.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 20,
+   "q": "The following diagram shows a basic computer system.\nWhat is K responsible for?",
+   "st": [
+    "(1) Controls devices through device drivers.",
+    "(2) Manages memory.",
+    "(3) Increases the number of application programs.",
+    "(4) Schedules the running of processes."
+   ],
+   "o": [
+    "(1), (2) and (3) only",
+    "(1), (2) and (4) only",
+    "(1), (3) and (4) only",
+    "(2), (3) and (4) only"
+   ],
+   "a": "B",
+   "pct": "77%",
+   "topic": "B",
+   "exp": "K is the OS kernel: it manages devices, memory and processes, but doesn't add applications.",
+   "pg": 6,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 21,
+   "q": "The 64-bit version of an operating system is better than the 32-bit version because",
+   "o": [
+    "the processing power of the CPU is higher.",
+    "the operating system can address more memory locations.",
+    "fewer program errors will occur.",
+    "the data transfer rate of RAM is higher."
+   ],
+   "a": "B",
+   "pct": "54%",
+   "topic": "B",
+   "exp": "A 32-bit OS can address only about 4 GB; 64-bit addresses far more memory.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 22,
+   "q": "In an instruction fetch cycle, which of the following registers are involved?",
+   "st": [
+    "(1) Accumulator",
+    "(2) Memory Data Register (MDR)",
+    "(3) Memory Address Register (MAR)"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "43%",
+   "topic": "B",
+   "exp": "Fetch: PC → MAR, instruction comes into MDR → CIR. The accumulator is used in execution.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 23,
+   "q": "A charity organisation wants to donate laptop computers to the children in developing countries for e-learning. With a limited budget, only one item in the original specifications can be upgraded, as shown below. Which of these is the most appropriate?",
+   "o": [
+    "Original: No network card → Upgrade: 802.11n network interface card",
+    "Original: Built-in graphics card → Upgrade: graphics card with 2G RAM",
+    "Original: Dual-core CPU → Upgrade: Quad-core CPU",
+    "Original: DVD disc drive → Upgrade: Blu-ray disc drive"
+   ],
+   "a": "A",
+   "pct": "85%",
+   "topic": "B",
+   "exp": "E-learning needs network access; without a network card the laptops can't go online.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 24,
+   "q": "A search engine can automatically return the search results related to the country in which the computer is located. Which of the following discloses this location information?",
+   "o": [
+    "The network interface card",
+    "The bandwidth of the connection",
+    "The operating system",
+    "The Internet Service Provider"
+   ],
+   "a": "D",
+   "pct": "62%",
+   "topic": "C1",
+   "exp": "The IP address given by the ISP shows which country/region the user is in.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 25,
+   "q": "Fiona creates a web page to show a photo of her child. In a web browser, the photo cannot be displayed, as shown below.\nWhat is the possible mistake she has made?",
+   "o": [
+    "Adopted improper text format.",
+    "Used an incorrect filename for the photo.",
+    "Missed some HTML tags.",
+    "Inserted a frame that is too large."
+   ],
+   "a": "B",
+   "pct": "54%",
+   "topic": "C2",
+   "exp": "A broken image icon usually means the src path/filename is wrong.",
+   "pg": 7,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 26,
+   "q": "A company develops an internal email system. It adopts HTML format instead of plain text for the email because",
+   "o": [
+    "the email size is smaller.",
+    "browsers can open the email.",
+    "text formatting can be applied.",
+    "the POP protocol can be used."
+   ],
+   "a": "C",
+   "pct": "27%",
+   "topic": "C1",
+   "exp": "HTML email supports fonts, colours, etc.; plain text can't.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 27,
+   "q": "In an email system, what is the use of IMAP and SMTP?",
+   "o": [
+    "IMAP and SMTP are application programs that regulate email transmission.",
+    "IMAP and SMTP are the part of the operating system that manages email resources.",
+    "IMAP and SMTP are utility programs that improve the efficiency of email transmission.",
+    "IMAP and SMTP are sets of rules that determine how email is transmitted."
+   ],
+   "a": "D",
+   "pct": "53%",
+   "topic": "C1",
+   "exp": "Protocols are sets of rules for communication.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 28,
+   "q": "In the following diagram, X is a device for transmitting high definition videos received from the Internet to the TV using streaming technology.\nWhich of the following specifications are necessary in X?",
+   "st": [
+    "(1) 2TB hard disk",
+    "(2) 8GB flash memory",
+    "(3) Audio output",
+    "(4) HDMI output",
+    "(5) VGA output"
+   ],
+   "o": [
+    "(2) and (4) only",
+    "(3) and (5) only",
+    "(1), (2) and (3) only",
+    "(1), (4) and (5) only"
+   ],
+   "a": "A",
+   "pct": "40%",
+   "topic": "B",
+   "exp": "Streaming only needs a small buffer (flash), and HDMI carries HD video and audio to the TV.",
+   "pg": 8,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 29,
+   "q": "Which of the following is a function of a switch?",
+   "st": [
+    "(1) Connects computers to form a LAN.",
+    "(2) Controls the network traffic in a network.",
+    "(3) Joins two networks.",
+    "(4) Connects a LAN to the Internet."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(3) and (4) only",
+    "(1), (2) and (4) only",
+    "(2), (3) and (4) only"
+   ],
+   "a": "A",
+   "pct": "37%",
+   "topic": "C1",
+   "exp": "A switch links devices in one LAN and forwards frames only to the right port; joining networks is a router's job.",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 30,
+   "q": "Dry run the following algorithm.\nX ← 1\nY ← 20\nwhile X < Y\n   output 'A'\n   X ← X + 2\n   Y ← Y - 2\nHow many character 'A's are displayed?",
+   "o": [
+    "5",
+    "6",
+    "10",
+    "20"
+   ],
+   "a": "A",
+   "pct": "72%",
+   "topic": "D1",
+   "exp": "(X,Y): (1,20)(3,18)(5,16)(7,14)(9,12) → 5 outputs, then (11,10) stops.",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 31,
+   "q": "In the following algorithm, what input value of B will generate a run-time error?\ninput B\nA ← 2\nC ← 2\nD ← square root of (B × B - 4 × A × C)\noutput D",
+   "o": [
+    "-4",
+    "2",
+    "4",
+    "5"
+   ],
+   "a": "B",
+   "pct": "72%",
+   "topic": "D2",
+   "exp": "B = 2: 4 − 16 = −12, square root of a negative number → run-time error.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 32,
+   "q": "The following two pseudo code segments are used for searching.\n<table><tr><th>S1</th><th>S2</th></tr><tr><td><pre>J ← 1\nwhile J <= 10000\n   if st = N[J]\n      Found ← J\n   J ← J + 1</pre></td><td><pre>Flag ← 0\nJ ← 1\nwhile J <= 10000 and Flag = 0\n   if st = N[J]\n      Found ← J\n      Flag ← 1\n   J ← J + 1</pre></td></tr></table>\nWhen comparing the execution times of the two segments, which of the following statements is correct?",
+   "o": [
+    "S1 is generally faster.",
+    "S2 is generally faster.",
+    "They are more or less the same.",
+    "The comparison cannot be determined."
+   ],
+   "a": "B",
+   "pct": "19%",
+   "topic": "D1",
+   "exp": "S2 stops as soon as the item is found; S1 always checks all 10000.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 33,
+   "q": "What is the major advantage of using an array in algorithm design?",
+   "o": [
+    "The modular approach can be used in the design.",
+    "It is useful in iteration design.",
+    "The size of an array is flexible.",
+    "The memory used is less."
+   ],
+   "a": "B",
+   "pct": "35%",
+   "topic": "D2",
+   "exp": "Indexed elements can be processed with a loop variable.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 34,
+   "q": "Which of the following statements about open source software is correct?",
+   "o": [
+    "Open source software is written by open source programming languages.",
+    "Open source software is executed in open source operating systems.",
+    "The source code can be copied, modified and redistributed freely.",
+    "Private companies cannot use open source software to make a profit."
+   ],
+   "a": "C",
+   "pct": "73%",
+   "topic": "E",
+   "exp": "Open source = source code available to copy, modify and share.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 35,
+   "q": "The following flowchart illustrates an algorithm that outputs the maximum value of four input numbers.\nThe algorithm cannot produce the correct result for one of the following sets of input numbers. Which set?",
+   "o": [
+    "0, 0, 0, 0",
+    "-8, 7, 6, -3",
+    "-2, -5, -4, -6",
+    "0, -1, -5, -9"
+   ],
+   "a": "C",
+   "pct": "40%",
+   "topic": "D1",
+   "exp": "M starts at 0, so if all inputs are negative the output stays 0 instead of the real maximum.",
+   "pg": 10,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 36,
+   "q": "When Peter tries to change the password of his computer account, the following screen is shown.\nChange password\nCurrent password: ____\nNew password: ____\nRe-enter new password: ____\n[Save] [Cancel]\nWhat is/are the use(s) of ‘Current password’?",
+   "st": [
+    "(1) It improves the password strength.",
+    "(2) It minimises typing errors.",
+    "(3) It prevents other people from changing the password."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) only",
+    "(3) only"
+   ],
+   "a": "D",
+   "pct": "89%",
+   "topic": "C2",
+   "exp": "Asking for the current password proves it's the owner; re-entering the new one is what catches typos.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 37,
+   "q": "Which of the following can reduce the threats from using social networking web sites?",
+   "st": [
+    "(1) Block or ignore people that you do not know or trust.",
+    "(2) Use default privacy settings to restrict access.",
+    "(3) Only disclose the name and address in the account."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "62%",
+   "topic": "E",
+   "exp": "Default settings are often public, and disclosing your address is risky.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 38,
+   "q": "In a company, all URLs browsed through the office computers are recorded by a proxy server. Which of the following statements is correct?",
+   "o": [
+    "The URLs should be recorded during office hours only.",
+    "The records should be checked by authorised staff only.",
+    "The records are the digital property of the staff.",
+    "The company has committed a computer crime."
+   ],
+   "a": "B",
+   "pct": "73%",
+   "topic": "E",
+   "exp": "Logs contain personal data, so only authorised staff should access them.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 39,
+   "q": "For the sake of their health, users should take a rest after every hour of computer use. A software company wants to improve its word processing software to include this ergonomic feature. When a user uses the software for an hour, the software should",
+   "st": [
+    "(1) display an alert message on the screen.",
+    "(2) send an alert email to the user.",
+    "(3) shut down the computer automatically."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "92%",
+   "topic": "E",
+   "exp": "An on-screen alert is immediate; email may be unread, and shutting down loses work.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 40,
+   "q": "Peter uses peer-to-peer file sharing software to download a commercial application program. His friends advise him not to install it. Why?",
+   "st": [
+    "(1) His action will create a digital divide.",
+    "(2) The application program may be spyware.",
+    "(3) He may infringe copyright law."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "88%",
+   "topic": "E",
+   "exp": "Pirated software from P2P may carry malware and breaks copyright law.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  }
+ ],
+ "lq": [
+  {
+   "n": 1,
+   "topic": "C1",
+   "pg": [
+    13,
+    14
+   ],
+   "stem": "John wants to set up a local area network with a desktop computer, a smartphone and a printer at home, as shown below:<br>[Diagram: printer point P attached to the Desktop computer; Desktop computer —cable X— Wireless router; Wireless router —cable Y— Modem —cable Z— Internet; Smartphone; printer point Q attached to the Wireless router]",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "John connects the printer to the network at P instead of Q. What is the advantage and disadvantage of this?\nAdvantage:\nDisadvantage:",
+     "m": 2,
+     "ms": "Advantage: It is easy to control / set up the printer.\nDisadvantage: The printer can be used only when the desktop computer is on. / The desktop computer runs slower when the printer is printing."
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "The printer is equipped with RAM and ROM. When John prints a document, what will the RAM and ROM store?\n(1) RAM\n(2) ROM",
+     "m": 2,
+     "ms": "(1) data of the document\n(2) printer's firmware / startup program"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Suggest two possible ways to link up the desktop computer and the smartphone.",
+     "m": 2,
+     "ms": "Any two (1×2): WiFi network through the wireless router / Bluetooth / USB cable"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "X and Z are two different cables. What is the major difference in functional characteristic between them?",
+     "m": 1,
+     "ms": "data transfer rate / maximum length of a cable segment"
+    },
+    {
+     "l": "(c)",
+     "q": "The rear part of the router is shown in the diagram below. Mark ‘X’ and ‘Y’ on the diagram to indicate where the cables X and Y should be connected.\n[Router rear panel: LAN (4 ports) | WAN (1 port) | DC/9V]",
+     "m": 2,
+     "ms": "X: a LAN port\nY: the WAN port"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Someone suggests that John build a Domain Name System (DNS) to improve his network services. John disagrees with this suggestion.\nWhat network service does a DNS mainly provide?",
+     "m": 1,
+     "ms": "DNS resolves domain names into IP addresses for the purpose of locating network services and devices worldwide."
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Do you agree with John's view? Explain briefly.",
+     "m": 2,
+     "ms": "Yes, John does not need it because his network is just a LAN / setup of a DNS is complicated and his SOHO network is a simple network / ISP can provide this service for him."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "topic": "C1",
+   "pg": [
+    15,
+    16
+   ],
+   "stem": "Janice is planning the annual Charity Run for her school. She uses graphics software to create a map with the route of the Charity Run and posts it on the school's web site.",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Janice decides to store the map as MAP.JPG instead of MAP.BMP. Give one benefit of her decision.",
+     "m": 1,
+     "ms": "smaller file size / supported by many browsers"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Janice sets up an email client program on her computer to help her in organising the Charity Run.\nSuggest two protocols for receiving email that Janice may use.\n(1) ____ (2) ____",
+     "m": 2,
+     "ms": "POP3, IMAP (1×2)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Janice's friend, Alan, sends her an email with the following information.\nTo: Janice\nCc: Betty\nBcc: Charles\nSubject: Route of Charity Run\nJanice finds that the email client program classifies Alan's email as spam. What does she need to do to prevent this happening again?",
+     "m": 1,
+     "ms": "Add Alan's email address in the trust (non-spam) list of the email client program."
+    },
+    {
+     "l": "(b)(iii)",
+     "q": "Upon reading Alan's email, Janice tries to reply to all the email accounts involved. Who will receive her email?",
+     "m": 1,
+     "ms": "Alan and Betty (Charles was Bcc, so his address is hidden)."
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Janice keeps a lot of videos and pictures of the annual Charity Runs of the past few years on her notebook computer.\nGive two benefits to Janice of using a SSD.",
+     "m": 2,
+     "ms": "Any two (1×2): It has a higher data transfer rate. / It consumes less electricity. / It is smaller in size. / It has a better shock resistance. / It is lighter. / It is more durable."
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Janice uploads the videos and pictures to the school's web site and the web site includes a statement ‘© All rights reserved’. If the statement were removed, would the school own the copyright of the web site? Explain briefly.",
+     "m": 2,
+     "ms": "Yes (1), copyright ownership does not require any registration or declaration (1)."
+    },
+    {
+     "l": "(d)(i)",
+     "q": "To promote the Charity Run, Janice writes an article in the school newsletter and inserts the following code for linking to the school's web site. [QR code]\nGive one advantage of using this code over a bar code.",
+     "m": 1,
+     "ms": "It can store more data. / It has a higher error correction capability. / It can be scanned in different orientation. / It can be made up of more types of data (e.g. Kanji)."
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "What is the benefit of using this code in the school newsletter?",
+     "m": 1,
+     "ms": "It is faster to input the URL into a mobile device for accessing the web site. / It can reduce typing errors."
+    },
+    {
+     "l": "(d)(iii)",
+     "q": "Describe another kind of use of this code.",
+     "m": 1,
+     "ms": "It can store a phone number or contact information. / It can store product information."
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "topic": "E",
+   "pg": [
+    17,
+    18
+   ],
+   "stem": "Amy, Billy and Charles work in different offices in a company. Read their conversation about using computers and answer the questions below.<br>Amy: Charles, your office does not have a good ergonomic environment.<br>Billy: Charles, you have installed a Bit Torrent (BT) program on your computer. You should delete it.<br>Charles: No, I will still keep the BT program and use it.<br>Amy: Charles, we installed the same anti-virus software at the same time but only your computer is infected.",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Give two possible features of the setup of Charles' office that could easily lead to eye strain when using the computer.",
+     "m": 2,
+     "ms": "Any two (1×2): improper viewing angle of the monitor / improper height of the monitor / distance from the monitor to his eyes too close / insufficient light / close to the window without curtain"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Billy and Charles have different views on the use of the BT program.\nGive a reason to support Billy's recommendation.",
+     "m": 1,
+     "ms": "Charles would download some software that the sources come from unidentified individual users; the software might be piracy copies."
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Give a reason to support Charles' decision.",
+     "m": 1,
+     "ms": "Charles can share working files with other colleagues efficiently."
+    },
+    {
+     "l": "(c)",
+     "q": "Why is only Charles' computer infected? Give two possible reasons.",
+     "m": 2,
+     "ms": "Any two (1×2):\n• Charles' computer is infected with new computer virus in anonymous files when using BT program.\n• Charles deactivates his anti-virus software.\n• Charles does not regularly update the definition database of the anti-virus software."
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Charles: The operating system of my computer uses Unicode instead of Big-5 code and GB code.\nBilly: Unicode only includes around 20,000 Chinese characters.\nAmy: Not any more. As of September 2012, Unicode includes more than 110,000 characters.\nTo represent a set of 20,000 characters using binary code, what is the minimum number of bits required? Show your calculation.",
+     "m": 2,
+     "ms": "2¹⁴ (16384) < 20,000 < 2¹⁵ (32768)\n15 bits are needed."
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Referring to Amy's comment, do the 110,000 characters include traditional and simplified Chinese characters only? Explain briefly.",
+     "m": 1,
+     "ms": "No. Other than the Chinese characters, there are characters of other languages such as Japanese."
+    },
+    {
+     "l": "(e)",
+     "q": "Amy, Billy and Charles go to a public library and want to use workstations.\nCharles: The email account has not been logged out. There is a coupon attached to the email. Let me print it so we can use it.\nBilly: The security of the workstations is very low. Secure Sockets Layer (SSL) should be used.\nDescribe two illegal offences that Charles would do if he accessed the email and printed the coupon.",
+     "m": 2,
+     "ms": "He accesses the email account without authorization.\nHe steals the coupon."
+    },
+    {
+     "l": "(f)",
+     "q": "Can SSL prevent Charles from accessing the email account mentioned above? Explain briefly.",
+     "m": 2,
+     "ms": "No (1), SSL is used to secure the data transmission (encryption) (1)."
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "topic": "A2",
+   "pg": [
+    19,
+    20
+   ],
+   "stem": "Sarah is a librarian in a secondary school. She uses a table in a database, LOAN, to store the book circulation records.<br><b>LOAN</b><table><tr><th>Field name</th><th>Type</th><th>Description</th></tr><tr><td>STUID</td><td>Character</td><td>Student's identity code</td></tr><tr><td>TRANID</td><td>Character</td><td>Transaction number</td></tr><tr><td>BOOKID</td><td>Character</td><td>Identity code of the book</td></tr><tr><td>LOANDATE</td><td>Date</td><td>Date of Loan</td></tr><tr><td>DUEDATE</td><td>Date</td><td>Due Date</td></tr><tr><td>RETDATE</td><td>Date</td><td>Date of Return</td></tr><tr><td>FINE</td><td>Integer</td><td>Fine for late return</td></tr></table>",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "Suggest a primary key for LOAN.",
+     "m": 1,
+     "ms": "TRANID"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Suggest a validation check on each of the following fields.\nDUEDATE\nFINE",
+     "m": 2,
+     "ms": "DUEDATE – It should not be earlier than LOANDATE.\nFINE – It should be a non-negative number."
+    },
+    {
+     "l": "(b)",
+     "q": "Sarah executes a SQL command on LOAN with four records, as shown below.\nSELECT STUID, COUNT(*) FROM LOAN GROUP BY STUID\n<table><tr><th>STUID</th><th>TRANID</th><th>BOOKID</th><th>LOANDATE</th><th>DUEDATE</th><th>RETDATE</th><th>FINE</th></tr><tr><td>20101001</td><td>20130001</td><td>123456789</td><td>02/01/2013</td><td>16/01/2013</td><td>17/01/2013</td><td>2</td></tr><tr><td>20101001</td><td>20130002</td><td>234567891</td><td>06/01/2013</td><td>20/01/2013</td><td>30/01/2013</td><td>5</td></tr><tr><td>20101001</td><td>20130003</td><td>345678912</td><td>08/01/2013</td><td>22/01/2013</td><td>09/01/2013</td><td>0</td></tr><tr><td>20102002</td><td>20130004</td><td>456789123</td><td>19/01/2013</td><td>02/02/2013</td><td>22/01/2013</td><td>0</td></tr></table>\nWhat is the output?",
+     "m": 2,
+     "ms": "20101001  3\n20102002  1"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Sarah extracts some data from the database and stores it in a worksheet, as shown below. The total fine for late returns for each student is stored in column D.\n<table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr><tr><td>1</td><td>STUID</td><td>Name</td><td>Form</td><td>Total Fine ($)</td><td>Email?</td><td></td><td colspan=\"2\">Summary</td></tr><tr><td>2</td><td>20121001</td><td>Wong Siu Man</td><td>1</td><td>2</td><td></td><td></td><td>Form</td><td>Result</td></tr><tr><td>3</td><td>20121002</td><td>Chan Tai Man</td><td>1</td><td>10</td><td></td><td></td><td>1</td><td></td></tr><tr><td>4</td><td>20112001</td><td>Lee Sai Man</td><td>2</td><td>12</td><td></td><td></td><td>2</td><td></td></tr><tr><td>5</td><td>20113008</td><td>Ng Wai Keung</td><td>2</td><td>12</td><td></td><td></td><td>3</td><td></td></tr><tr><td>⋮</td><td colspan=\"8\"></td></tr><tr><td>160</td><td>20102002</td><td>Ho Chung Man</td><td>3</td><td>0</td><td></td><td></td><td></td><td></td></tr></table>\nSarah wants to send a reminder email to the students whose fines total more than $10. She uses column E to store ‘Y’ if the email is needed, and ‘N’ otherwise. She enters a formula into E2 and then copies it to the other cells in column E. Write the formula in E2.",
+     "m": 1,
+     "ms": "=IF(D2>10,\"Y\",\"N\")"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Sarah enters the following formula into H3 and then copies it into H4:H5 so as to calculate the sum of all fines in each form.\n=SUMIF(C2:C160,$G$3,$D$2:$D$160)\nCorrect the formula in H3 below.\n=SUMIF(______, ______, ______)",
+     "m": 2,
+     "ms": "=SUMIF(C$2:C$160,G3,D$2:D$160)\n(1 mark for C$2:C$160 and 1 mark for G3, D$2:D$160 all correct)"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Sarah copies the worksheet into a document in a word processor by creating a dynamic link. For each of the following actions, is there any change in the worksheet? If yes, describe the change briefly.\nDelete the content in A1 of the worksheet in the document and save the document.",
+     "m": 1,
+     "ms": "Yes. The content in A1 of the worksheet in the spreadsheet is deleted."
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Delete the worksheet in the document and save the document.",
+     "m": 1,
+     "ms": "There is no change in the spreadsheet."
+    },
+    {
+     "l": "(e)",
+     "q": "Sarah creates a presentation file with hyperlinks and multimedia elements and posts it on the school's web site. A student downloads and opens the file. He finds some technical problems regarding the hyperlinks and multimedia elements. Describe two possible technical problems.",
+     "m": 2,
+     "ms": "Any two (1×2):\n• The hyperlinks involve Sarah's local files.\n• The file sizes of the multimedia elements are too large.\n• Some videos cannot be played because some codec is missing."
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "D1",
+   "pg": [
+    21,
+    22
+   ],
+   "stem": "A department store gives its members a bonus card. In a month, a member, Mary, has 10 transactions with the bonus card and the amounts are stored in T[1], T[2], …, T[10].",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Complete the following algorithm, ALG1, to calculate the total amount, TOTAL, that Mary has spent.\nALG1\nTOTAL ← [____]\nI ← 1\nWhile I [____] 10 do\n   TOTAL ← [____]\n   I ← I + 1",
+     "m": 3,
+     "ms": "0\n<=\nTOTAL + T[I]"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "The department store has a sales promotion. Every month, members do not have to pay the transaction with the lowest amount among the first 10 transactions in which the bonus card was used.\nComplete the following algorithm, ALG2, to find the transaction with the lowest amount for Mary.\nALG2\nM ← 1\nJ ← 1\nWhile J <= 10 do\n   If T[M] [____] T[J] do\n      M ← J\n   J ← J + 1",
+     "m": 1,
+     "ms": "> (or >=)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Could the second line of ALG2 be changed to ‘J ← 2’? Explain briefly.",
+     "m": 1,
+     "ms": "Yes, it is because the first comparison in the while loop (T[1] > T[1]) is redundant."
+    },
+    {
+     "l": "(c)",
+     "q": "In this sales promotion, ALG3 is used to calculate the actual payment, PAYMENT, for Mary. ALG3 includes ALG1 and ALG2. Complete ALG3.\nALG3\nExecute ______\nExecute ______\nPAYMENT ← ______",
+     "m": 3,
+     "ms": "Execute ALG1 (or ALG2)\nExecute ALG2 (or ALG1)\nPAYMENT ← TOTAL − T[M]"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "The department store has another sales promotion. The 20 members with the highest total spending each month can enjoy 20% off all year round. A computer application system is used to find these 20 members.\nShould the system be a single-user system or a multi-user system? Explain briefly.",
+     "m": 2,
+     "ms": "Single-user system (1): As the system is used to find the 20 members, one single user should be sufficient to generate the list of the members (1)."
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Should the system be a batch processing system or a real-time system? Explain briefly.",
+     "m": 2,
+     "ms": "Batch processing system (1): As the system will generate the list based on the monthly total amounts, it should be a batch processing system to perform the tasks in one batch each month (1)."
+    }
+   ]
+  }
+ ]
+}
