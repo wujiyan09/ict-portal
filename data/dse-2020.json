@@ -1,0 +1,1033 @@
+{
+ "year": "2020",
+ "mc": [
+  {
+   "n": 1,
+   "q": "A Hong Kong identity card number is wrongly entered into a computer system, as shown below:<table><tr><th>Original number</th><th>Wrong input</th></tr><tr><td>A123456(3)</td><td>A213456(3)</td></tr></table>Which of the following can help detect this error?",
+   "st": [
+    "(1) Range check",
+    "(2) Input data twice",
+    "(3) Check digit"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "74%",
+   "topic": "A1",
+   "exp": "Double entry catches the swapped digits, and the check digit (3) no longer matches.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 2,
+   "q": "Which of the following decimal values is equivalent to 1010 0001 in 8-bit two's complement representation?",
+   "o": [
+    "33",
+    "-33",
+    "95",
+    "-95"
+   ],
+   "a": "D",
+   "pct": "53%",
+   "topic": "A1",
+   "exp": "-128 + 32 + 1 = -95.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 3,
+   "q": "Amy uses JPG format instead of BMP format when scanning photos. What is/are the possible reason(s) for this?",
+   "st": [
+    "(1) To decrease the file size of the photos",
+    "(2) To increase the number of pixels per photo",
+    "(3) To increase the number of colours displayed"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "78%",
+   "topic": "A1",
+   "exp": "JPG compresses the image; it does not add pixels or colours.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 4,
+   "q": "A company has 30 000 employees. Each employee has a staff number. What is the minimum number of bits required to represent the staff numbers?",
+   "o": [
+    "5",
+    "14",
+    "15",
+    "32"
+   ],
+   "a": "C",
+   "pct": "61%",
+   "topic": "A1",
+   "exp": "2^14 = 16384 < 30000 ≤ 2^15 = 32768.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 5,
+   "q": "Assume that X = 2 and Y = 3. Which of the following Boolean expressions returns TRUE?",
+   "o": [
+    "((X > Y) AND (Y > 4)) OR (1 > X)",
+    "((X < Y) AND (Y > 4)) OR (1 > X)",
+    "(X > Y) AND ((Y < 4) OR (1 < X))",
+    "(X < Y) AND ((Y < 4) OR (1 < X))"
+   ],
+   "a": "D",
+   "pct": "91%",
+   "topic": "D1",
+   "exp": "X < Y is true and Y < 4 is true, so D is TRUE AND TRUE.",
+   "pg": 1,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 6,
+   "q": "Which of the following character sets can be used to represent simplified Chinese characters, traditional Chinese characters and English characters?",
+   "st": [
+    "(1) ASCII",
+    "(2) Unicode",
+    "(3) GB code"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "79%",
+   "topic": "A1",
+   "exp": "Only Unicode covers both Chinese scripts and English; GB is for simplified Chinese.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 7,
+   "q": "What of the following is/are the benefit(s) of e-government?",
+   "st": [
+    "(1) Government information can be more easily accessed by the public in digital format.",
+    "(2) The data security of the government information is enhanced.",
+    "(3) The digital divide in society can be closed."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "64%",
+   "topic": "E",
+   "exp": "E-government improves access; it does not by itself raise security or close the digital divide.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 8,
+   "q": "Mary sends an email with a document in PDF instead of DOC format. What is/are the possible reason(s) for this?",
+   "st": [
+    "(1) The document can be encrypted.",
+    "(2) The page layout of the document can be preserved.",
+    "(3) Multimedia elements can be included."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "41%",
+   "topic": "A1",
+   "exp": "PDF keeps the layout fixed; DOC files can also be encrypted and hold multimedia.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 9,
+   "q": "Ms Li plans to design and produce student result slips using student information and examination marks stored in a database. What should she do?",
+   "o": [
+    "Create reports using database software.",
+    "Create hyperlinks to the database using word processing software.",
+    "Create SQL commands using spreadsheet software.",
+    "Import data and create a pivot table using spreadsheet software."
+   ],
+   "a": "A",
+   "pct": "39%",
+   "topic": "A2",
+   "exp": "Database report features format records into printable slips.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 10,
+   "q": "For which of the following tasks should spreadsheet 'what-if' scenarios be created?",
+   "st": [
+    "(1) Find the students who are awarded 90 marks or above in a Mathematics examination.",
+    "(2) Estimate the cost of a product produced by different manufacturers.",
+    "(3) Create a chart of monthly average temperatures."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "58%",
+   "topic": "A2",
+   "exp": "What-if scenarios compare outcomes under different inputs, such as different manufacturers' costs.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 11,
+   "q": "There are 6 records in a database table PET, as shown below:<table><tr><th>PID</th><th>WEIGHT</th><th>PTYPE</th></tr><tr><td>103</td><td>15</td><td>A</td></tr><tr><td>105</td><td>18</td><td>P</td></tr><tr><td>106</td><td>12</td><td>P</td></tr><tr><td>109</td><td>30</td><td>D</td></tr><tr><td>110</td><td>4</td><td>P</td></tr><tr><td>112</td><td>30</td><td>D</td></tr></table>What value(s) will be included in the output of the following SQL statement?<pre>SELECT SUM(WEIGHT) FROM PET GROUP BY PTYPE</pre>",
+   "st": [
+    "(1) 109",
+    "(2) 15",
+    "(3) 34",
+    "(4) 60"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(3) and (4) only",
+    "(2), (3) and (4) only"
+   ],
+   "a": "D",
+   "pct": "73%",
+   "topic": "A2",
+   "exp": "Group sums: A = 15, P = 18+12+4 = 34, D = 60.",
+   "pg": 3,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 12,
+   "q": "A teacher creates a presentation which includes the following slide. (Slide titled 'Survey data on ways of going home' with an exploded pie chart and a tiny legend: On foot, By school bus, By MTR.)<br>Which element(s) of the slide should the teacher edit to create a more attractive presentation?",
+   "st": [
+    "(1) SQL",
+    "(2) Font",
+    "(3) Chart"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "73%",
+   "topic": "A1",
+   "exp": "The legend font is too small and the chart could be clearer; SQL has nothing to do with slides.",
+   "pg": 3,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 13,
+   "q": "Which of the following processes is an example of data collection?",
+   "o": [
+    "Taking Towngas meter readings",
+    "Inserting a bank card into an automated teller machine",
+    "Putting a photo on a scanner for scanning",
+    "Entering test marks written on a mark sheet into a spreadsheet"
+   ],
+   "a": "A",
+   "pct": "53%",
+   "topic": "A1",
+   "exp": "Reading meters gathers raw data at the source.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 14,
+   "q": "Answer Questions 14 and 15 with reference to the following specifications of computers X, Y and Z. All computers use the same operating system.<table><tr><th></th><th>X</th><th>Y</th><th>Z</th></tr><tr><td>CPU</td><td>Quad-core, 2.8 GHz</td><td>Dual-core, 1.8 GHz</td><td>Quad-core, 2.4 GHz</td></tr><tr><td>RAM</td><td>4 GB</td><td>2 GB</td><td>4 GB</td></tr><tr><td>Storage device</td><td>2TB hard drive</td><td>512 GB SSD</td><td>512 GB SSD</td></tr><tr><td>Network</td><td>LAN port (1000 Mbps)</td><td>802.11ac WiFi</td><td>LAN port (1000 Mbps)<br>802.11ac WiFi</td></tr></table>Which computer(s) has/have the best computational power?",
+   "o": [
+    "X",
+    "Y",
+    "Z",
+    "Y and Z"
+   ],
+   "a": "A",
+   "pct": "83%",
+   "topic": "B",
+   "exp": "X has a quad-core CPU at the highest clock rate.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 15,
+   "q": "(Refer to the specifications of computers X, Y and Z above.) Which computer(s) take(s) the shortest time to boot up?",
+   "o": [
+    "X",
+    "Y",
+    "Z",
+    "X and Z"
+   ],
+   "a": "C",
+   "pct": "47%",
+   "topic": "B",
+   "exp": "Z has both an SSD and a fast quad-core CPU.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 16,
+   "q": "Which of the following is not an advantage of an SSD over a hard drive?",
+   "o": [
+    "Consumes less electricity.",
+    "Generates less heat.",
+    "Supports random access.",
+    "Provides a higher access speed."
+   ],
+   "a": "C",
+   "pct": "51%",
+   "topic": "B",
+   "exp": "Hard drives also support random (direct) access.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 17,
+   "q": "Which of the following descriptions of a driver program is correct?",
+   "o": [
+    "Enables the operating system to manage files.",
+    "Enables the operating system to control a scanner.",
+    "Monitors the status of virus checking.",
+    "Monitors the usage of RAM."
+   ],
+   "a": "B",
+   "pct": "55%",
+   "topic": "B",
+   "exp": "A driver lets the OS communicate with a hardware device.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 18,
+   "q": "Consider the following instruction.<table><tr><th>Address</th><th>Instruction</th><th>Description</th></tr><tr><td>1000</td><td>STORE 1111</td><td>Store the content of the accumulator into the main memory with the address 1111</td></tr></table>In the fetch-decode-execute cycle, what does 'fetch' do?",
+   "o": [
+    "Obtains the instruction from the main memory with the address 1000.",
+    "Obtains the instruction from the main memory with the address 1111.",
+    "Obtains the content of the accumulator.",
+    "Calculates the address of the next instruction by using the control unit (CU)."
+   ],
+   "a": "A",
+   "pct": "60%",
+   "topic": "B",
+   "exp": "Fetch reads the instruction stored at its own address, 1000.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 19,
+   "q": "Answer Questions 19 and 20 with reference to the following network diagram. (Three desktop computers and the teacher's computer are connected by cable to a switch; the switch is connected to an access point (AP); a wireless printer stands on its own.)<br>What service will the teacher's computer commonly provide for the desktop computers?",
+   "st": [
+    "(1) File sharing",
+    "(2) Email",
+    "(3) Web browsing"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "62%",
+   "topic": "C1",
+   "exp": "On a small LAN the teacher's computer typically shares files; email and web need outside servers.",
+   "pg": 5,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 20,
+   "q": "Answer Questions 19 and 20 with reference to the following network diagram. (Three desktop computers and the teacher's computer are connected by cable to a switch; the switch is connected to an access point (AP); a wireless printer stands on its own.)<br>In order to allow all desktop computers to connect to the wireless printer, which of the following action should be taken?",
+   "o": [
+    "The AP should be installed between the switch and teacher's computer.",
+    "The teacher's computer should be turned on.",
+    "The switch should be replaced by a router.",
+    "The wireless printer should be connected to the AP."
+   ],
+   "a": "D",
+   "pct": "73%",
+   "topic": "C1",
+   "exp": "The wireless printer must join the network through the AP.",
+   "pg": 5,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 21,
+   "q": "Which of the following only support(s) sequential access?",
+   "st": [
+    "(1) DVD-RW",
+    "(2) Magnetic tape",
+    "(3) Flash memory"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "79%",
+   "topic": "B",
+   "exp": "Tape must be read in order; discs and flash allow direct access.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 22,
+   "q": "Which of the following statements about the components in a computer is not correct?",
+   "o": [
+    "The arithmetic and logic unit (ALU) is used to perform arithmetic operations.",
+    "The accumulator is a register that stores arithmetic and logic results.",
+    "The data transfer rate of registers is higher than that of the main memory.",
+    "Data buses are used to transfer control signals between the main board and input/output devices."
+   ],
+   "a": "D",
+   "pct": "33%",
+   "topic": "B",
+   "exp": "Data buses carry data; control signals travel on the control bus.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 23,
+   "q": "Which of the following is not appropriate for enhancing students' information literacy?",
+   "o": [
+    "Watching documentaries about the ocean online",
+    "Searching for the installation password of a software package through an online discussion forum",
+    "Reading school newsletters through the school intranet",
+    "Finding the history of computers through the Internet"
+   ],
+   "a": "B",
+   "pct": "81%",
+   "topic": "E",
+   "exp": "Hunting for software passwords online is unethical and likely illegal.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 24,
+   "q": "Which of the following can improve the quality of video conferencing?",
+   "st": [
+    "(1) A camera with a higher resolution",
+    "(2) A larger storage capacity",
+    "(3) A higher network bandwidth"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "C",
+   "pct": "91%",
+   "topic": "C1",
+   "exp": "Better cameras and more bandwidth improve live video; storage does not.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 25,
+   "q": "Which of the following protocols is/are involved when browsing https://www.gov.hk?",
+   "st": [
+    "(1) FTP",
+    "(2) IP",
+    "(3) DNS"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "62%",
+   "topic": "C1",
+   "exp": "DNS resolves the name and IP carries the packets; FTP is not used.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 26,
+   "q": "Which of the following can be used to identify a host computer on the Internet?",
+   "st": [
+    "(1) Email address",
+    "(2) IP address",
+    "(3) Computer name"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "78%",
+   "topic": "C1",
+   "exp": "An IP address uniquely identifies a host on the Internet.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 27,
+   "q": "What is the main function of a network interface card?",
+   "o": [
+    "To find a route for sending data packets",
+    "To make a computer communicate over a network",
+    "To enhance the security level of a communication link",
+    "To support satellite communication"
+   ],
+   "a": "B",
+   "pct": "83%",
+   "topic": "C1",
+   "exp": "A NIC connects the computer to the network.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 28,
+   "q": "When Eva logs on to a web site, she will receive an SMS message on her phone with a password. What is the SMS message about?",
+   "o": [
+    "Parity checking",
+    "Digital watermark",
+    "Digital signature",
+    "Authentication"
+   ],
+   "a": "D",
+   "pct": "90%",
+   "topic": "C2",
+   "exp": "A one-time password by SMS is two-factor authentication.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 29,
+   "q": "Answer Questions 29 and 30 with reference to the following segment of a flowchart. The initial values of P[0], P[1], P[2], P[3] and P[4] are 7, 7, 6, 7 and 9 respectively.<pre>i ← 0, n ← 0\nloop:\n  i < 5?        No  → Output i and n, End\n  Yes: P[i] <= 7?  No  → Output i and n, End\n  Yes: P[i] = 7?   No  → n ← n + 1\n  (then) i ← i + 1, back to loop</pre>What is the output value of i?",
+   "o": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "a": "C",
+   "pct": "65%",
+   "topic": "D1",
+   "exp": "P[4] = 9 fails P[i] <= 7, so the loop stops at i = 4.",
+   "pg": 7,
+   "fig": true,
+   "code": true
+  },
+  {
+   "n": 30,
+   "q": "Answer Questions 29 and 30 with reference to the following segment of a flowchart. The initial values of P[0], P[1], P[2], P[3] and P[4] are 7, 7, 6, 7 and 9 respectively.<pre>i ← 0, n ← 0\nloop:\n  i < 5?        No  → Output i and n, End\n  Yes: P[i] <= 7?  No  → Output i and n, End\n  Yes: P[i] = 7?   No  → n ← n + 1\n  (then) i ← i + 1, back to loop</pre>What is the output value of n?",
+   "o": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "a": "A",
+   "pct": "69%",
+   "topic": "D1",
+   "exp": "Only P[2] = 6 is <= 7 but not 7, so n = 1.",
+   "pg": 7,
+   "fig": true,
+   "code": true
+  },
+  {
+   "n": 31,
+   "q": "What is the output of the following algorithm?<pre>N ← 10\nK ← 0\nWhile  N < 14  do\n      K ← K + N\n      N ← N + 1\nOutput  K</pre>",
+   "o": [
+    "14",
+    "33",
+    "46",
+    "60"
+   ],
+   "a": "C",
+   "pct": "68%",
+   "topic": "D1",
+   "exp": "10 + 11 + 12 + 13 = 46.",
+   "pg": 7,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 32,
+   "q": "What is the output of the following algorithm?<pre>P ← 0\nQ ← 1\nFor i from 1 to 5 do\n   If i < 2 then\n        Output i\n   else\n        R ← P + Q\n        P ← Q\n        Q ← R\n        Output R</pre>",
+   "o": [
+    "1 1 2 2 4",
+    "1 1 2 3 5",
+    "1 2 3 4 5",
+    "1 2 4 8 16"
+   ],
+   "a": "B",
+   "pct": "73%",
+   "topic": "D1",
+   "exp": "i=1 outputs 1, then R = 1, 2, 3, 5 (Fibonacci).",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 33,
+   "q": "What is the output of the following algorithm?<pre>P ← 1\nQ ← 2\nRepeat\n      P ← P + 1\n      Q ← Q * 2\nUntil (P > 4)\nOutput Q</pre>",
+   "o": [
+    "4",
+    "5",
+    "16",
+    "32"
+   ],
+   "a": "D",
+   "pct": "75%",
+   "topic": "D1",
+   "exp": "The loop runs 4 times (P = 2..5), so Q = 2 × 2^4 = 32.",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 34,
+   "q": "A bank updates its automatic teller machine system with new restrictions on cash withdrawals, as follows:<br>• Available cash notes $100, $500 and $1 000<br>• Minimum withdrawal amount = $200<br>• Maximum withdrawal amount = $10 000<br>Which of the following sets of withdrawal amounts should be used as test data for this system update?",
+   "o": [
+    "50, 500, 7 000, 8 000, 9 000, 10 000",
+    "100, 200, 300, 500, 1 000, 30 000",
+    "100, 200, 600, 950, 10 000, 11 000",
+    "100, 1 000, 15 000, 20 000, 25 000, 30 000"
+   ],
+   "a": "C",
+   "pct": "70%",
+   "topic": "D2",
+   "exp": "It tests both boundaries (100/200, 10 000/11 000) and a non-multiple of 100 (950).",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 35,
+   "q": "A student is addicted to online gaming and plays more than 8 hours every day. Which of the following health problems might he encounter?",
+   "st": [
+    "(1) Sleep problems",
+    "(2) Vision problems",
+    "(3) Emotional problems"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "D",
+   "pct": "69%",
+   "topic": "E",
+   "exp": "Long gaming hours can harm sleep, eyesight and mood.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 36,
+   "q": "In a computer network, which of the following can protect a user's privacy from a hacker attack?",
+   "st": [
+    "(1) Create backup of data.",
+    "(2) Update the operating system.",
+    "(3) Install a firewall."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "68%",
+   "topic": "C2",
+   "exp": "OS updates patch holes and a firewall blocks intrusions; backups do not stop data being stolen.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 37,
+   "q": "What is/are the major characteristic(s) of open source software?",
+   "st": [
+    "(1) Developers can set the selling price.",
+    "(2) Users can change the source code.",
+    "(3) All functions of the software can be used during the trial period."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "80%",
+   "topic": "E",
+   "exp": "Open source lets users read and modify the source code.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 38,
+   "q": "An online shop collects its members' personal information. Which of the following actions is/are not appropriate without members' consent?",
+   "st": [
+    "(1) The shop encrypts and uploads all personal information to cloud storage.",
+    "(2) The shop sends all personal information to other online shops which provide other services to members.",
+    "(3) When a member unregisters his/her membership, the shop keeps the personal information permanently to help with his/her re-registration in the future."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "71%",
+   "topic": "E",
+   "exp": "Passing data to others and keeping it longer than needed break data privacy principles.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 39,
+   "q": "When Peter installs a game from a hyperlink sent by his friend, a dialogue box pops up, as shown below:<br>[Message] X has blocked some features of this program.<br>Allow this program to access your private networks?<br>[Cancel] [Allow]<br>What is X in the dialogue box?",
+   "o": [
+    "Firewall",
+    "Browser",
+    "File manager application",
+    "Device manager application"
+   ],
+   "a": "A",
+   "pct": "84%",
+   "topic": "C2",
+   "exp": "A firewall controls which programs may access the network.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 40,
+   "q": "The picture below illustrates good ergonomic practices for using a computer. (A person sits at a desk; P marks the chair's armrest, Q the display unit, R the height of the table.)<br>Which of the following settings are necessary?",
+   "st": [
+    "(1) The angle of the armrest at P should be adjustable.",
+    "(2) The angle of the display unit at Q should be adjustable.",
+    "(3) The height of the table at R should be adjustable."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "26%",
+   "topic": "E",
+   "exp": "An adjustable screen angle and table height fit the user; armrest angle is not needed.",
+   "pg": 10,
+   "fig": true,
+   "code": false
+  }
+ ],
+ "lq": [
+  {
+   "n": 1,
+   "topic": "A2",
+   "pg": [
+    11,
+    12
+   ],
+   "stem": "A school designs a database table, STUDENT, to store the test marks of Secondary One students. Some records are listed below:<br>STUDENT<table><tr><th>CODE</th><th>SNAME</th><th>TEST1</th><th>TEST2</th></tr><tr><td>1A01</td><td>Wong Ka Ka</td><td>90</td><td>92</td></tr><tr><td>1A02</td><td>Chan Tai Man</td><td>65</td><td>98</td></tr><tr><td>1A03</td><td>Li Lai Kit</td><td>39</td><td>64</td></tr><tr><td>1A04</td><td>Ho Tin Man</td><td>89</td><td>47</td></tr><tr><td>1B01</td><td>Lee Lai Lai</td><td>67</td><td>31</td></tr><tr><td>1B02</td><td>Cheung Hoi Yan</td><td>56</td><td>54</td></tr></table>",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Each data entry in CODE consists of the class name and class number of a student. Describe a validation check for CODE.",
+     "m": 1,
+     "ms": "Format check / length check / presence check / unique check, OR proper description of the validation (1). Range check / check digit not accepted."
+    },
+    {
+     "l": "(b)",
+     "q": "Based on the six records given in STUDENT, what is the output after executing the following SQL statement?<pre>SELECT SNAME FROM STUDENT WHERE TEST1 > 90 OR TEST2 > 90</pre>",
+     "m": 2,
+     "ms": "Wong Ka Ka<br>Chan Tai Man<br>(1) correct records + (1) correct field. Follow the actual display; no mark for a 1-line display with two names."
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Some students are absent from the tests and this information should be recorded in STUDENT.<br>It has been suggested that either 'ABS' or 0 should be stored in TEST1 and TEST2 to represent absence. Give a disadvantage of each suggestion.",
+     "m": 2,
+     "ms": "'ABS' (1): 'ABS' may not match the field type in the table (data type mismatch) / the field would also accept other character input, making data validation harder / problems in arithmetical calculation / needs more storage space.<br>0 (1): 0 will be mixed up with those who have got no marks."
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "The school decides to store -1 in TEST1 and TEST2 to represent absence. What precaution should be taken when doing computation work on STUDENT?",
+     "m": 2,
+     "ms": "Before doing arithmetical calculation (e.g. calculating average mark), '-1' should be (1) identified and (1) discarded. / (1) Input -1 as text (adding ' before -1) to (1) avoid involving it in calculation."
+    },
+    {
+     "l": "(d)(i)",
+     "q": "The school uses a spreadsheet to arrange new classes for the students who are promoted to Secondary Two, as shown below:<table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr><tr><td>1</td><td>Student Code</td><td>Name</td><td>Gender</td><td>New Class</td><td></td></tr><tr><td>2</td><td>1A01</td><td>Wong Ka Ka</td><td>F</td><td>2A</td><td></td></tr><tr><td>3</td><td>1A02</td><td>Chan Tai Man</td><td>M</td><td>2B</td><td></td></tr><tr><td>4</td><td>1A04</td><td>Ho Tin Man</td><td>M</td><td>2C</td><td></td></tr><tr><td>5</td><td>1B02</td><td>Cheung Hoi Yan</td><td>F</td><td>2D</td><td></td></tr><tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td></td></tr><tr><td>100</td><td>1D29</td><td>Cheung Yat Sun</td><td>M</td><td>2C</td><td></td></tr><tr><td>101</td><td>1D30</td><td>Cheung Chi Ming</td><td>M</td><td>2D</td><td></td></tr><tr><td>102</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>103</td><td>Class</td><td>M</td><td>F</td><td></td><td></td></tr><tr><td>104</td><td>2A</td><td></td><td></td><td></td><td></td></tr><tr><td>105</td><td>2B</td><td></td><td></td><td></td><td></td></tr><tr><td>106</td><td>2C</td><td></td><td></td><td></td><td></td></tr><tr><td>107</td><td>2D</td><td></td><td></td><td></td><td></td></tr></table>The following steps are used to find the number of male students ('M') and the number of female students ('F') assigned to each class and store the values in B104:C107.<br>Step 1: To combine the content of columns C and D into column E, the teacher enters the formula =CONCATENATE(C2,D2) in E2 and then copies it to E3:E101.<br>Step 2: The teacher enters a formula in B104 and then copies it to B105:C107.<br>Write down the value stored in E101.",
+     "m": 1,
+     "ms": "M2D (1)"
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Complete the formula in B104 below.<pre>=COUNTIF(__________, CONCATENATE(__________, $A104))</pre>",
+     "m": 3,
+     "ms": "=COUNTIF($E$2:$E$101, CONCATENATE(B$103, $A104))<br>(1) E2:E101 (accept E:E / E1:E101); (1) B103; (1) addressing (all $ correct)."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "topic": "D1",
+   "pg": [
+    13,
+    14
+   ],
+   "stem": "Eva plans to improve the system software in a software product.",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Give two major differences between system software and application software.",
+     "m": 2,
+     "ms": "Any two (1×2):<table><tr><th>System software</th><th>Application software</th></tr><tr><td>usually written by low level languages</td><td>usually written by high level languages</td></tr><tr><td>maintains system resources for application software</td><td>runs on the platform provided by system software</td></tr><tr><td>interacts with application software</td><td>interacts with users</td></tr><tr><td>general purpose software used for operating computer hardware</td><td>specific purpose software used by user to perform specific task</td></tr></table>"
+    },
+    {
+     "l": "(b)",
+     "q": "Eva writes an algorithm involving integers, as follows:<pre>Line  Content\n10    Input A, B\n20    Repeat\n30        If A < B then\n40            T ← A\n50            ____ ← ____\n60            ____ ← ____\n70        A ← Remainder of (A/B)\n80    until (A = 0 or B = 0)\n90    Output (A + B)</pre>Lines 40 to 60 are used to swap the contents of A and B. T is a temporary variable. Complete the pseudocode above.",
+     "m": 2,
+     "ms": "Line 50: A ← B (1)<br>Line 60: B ← T (1)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Suppose that the input values for A and B are 9 and 15 respectively. Write down the contents of A and B after each pass on Line 80.<table><tr><th>Iteration</th><th>A</th><th>B</th></tr><tr><td>First</td><td></td><td></td></tr><tr><td>Second</td><td></td><td></td></tr><tr><td>Third</td><td></td><td></td></tr></table>",
+     "m": 3,
+     "ms": "<table><tr><th>Iteration</th><th>A</th><th>B</th></tr><tr><td>First</td><td>6</td><td>9</td></tr><tr><td>Second</td><td>3</td><td>6</td></tr><tr><td>Third</td><td>0</td><td>3</td></tr></table>(1 mark per row)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Suppose that the input values for A and B are the same positive integer. How many times will Line 80 be executed?",
+     "m": 1,
+     "ms": "1 (1)"
+    },
+    {
+     "l": "(d)",
+     "q": "Eva adds the following pseudocode after Line 10 to ensure that the initial values for A and B are positive. Complete the pseudocode.<pre>While (A ____ 0) ____ (B ____ 0) do\n    output \"Invalid input!\"\n    Input A, B</pre>",
+     "m": 2,
+     "ms": "While (A <= 0) or (B <= 0) do<br>(1) <= ; (1) or"
+    },
+    {
+     "l": "(e)",
+     "q": "Eva rewrites Lines 30 to 70 using an 'If-then-else' statement, as shown below. Complete the statement below.<pre>If A < B then\n    B ← __________\nelse\n    A ← __________</pre>",
+     "m": 2,
+     "ms": "B ← Remainder of B/A  or  B-A (1)<br>A ← Remainder of A/B  or  A-B (1)"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "topic": "C1",
+   "pg": [
+    15,
+    16
+   ],
+   "stem": "John helps a clinic to modernise its IT equipment.",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "John installs a web camera in the waiting area for security purposes.<br>John chooses to use MP4 format instead of AVI format to create a backup of the videos captured by the web camera. Give one reason to support his choice.",
+     "m": 1,
+     "ms": "MP4 supports a smaller file size of video. (1)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "John finds that a 1-minute video takes up approximately 10 MB. Calculate the required storage capacity of a daily backup in GB. Show your calculation.",
+     "m": 2,
+     "ms": "10 × 60 × 24 / 1024 (1)<br>= 14.0625 GB (1)"
+    },
+    {
+     "l": "(a)(iii)",
+     "q": "A doctor can view a video in the daily backup through the Internet when out of the clinic. Briefly describe how the video file is transmitted over the Internet with reference to the concepts of data packets and the Internet Protocol (IP).",
+     "m": 2,
+     "ms": "Concept of data packets (division of data into packets / reassembly of packets) (1)<br>Use of IP address (IP address to destination / routing) (1)"
+    },
+    {
+     "l": "(a)(iv)",
+     "q": "A doctor in his consultation room can view the waiting area. Give two technical issues relating to streaming that John should consider when designing a streaming service.",
+     "m": 2,
+     "ms": "Any two (1×2): media format; compression ratio for video and audio (bitrate); frame size (video resolution, including aspect ratio); frame rate; network bandwidth. (Acceptable: encoding scheme / codec)"
+    },
+    {
+     "l": "(b)",
+     "q": "Describe two things John should consider when setting up a new lighting system and curtains in the clinic with reference to ergonomics of the workspace for using computers.",
+     "m": 2,
+     "ms": "The lighting system should be set to a suitable brightness to reduce visual discomfort. (1)<br>The curtains and/or the lighting system should be set to avoid the monitor reflecting the light. (1)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "John installs an electronic lock on the door of the consultation room. The doctor can use his fingerprint or a smart card to open it.<br>Suggest another biometric authentication method which can be used to open a door.",
+     "m": 1,
+     "ms": "Face recognition, iris / eye vein / retinal scan, hand geometry (palmprint), palm vein, wave forms of voice (voice / ear acoustics) (1)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Give two disadvantages of using the smart card instead of biometric authentication methods to open the door.",
+     "m": 2,
+     "ms": "Any two (1×2): need to bring along the smart card; doctors may lose the smart card; another non-holder may use the smart card to enter the room / duplication."
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "topic": "C1",
+   "pg": [
+    17,
+    18,
+    19
+   ],
+   "stem": "Peter plans to install some self-service kiosks in his fast food restaurant so that customers can order food by themselves. Customers can still order food through cashiers using dedicated terminals, however. The LAN in the fast food restaurant is shown below: (self-service kiosks, dedicated terminals and a server are all connected to a central network connecting device X.)",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "X is a network connecting device. What should X be?",
+     "m": 1,
+     "ms": "Switch / hub (1)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Describe two major network services for the dedicated terminals provided by the server.",
+     "m": 2,
+     "ms": "Any two (1×2): price searching (database access); store the transaction (data storage); deduct the item count (database update); calculation for transactions (computation); connection with the printers in the terminals/kitchen (communication)."
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Below are two sample screens captured from the touch screen of a kiosk:<br>Screen 1 (Dessert tab; tabs Meal, Drink, Dessert, Snack, Checkout): Ice-cream ⊖ 0 ⊕; Apple pie ⊖ 1 ⊕; Cheesecake ⊖ 0 ⊕; Fruit tart ⊖ 3 ⊕; Cookie ⊖ 0 ⊕; Donut ⊖ 0 ⊕<br>Screen 2 (Checkout tab): Cheese burger $30 × 4; Ice lemon tea $20 × 4; Apple pie $10 × 1; Fruit tart $10 × 3; French fries $20 × 4; Total = $320; Confirm? [YES] [NO]<br>Describe two advantages of using the ⊖ and ⊕ buttons.",
+     "m": 2,
+     "ms": "Minimise the input errors. (1)<br>Increase the efficiency of input (or description of the user-friendliness). (1)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Twenty different dessert items will be added to the menu. Draft a user-friendly design for including the new dessert items and describe your design briefly. (A blank screen with the tabs Meal, Drink, Dessert, Snack, Checkout is given.)",
+     "m": 2,
+     "ms": "Proper arrangement of the 20/26 items (e.g. by page, by category, by sorting) (1)<br>Provide quantity input properly (e.g. ⊖ 0 ⊕) (1)"
+    },
+    {
+     "l": "(c)",
+     "q": "Give two technical reasons why a thermal printer is commonly used instead of a laser printer in self-service kiosks in fast food restaurants.",
+     "m": 2,
+     "ms": "Any two (1×2): fast in printing; no need to replace toner; smaller in size."
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Many fast food restaurants plan to install self-service kiosks to replace some dedicated terminals.<br>How will this change affect the nature of the work done in the fast food restaurants?",
+     "m": 2,
+     "ms": "Any two (1×2): less manpower on terminals; more technical staff for the maintenance of the kiosks; more staff on customer service."
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "What is the benefit to customers of this change?",
+     "m": 1,
+     "ms": "The service is streamlined and customers enjoy a better experience. / Shorter waiting time for ordering food. / Suitable for speech-impaired customers. (1)"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "A3",
+   "pg": [
+    20,
+    21,
+    22
+   ],
+   "stem": "A computer controls a display consisting of 200 × 7 pixels (200 rows, columns 1–7).<br>A white pixel and a black pixel are represented by '0' and '1' respectively. Method 1 and Method 2 are methods that use bit patterns to represent pixels in the display.<br>Method 1: A bit pattern consists of 8 bits. The first 7 bits represent a row of pixels and the 8th bit is always 1. The following example shows how 11010011 represents a row of pixels:<pre>■ ■ □ ■ □ □ ■</pre>",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Complete the display below by drawing pixels to represent the following five bit patterns, in order.<pre>11010011   10000011   10000011   10000011   01111101</pre>(The first row, ■ ■ □ ■ □ □ ■, is already drawn; the grid has 5 rows × 7 columns.)",
+     "m": 2,
+     "ms": "<pre>■ ■ □ ■ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n□ ■ ■ ■ ■ ■ □</pre>(1) rows 2–4; (1) row 5"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Method 2: Similar to Method 1, if the 8th bit of a bit pattern is 1, the first 7 bits represent a row of pixels. If the 8th bit of a bit pattern is 0, the first 7 bits represent the number of occurrences (in binary notation) of the row of pixels represented by the next bit pattern.<br>For example, 00011001  00000110  11000011 represent:<pre>□ □ □ ■ ■ □ □\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■</pre>(the last three rows: number of occurrences = 3)<br>Complete the display below by drawing the pixels represented by the following four bit patterns in order.<pre>11111111   00000110   11010011   11111111</pre>",
+     "m": 2,
+     "ms": "<pre>■ ■ ■ ■ ■ ■ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ ■ ■ ■ ■ ■</pre>(1) the six repeated rows 1101001; (1) first and last rows all black. (Only part fits in the 5-row answer grid.)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Write down the three bit patterns for representing the following display:<pre>■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ ■ ■ ■ ■ ■ ■</pre>",
+     "m": 2,
+     "ms": "00001000  10000011 (1)  11111111 (1)"
+    },
+    {
+     "l": "(b)(iii)",
+     "q": "What is the maximum number of rows of pixels represented by two bit patterns?",
+     "m": 2,
+     "ms": "127"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "In which type of memory, RAM or ROM, should the information about the pixels in the display be stored? Give a reason to support your choice.",
+     "m": 1,
+     "ms": "RAM should be used as it is volatile and its content can be over-written. (1)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "The following display consists of alternate rows of black pixels and white pixels. Compare the memory sizes needed for the following display represented by Method 1 and Method 2 respectively. Explain briefly.<pre>■ ■ ■ ■ ■ ■ ■\n□ □ □ □ □ □ □\n■ ■ ■ ■ ■ ■ ■\n□ □ □ □ □ □ □\n■ ■ ■ ■ ■ ■ ■</pre>(rows alternate down to row 199 black, row 200 white)",
+     "m": 2,
+     "ms": "Memory size needed by Method 1 <= memory size needed by Method 2 (1)<br>Method 1 = 200 bytes, Method 2 = 200 bytes or 400 bytes; reasonable explanation (1)"
+    },
+    {
+     "l": "(c)(iii)",
+     "q": "In general, which method, Method 1 or Method 2, needs fewer computer resources? Explain briefly.",
+     "m": 2,
+     "ms": "Method 2 needs fewer computer resources (1). Whenever there are any three or more repeated rows to be displayed, only two bit patterns are needed. It saves storage space to represent the content (1).<br>Or: Method 1 needs fewer computer resources (1). Method 1 is simple in structure and saves computational power/time (1)."
+    }
+   ]
+  }
+ ]
+}
