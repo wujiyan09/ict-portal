@@ -24,8 +24,8 @@ function codeBlock(cb){const id="cb"+(++DUID);DM[id]={cb};const lines=String(cb.
  ${cb.setup?`<details class="io"><summary>${T("Sample tables (setup)","示例数据表（setup）")}</summary><pre>${hl(cb.setup,"sql")}</pre></details>`:""}${cb.in?`<div class="io"><b>${T("Input","输入")}</b><pre>${esc(cb.in)}</pre></div>`:""}${cb.out!=null&&cb.out!==""?`<div class="io"><b>${T("Output","输出")}</b>${outBox(cb.out)}</div>`:""}
  <div id="${id}-try"></div></div>`}
 function sqlSetup(cb){if(cb.setup)return cb.setup;const m=String(cb.in||"").match(/\(runs on the sample tables\)\s*([\s\S]*)/i);return m?m[1]:""}
-function sqlRun(db,code){let res=[],err="";try{for(const st of db.iterateStatements(code)){const cols=st.getColumnNames();const rows=[];while(st.step())rows.push(st.get());if(cols.length)res=[{columns:cols,values:rows}];st.free()}}catch(e){err=e.message}
- return (res.length?rowsTbl(res):err?"":`<p class="k">OK</p>`)+(err?`<pre class="fail">Error: ${esc(err)}</pre>`:"")}
+function sqlRun(db,code){let res=[],err="";try{for(const st of db.iterateStatements(code)){const cols=st.getColumnNames();const rows=[];while(st.step())rows.push(st.get());if(cols.length)res.push({columns:cols,values:rows});st.free()}}catch(e){err=e.message}
+ return (res.length?res.map(r=>rowsTbl([r])).join(""):err?"":`<p class="k">OK</p>`)+(err?`<pre class="fail">Error: ${esc(err)}</pre>`:"")}
 const outBox=o=>/^\s*(Error|Runtime error|Traceback)/i.test(o)?`<pre class="fail">${esc(o)}</pre>`:`<pre>${esc(o)}</pre>`;
 function lnNote(id,l){const cb=DM[id].cb;const n=(cb.notes||[]).find(x=>x.l===l);document.querySelectorAll(`#${id} .ln`).forEach((e,i)=>e.classList.toggle("on",i+1===l));
  document.getElementById(id+"-n").innerHTML=n?`<b>${T("Line","第")} ${l}${EN()?"":" 行"}</b> ${rich(T(n.t,n.tz||n.t))}`:""}
