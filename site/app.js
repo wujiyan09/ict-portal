@@ -36,7 +36,7 @@ function legacyDSE(){DSEQ.forEach(q=>{const [y,n]=q.id.split("-");const Y=y;if(D
  const it={type:"mc",key:"dse-"+Y+"-"+n,y:Y,n:+n,q:q.q,st:q.st,o:q.o,a:LT.indexOf(q.a),pct:(PCT[Y]||[])[n-1]||"",topic:q.topic,e:q.exp,code:q.code,orig:false,src:yLabel(Y)+" 1A Q"+n};IT[it.key]=it;DQ.push(it)})}
 const allCh=()=>BK.flatMap(b=>b.chs);
 const chOf=id=>allCh().find(c=>c.id===id);
-const chName=c=>`${c.book.id} Ch${c.n} ${T(c.t,c.tz||c.t)}`;
+const chName=c=>`${c.book.id} Ch${c.n} ${c.t}`;
 
 // ---------- history ----------
 const H=()=>store.get("hist",{}); // key -> {r:[1,0,..], last}
@@ -164,7 +164,7 @@ V.home=()=>{const chs=allCh();const nc=chs.reduce((a,c)=>a+c.cards.length,0),nm=
  <a href="#tools"><span>${T("Tools","工具")}</span><span>SQL · ${T("base","进制")} · subnet</span></a>
  <a href="#progress"><span>${T("Progress","进度")}</span><span></span></a></div>`};
 function setLang(l){store.set("lang",l);route()}
-V.learn=()=>{const sec=(f,title)=>`<h2>${title}</h2>`+BK.filter(f).map(b=>`<div class="k" style="margin-top:14px">${esc(b.id)} · ${esc(T(b.name,b.nz||b.name))}</div><div class="list">${b.chs.map(c=>{const s=stat(c.mc.map(m=>m.key));return `<a href="#ch/${c.id}"><span>Ch${c.n} ${esc(T(c.t,c.tz||c.t))}</span><span>${s.d?`${s.c}/${s.d}`:""}</span></a>`}).join("")}</div>`).join("");
+V.learn=()=>{const sec=(f,title)=>`<h2>${title}</h2>`+BK.filter(f).map(b=>`<div class="k" style="margin-top:14px">${esc(b.id)} · ${esc(b.name)}</div><div class="list">${b.chs.map(c=>{const s=stat(c.mc.map(m=>m.key));return `<a href="#ch/${c.id}"><span>Ch${c.n} ${esc(c.t)}</span><span>${s.d?`${s.c}/${s.d}`:""}</span></a>`}).join("")}</div>`).join("");
  return `<h1>${T("Textbook","课本")}</h1>`+sec(b=>!b.elective,T("Compulsory","必修部分"))+sec(b=>b.elective,T("Electives","选修部分"))};
 function chTabs(c,on){return `<p class="k"><a href="#learn">← ${T("Textbook","课本")}</a></p><h1>${esc(chName(c))}</h1><div class="tabs">
  <a class="${on==="c"?"on":""}" href="#cards/${c.id}/0">${T("Cards","知识卡")} ${c.cards.length}</a><a class="${on==="p"?"on":""}" href="#ch/${c.id}">${T("Practice","练习")} ${c.mc.length}</a><a class="${on==="s"?"on":""}" href="#sq/${c.id}">${T("Structured","结构题")} ${c.sq.length}</a>${c.pr.length?`<a class="${on==="r"?"on":""}" href="#pr/${c.id}">${T("Hands-on","实操")} ${c.pr.length}</a>`:""}</div>`}
@@ -208,7 +208,7 @@ V.quiz=()=>{const q=store.get("qz",{n:20,scope:[],type:["mc"],mix:50});const ck=
  <h2>${T("Number of questions","题数")}</h2><input type="number" name="n" min="1" max="200" value="${q.n}">
  <h2>${T("Scope","范围")}</h2><p>${ck("scope","comp",T("All compulsory","全部必修"),q.scope.includes("comp"))}${ck("scope","elec",T("All electives","全部选修"),q.scope.includes("elec"))}</p>
  <div class="k">${T("DSE topics","DSE 课题")}</div><p>${Object.keys(TOPIC).map(t=>ck("scope","t:"+t,tName(t),q.scope.includes("t:"+t))).join("")}</p>
- <details><summary>${T("Choose chapters","选择章节")}</summary>${BK.map(b=>`<div class="k" style="margin-top:8px">${esc(b.id)} ${esc(T(b.name,b.nz||b.name))}</div>`+b.chs.map(c=>ck("scope","c:"+c.id,"Ch"+c.n+" "+T(c.t,c.tz||c.t),q.scope.includes("c:"+c.id))).join("<br>")).join("")}</details>
+ <details><summary>${T("Choose chapters","选择章节")}</summary>${BK.map(b=>`<div class="k" style="margin-top:8px">${esc(b.id)} ${esc(b.name)}</div>`+b.chs.map(c=>ck("scope","c:"+c.id,"Ch"+c.n+" "+c.t,q.scope.includes("c:"+c.id))).join("<br>")).join("")}</details>
  <h2>${T("Question type","题型")}</h2><p>${ck("type","mc","MC",q.type.includes("mc"))}${ck("type","sq",T("Structured","结构题"),q.type.includes("sq"))}${ck("type","lq",T("DSE long (1B)","DSE 长题 (1B)"),q.type.includes("lq"))}${ck("type","pr",T("Hands-on","实操"),q.type.includes("pr"))}</p>
  <h2>${T("Real DSE share","真题比例")}: <span id="mv">${q.mix}</span>%</h2><input type="range" name="mix" min="0" max="100" step="10" value="${q.mix}" oninput="$('#mv').textContent=this.value" style="width:100%">
  <p><button class="btn">${T("Generate","生成测验")}</button></p></form>
