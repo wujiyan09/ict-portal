@@ -94,7 +94,7 @@ let SQLJS=null,PY=null;
 function loadScript(src){return new Promise((ok,no)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
 async function getSQL(){if(SQLJS)return SQLJS;if(!window.initSqlJs)await loadScript("https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/sql-wasm.js");SQLJS=await initSqlJs({locateFile:f=>"https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.3/"+f});return SQLJS}
 async function getPY(){if(PY)return PY;if(!window.loadPyodide)await loadScript("https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js");PY=await loadPyodide();return PY}
-function prBody(it,id,code,si){const c=it.check||{};const lg=it.lang||"";
+function prBody(it,id,code,si){const c=it.check||{};if(it.lang==="self"&&c.type!=="self"){c.type="self";c.model=c.model||it.solution}const lg=it.lang||"";
  return `<h3>${esc(T(it.t,it.tz||it.t))} <span class="k">${lg.toUpperCase()}</span></h3><div>${rich(T(it.task,it.taskz||it.task))}</div>
  ${it.setup&&lg==="sql"?`<details><summary>${T("Tables","数据表")}</summary><pre>${esc(it.setup)}</pre></details>`:""}
  ${c.type==="self"?`<textarea class="code" id="ed-${id}" spellcheck="false" autocapitalize="off" onkeydown="tabKey(event)">${esc(code??it.starter??"")}</textarea><details><summary>${T("Model answer","参考答案")}</summary><pre>${esc(c.model||it.solution||"")}</pre></details>`
@@ -231,11 +231,11 @@ V.progress=()=>{const h=H();const chs=allCh();const wrong=Object.keys(h).filter(
  <h2>${T("DSE answer sheets","真题答题纸")}</h2><div class="list">${YEARS.map(y=>{const r=store.get("sheet:"+y.y,null);return r&&r.done?`<a href="#year/${y.y}"><span>${esc(y.label||y.y)}</span><span>${r.score}/${KEYS[y.y].length}</span></a>`:""}).join("")}</div>
  <h2>${T("Sessions","练习记录")}</h2><div class="list">${store.get("runs",[]).slice(0,30).map(r=>`<div class="item"><span>${esc(r.title)}</span><span class="r">${r.got}/${r.tot} · ${new Date(r.t).toLocaleString()}</span></div>`).join("")}</div>
  <p><button class="btn sec" onclick="if(confirm('Reset?')){Object.keys(localStorage).filter(k=>k.startsWith('ict:')&&k!=='ict:lang').forEach(k=>localStorage.removeItem(k));route()}">${T("Reset all progress","清除全部进度")}</button></p>`};
-V.tools=()=>TOOLS();
+V.tools=()=>TOOLS();V.tool=k=>TOOL(k);
 
 function route(){const nv=document.querySelectorAll("nav a");[["Textbook","课本"],["Past papers","真题"],["Quiz","测验"],["Tools","工具"],["Progress","进度"]].forEach((x,i)=>{if(nv[i])nv[i].textContent=T(x[0],x[1])});const h=(location.hash||"#home").slice(1).split("/");const f=V[h[0]]||V.home;
  if(h[0]==="s"){app.innerHTML=vSess(h[1])}else app.innerHTML=f(h[1],h[2]);
- if(h[0]==="tools"&&window.initTools)initTools();window.scrollTo(0,0)}
+ if((h[0]==="tools"||h[0]==="tool")&&window.initTools)initTools();window.scrollTo(0,0)}
 function clean(t){const o=JSON.parse(t);const f=v=>typeof v==="string"?scrub(v):Array.isArray(v)?v.map(f):v&&typeof v==="object"?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,f(x)])):v;return f(o)}
 function scrub(s){return s.replace(/\s*[(（][^()（）]*Quest[^()（）]*[)）]/g,"").replace(/Quest[’']s\s+/g,"").replace(/\bQuest\s*(original|原创|补充|自拟|编写|所写)[^。.;；<]*[。.;；]?/gi,"").replace(/Suggested answer \(Quest\)/g,"Suggested answer")}
 async function boot(){app.innerHTML="<p class='sub'>Loading…</p>";
