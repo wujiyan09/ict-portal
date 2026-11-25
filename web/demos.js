@@ -21,8 +21,12 @@ function codeBlock(cb){const id="cb"+(++DUID);DM[id]={cb};const lines=String(cb.
  <div class="cbv">${hlines.map((l,i)=>`<div class="ln ${notes[i+1]?"hasn":""}" onclick="lnNote('${id}',${i+1})"><span class="no">${i+1}</span><span class="lc">${l||" "}</span></div>`).join("")}</div>
  <div class="lnote" id="${id}-n">${Object.keys(notes).length?T("Tap a line to see what it does.","点任意一行看解释。"):""}</div>
  <details class="alln"><summary>${T("All line notes","全部逐行解释")}</summary>${Object.entries(notes).map(([l,t])=>`<div><b>${l}</b> ${rich(t)}</div>`).join("")}</details>
- ${cb.in?`<div class="io"><b>${T("Input","输入")}</b><pre>${esc(cb.in)}</pre></div>`:""}${cb.out!=null&&cb.out!==""?`<div class="io"><b>${T("Output","输出")}</b><pre>${esc(cb.out)}</pre></div>`:""}
+ ${cb.setup?`<details class="io"><summary>${T("Sample tables (setup)","示例数据表（setup）")}</summary><pre>${hl(cb.setup,"sql")}</pre></details>`:""}${cb.in?`<div class="io"><b>${T("Input","输入")}</b><pre>${esc(cb.in)}</pre></div>`:""}${cb.out!=null&&cb.out!==""?`<div class="io"><b>${T("Output","输出")}</b>${outBox(cb.out)}</div>`:""}
  <div id="${id}-try"></div></div>`}
+function sqlSetup(cb){if(cb.setup)return cb.setup;const m=String(cb.in||"").match(/\(runs on the sample tables\)\s*([\s\S]*)/i);return m?m[1]:""}
+function sqlRun(db,code){let res=[],err="";try{for(const st of db.iterateStatements(code)){const cols=st.getColumnNames();const rows=[];while(st.step())rows.push(st.get());if(cols.length)res=[{columns:cols,values:rows}];st.free()}}catch(e){err=e.message}
+ return (res.length?rowsTbl(res):err?"":`<p class="k">OK</p>`)+(err?`<pre class="fail">Error: ${esc(err)}</pre>`:"")}
+const outBox=o=>/^\s*(Error|Runtime error|Traceback)/i.test(o)?`<pre class="fail">${esc(o)}</pre>`:`<pre>${esc(o)}</pre>`;
 function lnNote(id,l){const cb=DM[id].cb;const n=(cb.notes||[]).find(x=>x.l===l);document.querySelectorAll(`#${id} .ln`).forEach((e,i)=>e.classList.toggle("on",i+1===l));
  document.getElementById(id+"-n").innerHTML=n?`<b>${T("Line","第")} ${l}${EN()?"":" 行"}</b> ${rich(T(n.t,n.tz||n.t))}`:""}
 function tryCode(id){const cb=DM[id].cb;const box=document.getElementById(id+"-try");
@@ -39,7 +43,7 @@ except Exception:
 sys.stdout=sys.__stdout__
 [__o.getvalue(),__e]`).toJs();out.innerHTML=`<pre>${esc(r[0])}</pre>`+(r[1]?`<pre class="fail">${esc(r[1])}</pre>`:"")}
   else if(lang==="js"){const logs=[];const con={log:(...a)=>logs.push(a.map(x=>typeof x==="object"?JSON.stringify(x):String(x)).join(" "))};let err="";try{new Function("console",code)(con)}catch(e){err=e.message}out.innerHTML=`<pre>${esc(logs.join("\n"))}</pre>`+(err?`<pre class="fail">${esc(err)}</pre>`:"")}
-  else if(lang==="sql"){const SQL=await getSQL();const db=new SQL.Database();out.innerHTML=rowsTbl(db.exec(code))}
+  else if(lang==="sql"){const SQL=await getSQL();const db=new SQL.Database();const st=sqlSetup(DM[id].cb);if(st)try{db.exec(st)}catch(e){}out.innerHTML=sqlRun(db,code)}
   else if(lang==="html"||lang==="css"){out.innerHTML=`<iframe class="prev" sandbox="allow-scripts"></iframe>`;out.firstChild.srcdoc=lang==="css"?`<style>${code}</style><p>Sample text</p>`:code}
  }catch(e){out.innerHTML=`<pre class="fail">${esc(e.message||e)}</pre>`}}
 
@@ -104,8 +108,8 @@ function svgD(g){const N=g.nodes||[];const W=560,H=Math.max(130,N.length>4?220:1
  const act=new Set(g.active||[]);
  return `<svg viewBox="0 0 ${W} ${H}" class="dg">${(g.edges||[]).map(e=>{const a=pos[e[0]],b=pos[e[1]];if(!a||!b)return"";const on=act.has(e[0])&&act.has(e[1]);return `<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" class="${on?"on":""}"/>${e[2]?`<text x="${(a[0]+b[0])/2}" y="${(a[1]+b[1])/2-6}" class="el">${esc(e[2])}</text>`:""}`}).join("")}
  ${N.map(x=>{const [cx,cy]=pos[x.id];const w=Math.max(60,String(x.label).length*8+20);return `<g class="${act.has(x.id)?"on":""}"><rect x="${cx-w/2}" y="${cy-18}" width="${w}" height="36" rx="10"/><text x="${cx}" y="${cy+5}">${esc(x.label)}</text></g>`}).join("")}</svg>`}
-async function sqlFrames(d){const SQL=await getSQL();const db=new SQL.Database();db.exec(d.setup||"");const tn=db.exec("SELECT name FROM sqlite_master WHERE type='table'")[0]?.values.map(v=>v[0])||[];
+async function sqlFrames(d){const SQL=await getSQL();const db=new SQL.Database();try{db.exec(d.setup||"")}catch(e){}const tn=db.exec("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")[0]?.values.map(v=>v[0])||[];
  const f=[];tn.forEach(t=>f.push(cap(T(`Table ${t}`,`数据表 ${t}`))+rowsTbl(db.exec(`SELECT * FROM "${t}"`))));
  f.push(cap(T("The query","查询语句"))+`<pre>${hl(d.query,"sql")}</pre>`);
- try{f.push(cap(T("Result","结果"))+`<pre>${hl(d.query,"sql")}</pre>`+rowsTbl(db.exec(d.query))+(d.note?`<p>${rich(d.note)}</p>`:""))}catch(e){f.push(`<pre class="fail">${esc(e.message)}</pre>`)}return f}
+ f.push(cap(T("Result","结果"))+`<pre>${hl(d.query,"sql")}</pre>`+sqlRun(db,d.query)+(d.note?`<p>${rich(d.note)}</p>`:""));return f}
 function cheat(k){return `<div class="cheat">${wrapT(EN()?(k.en||k.zh):(k.zh||k.en))}</div>`}
