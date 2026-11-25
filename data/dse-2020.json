@@ -244,7 +244,10 @@
    "exp": "The legend font is too small and the chart could be clearer; SQL has nothing to do with slides.",
    "pg": 3,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2020-mc12-1.jpg"
+   ]
   },
   {
    "n": 13,
@@ -368,7 +371,10 @@
    "exp": "On a small LAN the teacher's computer typically shares files; email and web need outside servers.",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2020-mc19-1.jpg"
+   ]
   },
   {
    "n": 20,
@@ -385,7 +391,10 @@
    "exp": "The wireless printer must join the network through the AP.",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2020-mc20-1.jpg"
+   ]
   },
   {
    "n": 21,
@@ -558,7 +567,10 @@
    "exp": "P[4] = 9 fails P[i] <= 7, so the loop stops at i = 4.",
    "pg": 7,
    "fig": true,
-   "code": true
+   "code": true,
+   "figs": [
+    "figs/2020-mc29-1.jpg"
+   ]
   },
   {
    "n": 30,
@@ -575,7 +587,10 @@
    "exp": "Only P[2] = 6 is <= 7 but not 7, so n = 1.",
    "pg": 7,
    "fig": true,
-   "code": true
+   "code": true,
+   "figs": [
+    "figs/2020-mc30-1.jpg"
+   ]
   },
   {
    "n": 31,
@@ -747,8 +762,11 @@
    "topic": "C2",
    "exp": "A firewall controls which programs may access the network.",
    "pg": 10,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2020-mc39-1.jpg"
+   ]
   },
   {
    "n": 40,
@@ -770,7 +788,10 @@
    "exp": "An adjustable screen angle and table height fit the user; armrest angle is not needed.",
    "pg": 10,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2020-mc40-1.jpg"
+   ]
   }
  ],
  "lq": [
@@ -947,13 +968,19 @@
      "l": "(b)(i)",
      "q": "Below are two sample screens captured from the touch screen of a kiosk:<br>Screen 1 (Dessert tab; tabs Meal, Drink, Dessert, Snack, Checkout): Ice-cream ⊖ 0 ⊕; Apple pie ⊖ 1 ⊕; Cheesecake ⊖ 0 ⊕; Fruit tart ⊖ 3 ⊕; Cookie ⊖ 0 ⊕; Donut ⊖ 0 ⊕<br>Screen 2 (Checkout tab): Cheese burger $30 × 4; Ice lemon tea $20 × 4; Apple pie $10 × 1; Fruit tart $10 × 3; French fries $20 × 4; Total = $320; Confirm? [YES] [NO]<br>Describe two advantages of using the ⊖ and ⊕ buttons.",
      "m": 2,
-     "ms": "Minimise the input errors. (1)<br>Increase the efficiency of input (or description of the user-friendliness). (1)"
+     "ms": "Minimise the input errors. (1)<br>Increase the efficiency of input (or description of the user-friendliness). (1)",
+     "figs": [
+      "figs/2020-lq4-2.jpg"
+     ]
     },
     {
      "l": "(b)(ii)",
      "q": "Twenty different dessert items will be added to the menu. Draft a user-friendly design for including the new dessert items and describe your design briefly. (A blank screen with the tabs Meal, Drink, Dessert, Snack, Checkout is given.)",
      "m": 2,
-     "ms": "Proper arrangement of the 20/26 items (e.g. by page, by category, by sorting) (1)<br>Provide quantity input properly (e.g. ⊖ 0 ⊕) (1)"
+     "ms": "Proper arrangement of the 20/26 items (e.g. by page, by category, by sorting) (1)<br>Provide quantity input properly (e.g. ⊖ 0 ⊕) (1)",
+     "figs": [
+      "figs/2020-lq4-3.jpg"
+     ]
     },
     {
      "l": "(c)",
@@ -973,6 +1000,9 @@
      "m": 1,
      "ms": "The service is streamlined and customers enjoy a better experience. / Shorter waiting time for ordering food. / Suitable for speech-impaired customers. (1)"
     }
+   ],
+   "figs": [
+    "figs/2020-lq4-1.jpg"
    ]
   },
   {
@@ -989,19 +1019,29 @@
      "l": "(a)",
      "q": "Complete the display below by drawing pixels to represent the following five bit patterns, in order.<pre>11010011   10000011   10000011   10000011   01111101</pre>(The first row, ■ ■ □ ■ □ □ ■, is already drawn; the grid has 5 rows × 7 columns.)",
      "m": 2,
-     "ms": "<pre>■ ■ □ ■ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n□ ■ ■ ■ ■ ■ □</pre>(1) rows 2–4; (1) row 5"
+     "ms": "<pre>■ ■ □ ■ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n□ ■ ■ ■ ■ ■ □</pre>(1) rows 2–4; (1) row 5",
+     "figs": [
+      "figs/2020-lq5-3.jpg"
+     ]
     },
     {
      "l": "(b)(i)",
      "q": "Method 2: Similar to Method 1, if the 8th bit of a bit pattern is 1, the first 7 bits represent a row of pixels. If the 8th bit of a bit pattern is 0, the first 7 bits represent the number of occurrences (in binary notation) of the row of pixels represented by the next bit pattern.<br>For example, 00011001  00000110  11000011 represent:<pre>□ □ □ ■ ■ □ □\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■</pre>(the last three rows: number of occurrences = 3)<br>Complete the display below by drawing the pixels represented by the following four bit patterns in order.<pre>11111111   00000110   11010011   11111111</pre>",
      "m": 2,
-     "ms": "<pre>■ ■ ■ ■ ■ ■ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ ■ ■ ■ ■ ■</pre>(1) the six repeated rows 1101001; (1) first and last rows all black. (Only part fits in the 5-row answer grid.)"
+     "ms": "<pre>■ ■ ■ ■ ■ ■ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ □ ■ □ □ ■\n■ ■ ■ ■ ■ ■ ■</pre>(1) the six repeated rows 1101001; (1) first and last rows all black. (Only part fits in the 5-row answer grid.)",
+     "figs": [
+      "figs/2020-lq5-4.jpg",
+      "figs/2020-lq5-5.jpg"
+     ]
     },
     {
      "l": "(b)(ii)",
      "q": "Write down the three bit patterns for representing the following display:<pre>■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ □ □ □ □ □ ■\n■ ■ ■ ■ ■ ■ ■</pre>",
      "m": 2,
-     "ms": "00001000  10000011 (1)  11111111 (1)"
+     "ms": "00001000  10000011 (1)  11111111 (1)",
+     "figs": [
+      "figs/2020-lq5-6.jpg"
+     ]
     },
     {
      "l": "(b)(iii)",
@@ -1019,7 +1059,10 @@
      "l": "(c)(ii)",
      "q": "The following display consists of alternate rows of black pixels and white pixels. Compare the memory sizes needed for the following display represented by Method 1 and Method 2 respectively. Explain briefly.<pre>■ ■ ■ ■ ■ ■ ■\n□ □ □ □ □ □ □\n■ ■ ■ ■ ■ ■ ■\n□ □ □ □ □ □ □\n■ ■ ■ ■ ■ ■ ■</pre>(rows alternate down to row 199 black, row 200 white)",
      "m": 2,
-     "ms": "Memory size needed by Method 1 <= memory size needed by Method 2 (1)<br>Method 1 = 200 bytes, Method 2 = 200 bytes or 400 bytes; reasonable explanation (1)"
+     "ms": "Memory size needed by Method 1 <= memory size needed by Method 2 (1)<br>Method 1 = 200 bytes, Method 2 = 200 bytes or 400 bytes; reasonable explanation (1)",
+     "figs": [
+      "figs/2020-lq5-7.jpg"
+     ]
     },
     {
      "l": "(c)(iii)",
@@ -1027,6 +1070,10 @@
      "m": 2,
      "ms": "Method 2 needs fewer computer resources (1). Whenever there are any three or more repeated rows to be displayed, only two bit patterns are needed. It saves storage space to represent the content (1).<br>Or: Method 1 needs fewer computer resources (1). Method 1 is simple in structure and saves computational power/time (1)."
     }
+   ],
+   "figs": [
+    "figs/2020-lq5-1.jpg",
+    "figs/2020-lq5-2.jpg"
    ]
   }
  ]

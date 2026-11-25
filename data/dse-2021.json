@@ -115,8 +115,11 @@
    "topic": "A1",
    "exp": "An automatic TOC is generated from headings, so page numbers and entries update automatically.",
    "pg": 3,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2021-mc6-1.jpg"
+   ]
   },
   {
    "n": 7,
@@ -176,8 +179,11 @@
    "topic": "A1",
    "exp": "Double entry checks the data was entered as intended = verification. Validation checks data is reasonable (range, type, format).",
    "pg": 3,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2021-mc9-1.jpg"
+   ]
   },
   {
    "n": 10,
@@ -233,7 +239,10 @@
    "exp": "A program controls the processing; storage is read from and written to (two-way arrow).",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2021-mc12-1.jpg"
+   ]
   },
   {
    "n": 13,
@@ -256,7 +265,11 @@
    "exp": "Participant goes in ROWS (one row per person) and also in VALUES as Count of Participant to count meetings. Only 28% got this right.",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2021-mc13-1.jpg",
+    "figs/2021-mc13-2.jpg"
+   ]
   },
   {
    "n": 14,
@@ -847,7 +860,10 @@
      "ms": "SSL encrypts information/sensitive data such as usernames and passwords, and credit card information (1) transmitted between Mrs Wong (customers) and the web site. (1)"
     }
    ],
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2021-lq1-1.jpg"
+   ]
   },
   {
    "n": 2,
@@ -1001,7 +1017,10 @@
      "ms": "It ensures that students with the same marks are of the same rank. (2)\n(Only mention 'same marks' but not mention 'with the same rank': 1 mark)"
     }
    ],
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2021-lq4-1.jpg"
+   ]
   },
   {
    "n": 5,
@@ -1056,7 +1075,10 @@
      "ms": "The computation power (CPU) (1) should be considered because the encoding scheme involves extra computation for representation. (1)"
     }
    ],
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2021-lq5-1.jpg"
+   ]
   }
  ]
 }

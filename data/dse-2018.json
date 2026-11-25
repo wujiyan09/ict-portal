@@ -16,7 +16,10 @@
    "exp": "Chart 2 shows the same data with the vertical axis starting at 9200 instead of 0, so only the axis scale changes.",
    "pg": 1,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2018-mc1-1.jpg"
+   ]
   },
   {
    "n": 2,
@@ -240,7 +243,10 @@
    "exp": "Y is a 2D (QR) code, which stores much more data than a 1D barcode.",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2018-mc13-1.jpg"
+   ]
   },
   {
    "n": 14,
@@ -451,8 +457,11 @@
    "topic": "C1",
    "exp": "Remote logon sessions can be encrypted; the software runs only on the office computer.",
    "pg": 6,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2018-mc24-1.jpg"
+   ]
   },
   {
    "n": 25,
@@ -469,7 +478,10 @@
    "exp": "info is inside chi, so the path is /chi/info/, not /info/chi/.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2018-mc25-1.jpg"
+   ]
   },
   {
    "n": 26,
@@ -547,7 +559,10 @@
    "exp": "Tables can lay the long list out compactly and frames keep navigation visible; music does not help.",
    "pg": 7,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2018-mc29-1.jpg"
+   ]
   },
   {
    "n": 30,
@@ -598,7 +613,10 @@
    "exp": "X goes 14 → 10 → 6 → 2; 2 < 4 so it outputs X = 2.",
    "pg": 8,
    "fig": true,
-   "code": true
+   "code": true,
+   "figs": [
+    "figs/2018-mc32-1.jpg"
+   ]
   },
   {
    "n": 33,
@@ -853,7 +871,10 @@
      "l": "(b)(ii)",
      "q": "Peter browses a web site to download particular freeware, as shown below:<br>Choose the operating system for downloading the freeware:<br>Linux  MacOS  Windows<br>Give two differences between these operating systems.",
      "m": 2,
-     "ms": "Any two (1×2):<br>Linux fully supports a command line interface while the others do not. (different user interface)<br>MacOS usually only run on proprietary hardware. (hardware support)<br>They have different types of software licence. (licence)<br>They have different types of memory management methods. (memory management)<br>They have different types of file management methods. (file management)<br>Not accepted: different types of programming language support/used, ease of use, types of application software on the platform, support from the OS companies / communities"
+     "ms": "Any two (1×2):<br>Linux fully supports a command line interface while the others do not. (different user interface)<br>MacOS usually only run on proprietary hardware. (hardware support)<br>They have different types of software licence. (licence)<br>They have different types of memory management methods. (memory management)<br>They have different types of file management methods. (file management)<br>Not accepted: different types of programming language support/used, ease of use, types of application software on the platform, support from the OS companies / communities",
+     "figs": [
+      "figs/2018-lq2-1.jpg"
+     ]
     },
     {
      "l": "(c)(i)",

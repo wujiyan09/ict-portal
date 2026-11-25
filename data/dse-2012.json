@@ -141,7 +141,10 @@
    "exp": "Before: one long line in a cell; after: text broken onto several lines inside the same cell = wrap text.",
    "pg": 3,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2012-mc7-1.jpg"
+   ]
   },
   {
    "n": 8,
@@ -158,7 +161,10 @@
    "exp": "Filter keeps only marks ≥ 80; the result list is in descending order, so it is also sorted.",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2012-mc8-1.jpg"
+   ]
   },
   {
    "n": 9,
@@ -257,8 +263,11 @@
    "topic": "A1",
    "exp": "Slide-sorter view shows all slides, good for overview and reordering, not for editing content.",
    "pg": 5,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2012-mc13-1.jpg"
+   ]
   },
   {
    "n": 14,
@@ -585,7 +594,10 @@
    "exp": "P > R? No → Q > R? No → output 'Z'.",
    "pg": 9,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2012-mc30-1.jpg"
+   ]
   },
   {
    "n": 31,
@@ -602,7 +614,10 @@
    "exp": "X is output only when P > R and P > Q, i.e. P is the largest.",
    "pg": 9,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2012-mc31-1.jpg"
+   ]
   },
   {
    "n": 32,
@@ -769,8 +784,11 @@
    "topic": "E",
    "exp": "Adjustable screen angle and keyboard height fit users' bodies; adding a mouse isn't ergonomic.",
    "pg": 11,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2012-mc40-1.jpg"
+   ]
   }
  ],
  "lq": [
@@ -817,7 +835,10 @@
      "l": "(d)",
      "q": "Peter takes some photos and shares them with his friends through the Internet. The protocols, HTTP, IMAP, FTP and SMTP, are used by the servers, as shown in the diagram below. [Diagram: Peter's computer —(i)→ File server —(ii)→ Web server; Web server —(iii)/(iv)→ his friends' computers; Peter's computer —(v)→ Email server —(vi)→ his friends' computers]\nFill in the protocols used for the data transmission between the computers.\n(i) ___ (ii) ___ (iii) ___ (iv) ___ (v) ___ (vi) ___",
      "m": 3,
-     "ms": "(i) FTP\n(ii) FTP\n(iii) HTTP\n(iv) HTTP\n(v) SMTP\n(vi) IMAP\n(Check the exact arrow positions on the page image.)"
+     "ms": "(i) FTP\n(ii) FTP\n(iii) HTTP\n(iv) HTTP\n(v) SMTP\n(vi) IMAP\n(Check the exact arrow positions on the page image.)",
+     "figs": [
+      "figs/2012-lq1-1.jpg"
+     ]
     }
    ]
   },

@@ -72,7 +72,10 @@
    "exp": "Zipping bundles 100 files into one compressed attachment; it doesn't change platform compatibility.",
    "pg": 2,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc4-1.jpg"
+   ]
   },
   {
    "n": 5,
@@ -105,8 +108,11 @@
    "topic": "A1",
    "exp": "Each switch has 2 states: 2⁵ = 32.",
    "pg": 3,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2013-mc6-1.jpg"
+   ]
   },
   {
    "n": 7,
@@ -123,7 +129,11 @@
    "exp": "The lookup table is on WA1 (rows 2–240); rows must be absolute ($2, $240) so copying down doesn't shift the range.",
    "pg": 3,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc7-1.jpg",
+    "figs/2013-mc7-2.jpg"
+   ]
   },
   {
    "n": 8,
@@ -258,7 +268,10 @@
    "exp": "How text flows around an image is controlled by text wrapping.",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc14-1.jpg"
+   ]
   },
   {
    "n": 15,
@@ -376,7 +389,10 @@
    "exp": "K is the OS kernel: it manages devices, memory and processes, but doesn't add applications.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc20-1.jpg"
+   ]
   },
   {
    "n": 21,
@@ -466,7 +482,10 @@
    "exp": "A broken image icon usually means the src path/filename is wrong.",
    "pg": 7,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc25-1.jpg"
+   ]
   },
   {
    "n": 26,
@@ -524,7 +543,10 @@
    "exp": "Streaming only needs a small buffer (flash), and HDMI carries HD video and audio to the TV.",
    "pg": 8,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc28-1.jpg"
+   ]
   },
   {
    "n": 29,
@@ -649,7 +671,10 @@
    "exp": "M starts at 0, so if all inputs are negative the output stays 0 instead of the real maximum.",
    "pg": 10,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2013-mc35-1.jpg"
+   ]
   },
   {
    "n": 36,
@@ -795,7 +820,10 @@
      "l": "(c)",
      "q": "The rear part of the router is shown in the diagram below. Mark ‘X’ and ‘Y’ on the diagram to indicate where the cables X and Y should be connected.\n[Router rear panel: LAN (4 ports) | WAN (1 port) | DC/9V]",
      "m": 2,
-     "ms": "X: a LAN port\nY: the WAN port"
+     "ms": "X: a LAN port\nY: the WAN port",
+     "figs": [
+      "figs/2013-lq1-2.jpg"
+     ]
     },
     {
      "l": "(d)(i)",
@@ -809,6 +837,9 @@
      "m": 2,
      "ms": "Yes, John does not need it because his network is just a LAN / setup of a DNS is complicated and his SOHO network is a simple network / ISP can provide this service for him."
     }
+   ],
+   "figs": [
+    "figs/2013-lq1-1.jpg"
    ]
   },
   {

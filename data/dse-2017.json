@@ -15,8 +15,11 @@
    "topic": "A1",
    "exp": "In UTF-8, ASCII characters take 1 byte but Chinese characters take 3 bytes, so (3) = 12 bytes > (2) = 5 bytes.",
    "pg": 2,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2017-mc1-1.jpg"
+   ]
   },
   {
    "n": 2,
@@ -38,7 +41,10 @@
    "exp": "Clicking a date avoids typing errors and is easier; parity checking is unrelated.",
    "pg": 2,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2017-mc2-1.jpg"
+   ]
   },
   {
    "n": 3,
@@ -120,8 +126,11 @@
    "topic": "A1",
    "exp": "PDF is cross-platform and digital forms (with bar codes) can be searched quickly.",
    "pg": 3,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2017-mc6-1.jpg"
+   ]
   },
   {
    "n": 7,
@@ -177,7 +186,10 @@
    "exp": "64 − 4 = 60 free pixels, each black or white: 2⁶⁰ patterns.",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2017-mc9-1.jpg"
+   ]
   },
   {
    "n": 10,
@@ -250,7 +262,11 @@
    "exp": "Separate categories comparing two groups suit a clustered column chart; lines imply a trend.",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2017-mc13-1.jpg",
+    "figs/2017-mc13-2.jpg"
+   ]
   },
   {
    "n": 14,
@@ -533,7 +549,10 @@
    "exp": "The list is too tall: smaller font or multiple columns cut the height; character spacing only affects width.",
    "pg": 8,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2017-mc27-1.jpg"
+   ]
   },
   {
    "n": 28,
@@ -572,7 +591,10 @@
    "exp": "Input followed by a check that loops back on 'No' is an input validation loop.",
    "pg": 9,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2017-mc29-1.jpg"
+   ]
   },
   {
    "n": 30,
@@ -872,7 +894,10 @@
      "l": "(c)(i)",
      "q": "Mr Wong will upload students' videos to a public video sharing web site. Afterwards, the students can play their videos from the web site, as shown in the figure below:\n[Video player with 'Video settings' menu: 1280 × 720, 720 × 405, 240 × 135]\nThe web site uses the streaming method to deliver videos. What is the major benefit of this method? Explain briefly.",
      "m": 2,
-     "ms": "It can shorten the waiting time to view the videos (1), because users can watch the videos without downloading the entire files. (1)"
+     "ms": "It can shorten the waiting time to view the videos (1), because users can watch the videos without downloading the entire files. (1)",
+     "figs": [
+      "figs/2017-lq2-1.jpg"
+     ]
     },
     {
      "l": "(c)(ii)",
@@ -919,7 +944,10 @@
      "l": "(c)",
      "q": "On a certain route, there are 10 stations, A to J. The estimated travel time (hours) between any two adjacent stations is shown below. For example, the estimated travel time from station A to station B is 2 hours.\nA —2— B —5— C —3— D —4— E —2— F —3— G —5— H —5— I —1— J\nWhat is the estimated travel time from station D to station G?",
      "m": 1,
-     "ms": "9"
+     "ms": "9",
+     "figs": [
+      "figs/2017-lq3-1.jpg"
+     ]
     },
     {
      "l": "(d)",

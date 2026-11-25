@@ -179,7 +179,10 @@
    "exp": "Filter shows only rows meeting a criterion (Class = 1A).",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/pp-mc10-1.jpg"
+   ]
   },
   {
    "n": 11,
@@ -743,7 +746,10 @@
    "exp": "It generates a one-time password that changes regularly; it is used together with username/password and is not connected to the server.",
    "pg": 10,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/pp-mc39-1.jpg"
+   ]
   },
   {
    "n": 40,
@@ -902,7 +908,10 @@
      "l": "(b)",
      "q": "Ben uses the following flowchart to represent his algorithm. Write down YES, NO and an appropriate operator in the shaded areas for the first decision box.<br>[Flowchart: START → Input MARK → decision (MARK >= 0 [shaded] MARK <= 100) → MARK >= 80? Yes: GRADE ← 'Distinction'; No → MARK >= 40? Yes: GRADE ← 'Attained'; No (Label X): GRADE ← 'Unattained' → Output GRADE → END]",
      "m": 2,
-     "ms": "Operator: AND (1)<br>Yes / No placed correctly: Yes leads on to the grade checks, No loops back to Input MARK (1 for Yes+No)"
+     "ms": "Operator: AND (1)<br>Yes / No placed correctly: Yes leads on to the grade checks, No loops back to Input MARK (1 for Yes+No)",
+     "figs": [
+      "figs/pp-lq3-1.jpg"
+     ]
     },
     {
      "l": "(c)",
@@ -975,6 +984,9 @@
      "m": 2,
      "ms": "IMAP (webmail ✗) (1)<br>Any email the students read, move or delete will be updated across different computers (synchronisation). / Set all read and unread email to be stored in the server. (1)"
     }
+   ],
+   "figs": [
+    "figs/pp-lq4-1.jpg"
    ]
   },
   {
@@ -1015,7 +1027,10 @@
      "l": "(c)(i)",
      "q": "The same steps in (b) have also been applied to Sheet2 for the data collected at Kwun Tong. Peter creates the following chart to show the average readings of P1 at Shatin and at Kwun Tong in January 2010.<br>[Column chart titled “P1 (January 2010)”, y-axis “Average Readings” 0–70, x-axis “Stations”, two bars: Shatin and Kwun Tong]<br>Describe, with major steps, how to create the chart.",
      "m": 3,
-     "ms": "Click the chart wizard button (activate the chart function) and select the chart type (1)<br>Select data in Sheet1!G97 (G97 in Sheet1) and Sheet2!G97 (G97 in Sheet2) (data selection) (1)<br>Enter the chart title / axis names / labels (1)"
+     "ms": "Click the chart wizard button (activate the chart function) and select the chart type (1)<br>Select data in Sheet1!G97 (G97 in Sheet1) and Sheet2!G97 (G97 in Sheet2) (data selection) (1)<br>Enter the chart title / axis names / labels (1)",
+     "figs": [
+      "figs/pp-lq5-2.jpg"
+     ]
     },
     {
      "l": "(c)(ii)",
@@ -1023,6 +1038,9 @@
      "m": 2,
      "ms": "Yes, the chart will change accordingly provided that there is a dynamic link (OLE) between the original one and the copy. / No, the dynamic link (OLE) between the original one and the copy is deactivated. (2) (1 for showing the simple concept of a dynamic link only)"
     }
+   ],
+   "figs": [
+    "figs/pp-lq5-1.jpg"
    ]
   }
  ]

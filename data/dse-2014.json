@@ -128,7 +128,11 @@
    "exp": "Parts of a whole (adding to 100%) are best shown with a pie chart.",
    "pg": 3,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2014-mc7-1.jpg",
+    "figs/2014-mc7-2.jpg"
+   ]
   },
   {
    "n": 8,
@@ -167,7 +171,10 @@
    "exp": "Page 2 is landscape while 1 and 3 are portrait: that needs section breaks plus orientation.",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2014-mc9-1.jpg"
+   ]
   },
   {
    "n": 10,
@@ -272,7 +279,10 @@
    "exp": "To open product info online, the QR code holds the web address (URL).",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2014-mc14-1.jpg"
+   ]
   },
   {
    "n": 15,
@@ -362,7 +372,10 @@
    "exp": "HDMI carries HD video (and audio) to a TV.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2014-mc19-1.jpg"
+   ]
   },
   {
    "n": 20,
@@ -586,7 +599,10 @@
    "exp": "'Yes' loops back to input again, so the condition must be true for non-positive numbers: X ≤ 0.",
    "pg": 8,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2014-mc31-1.jpg"
+   ]
   },
   {
    "n": 32,
@@ -803,6 +819,9 @@
      "m": 2,
      "ms": "It can generate better reports with unified formats.\nThe data extraction (SQL) is more flexible."
     }
+   ],
+   "figs": [
+    "figs/2014-lq1-1.jpg"
    ]
   },
   {

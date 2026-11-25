@@ -55,7 +55,10 @@
    "exp": "A calendar stops impossible dates and is easy to use, but the user can still click the wrong date, so input is not error-free.",
    "pg": 2,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2022-mc3-1.jpg"
+   ]
   },
   {
    "n": 4,
@@ -184,7 +187,11 @@
    "exp": "Set the result cell (fee, B6) to the target 1000 by changing the input (tour budget, B4).",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2022-mc10-1.jpg",
+    "figs/2022-mc10-2.jpg"
+   ]
   },
   {
    "n": 11,
@@ -401,7 +408,10 @@
    "exp": "Users talk to application software, which runs on the operating system, which controls the hardware at the core.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2022-mc21-1.jpg"
+   ]
   },
   {
    "n": 22,
@@ -832,7 +842,10 @@
      "l": "(e)",
      "q": "When Peter installs application software, the following dialogue box is shown:<br><div style='border:1px solid;padding:6px'><u>Terms of service</u><br>Before installing this application software, you must read and accept the terms of service below:<br>1. This agreement governs your use of this service.<br>2. …<br>⋮<br>☐ I agree to the terms of service.</div>Give a term of service regarding privacy. Describe the potential risk of accepting this term that Peter might encounter.",
      "m": 2,
-     "ms": "Example of terms of service (1): Accept the use of the contact list or photos in users' devices. (Accessing resources [hardware / function / files] of the devices) / Collect personal information from the users / Collect daily information about the use of the software / Allow to use personal information (Information collection)\nPotential risk, echoing the term of service stated above (1): Personal information is leaked (info leakage) / Receive unwanted advertisement / spam (spamming)"
+     "ms": "Example of terms of service (1): Accept the use of the contact list or photos in users' devices. (Accessing resources [hardware / function / files] of the devices) / Collect personal information from the users / Collect daily information about the use of the software / Allow to use personal information (Information collection)\nPotential risk, echoing the term of service stated above (1): Personal information is leaked (info leakage) / Receive unwanted advertisement / spam (spamming)",
+     "figs": [
+      "figs/2022-lq1-1.jpg"
+     ]
     }
    ],
    "fig": false,
@@ -863,7 +876,10 @@
      "l": "(c)(i)",
      "q": "In Sheet2, a pivot chart is created for displaying the number of participants in each house.<br>[Bar chart: Blue, Yellow, Red, Green]<br>Complete the following parts to create the pivot chart.<br>ROWS: ______  VALUES: ______",
      "m": 2,
-     "ms": "ROWS: HOUSE / Column B (1)\nVALUES: Count of HOUSE / Count of HCODE (other reasonable answer) (1)"
+     "ms": "ROWS: HOUSE / Column B (1)\nVALUES: Count of HOUSE / Count of HCODE (other reasonable answer) (1)",
+     "figs": [
+      "figs/2022-lq2-1.jpg"
+     ]
     },
     {
      "l": "(c)(ii)",
@@ -940,7 +956,10 @@
      "ms": "Any two (1 × 2): SSL encryption, two-factor authentication, biometric authentication, one-time password via SMS/email, smartcard, adopt digital certificates / use a private key to verify the user identity\n✗ set login name and password\n✗ use a stronger password\n✗ change password regularly\n✗ show last logon time\n✗ validate personal information / identity or enhance server security without further elaboration or illustrating examples"
     }
    ],
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2022-lq3-1.jpg"
+   ]
   },
   {
    "n": 4,
@@ -956,7 +975,10 @@
      "l": "(a)(i)",
      "q": "A dialogue between the chatbot and an online user is shown in the following example:<br>Chatbot: Hello, I'm a chatbot. How can I help you?<br>User: Can you tell me a major difference between MP4 and AVI?<br>According to the dialogue, suggest an answer for the chatbot to reply.",
      "m": 1,
-     "ms": "The file size of AVI is larger. / The quality of AVI is better. / MP4 supports streaming. / MP4 supports subtitle/menu. / HTML5 supports MP4 only. / More portable devices/operating systems support MP4. (1)"
+     "ms": "The file size of AVI is larger. / The quality of AVI is better. / MP4 supports streaming. / MP4 supports subtitle/menu. / HTML5 supports MP4 only. / More portable devices/operating systems support MP4. (1)",
+     "figs": [
+      "figs/2022-lq4-1.jpg"
+     ]
     },
     {
      "l": "(a)(ii)",
@@ -974,7 +996,10 @@
      "l": "(c)(i)",
      "q": "John develops the login page for using the chatbot application.<br>[Login page: Username, Password, Captcha (with a distorted-text image), Login and Cancel buttons]<br>Users should set a password of at least 8 characters that must include an uppercase letter, a lowercase letter, a digit and a symbol. Give two good practices for users when setting a password, other than having a long password.",
      "m": 2,
-     "ms": "Any two (1 × 2): Use meaningless words. / Use randomised numbers. / Use different passwords for different systems."
+     "ms": "Any two (1 × 2): Use meaningless words. / Use randomised numbers. / Use different passwords for different systems.",
+     "figs": [
+      "figs/2022-lq4-2.jpg"
+     ]
     },
     {
      "l": "(c)(ii)",
@@ -986,7 +1011,11 @@
      "l": "(d)(i)",
      "q": "John considers encoding symbols into bit patterns in the application. The following table shows the bit patterns of symbols using two different methods.<br><table><tr><th>Symbol</th><th>Bit pattern: Method 1</th><th>Bit pattern: Method 2</th></tr><tr><td>😊</td><td>10</td><td>1</td></tr><tr><td>🙃</td><td>01</td><td>01</td></tr><tr><td>😐</td><td>00</td><td>000</td></tr><tr><td>☹</td><td>11</td><td>001</td></tr></table>Encode 😊 😐 ☹ ☹ using Method 1: ______",
      "m": 1,
-     "ms": "10 00 11 11"
+     "ms": "10 00 11 11",
+     "figs": [
+      "figs/2022-lq4-3.jpg",
+      "figs/2022-lq4-4.jpg"
+     ]
     },
     {
      "l": "(d)(ii)",
@@ -998,7 +1027,10 @@
      "l": "(d)(iii)",
      "q": "Find the number of bits required for encoding the symbols in each row below.<br><table><tr><th></th><th>Method 1</th><th>Method 2</th></tr><tr><td>😊 😊 😊 ☹ ☹ ☹</td><td></td><td></td></tr><tr><td>☹ ☹ ☹ 😐 😐 😐</td><td></td><td></td></tr></table>",
      "m": 2,
-     "ms": "😊😊😊☹☹☹: Method 1 = 12, Method 2 = 12\n☹☹☹😐😐😐: Method 1 = 12, Method 2 = 18 (2)"
+     "ms": "😊😊😊☹☹☹: Method 1 = 12, Method 2 = 12\n☹☹☹😐😐😐: Method 1 = 12, Method 2 = 18 (2)",
+     "figs": [
+      "figs/2022-lq4-5.jpg"
+     ]
     },
     {
      "l": "(d)(iv)",

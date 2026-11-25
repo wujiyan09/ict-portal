@@ -38,7 +38,10 @@
    "exp": "7 segments, each on or off: 2⁷ = 128 patterns. Minus all-off: 127.",
    "pg": 2,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2023-mc2-1.jpg"
+   ]
   },
   {
    "n": 3,
@@ -411,7 +414,10 @@
    "exp": "Cookies track browsing and can collect personal information. They cannot read his email address book or cut bandwidth.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2023-mc21-1.jpg"
+   ]
   },
   {
    "n": 22,
@@ -450,7 +456,10 @@
    "exp": "Computers connect to a switch (X), and the router (Y) links the LAN to the Internet.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2023-mc23-1.jpg"
+   ]
   },
   {
    "n": 24,

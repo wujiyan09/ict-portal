@@ -147,7 +147,10 @@
    "exp": "A note linked by a superscript number and shown at the page bottom is a footnote.",
    "pg": 3,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2015-mc8-1.jpg"
+   ]
   },
   {
    "n": 9,
@@ -338,7 +341,11 @@
    "exp": "Barcodes are read across the bars; C has a vertical strip of bars covered, so the full bar pattern can't be read; covering the top/bottom or digits still leaves complete bars.",
    "pg": 6,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2015-mc18-1.jpg",
+    "figs/2015-mc18-2.jpg"
+   ]
   },
   {
    "n": 19,
@@ -478,7 +485,11 @@
    "exp": "Only B is valid HTML: text, a line break and an <IMG SRC=...> tag.",
    "pg": 7,
    "fig": true,
-   "code": true
+   "code": true,
+   "figs": [
+    "figs/2015-mc25-1.jpg",
+    "figs/2015-mc25-2.jpg"
+   ]
   },
   {
    "n": 26,
@@ -534,7 +545,10 @@
    "exp": "The decision box comes after the process and input steps, so the body runs before the test: post-test loop.",
    "pg": 8,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2015-mc28-1.jpg"
+   ]
   },
   {
    "n": 29,
@@ -667,8 +681,11 @@
    "topic": "C2",
    "exp": "The token is a second factor that proves the user is who they claim to be.",
    "pg": 10,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2015-mc35-1.jpg"
+   ]
   },
   {
    "n": 36,
@@ -810,7 +827,10 @@
      "l": "(d)(i)",
      "q": "The mobile device that Ada uses is a tablet computer. She develops an interface for controlling the movement of the drone and capturing videos and photos, as shown below. [Interface figure with 'Record a video' and 'Take a photo' buttons]\nThere are drawbacks in the design of the interface. Make two changes to improve the design and draft it below.",
      "m": 2,
-     "ms": "2 improvements are clearly shown (no matter how many improvements have been drafted) (1×2)\nExamples:\n- Direction buttons & location (The location must be user-friendly. The centre position is not appropriate.)\n- Merge of two screens\n- Buttons within the screen"
+     "ms": "2 improvements are clearly shown (no matter how many improvements have been drafted) (1×2)\nExamples:\n- Direction buttons & location (The location must be user-friendly. The centre position is not appropriate.)\n- Merge of two screens\n- Buttons within the screen",
+     "figs": [
+      "figs/2015-lq1-2.jpg"
+     ]
     },
     {
      "l": "(d)(ii)",
@@ -818,6 +838,9 @@
      "m": 2,
      "ms": "2 improvements are clearly and appropriately described (corresponding to (d)(i)) (1×2)\nSuggested answer: Putting the direction buttons at the sides, within easy reach of the thumbs, lets Ada control the drone while holding the tablet; merging the video view and controls into one screen lets her watch the live video while flying and shooting."
     }
+   ],
+   "figs": [
+    "figs/2015-lq1-1.jpg"
    ]
   },
   {
@@ -978,6 +1001,9 @@
      "m": 1,
      "ms": "ALG2 — It generates a fewer number of iterations / average execution time is shorter. (It stops as soon as one product is found.)\nOR ALG1 — It may have fewer conditional statements."
     }
+   ],
+   "figs": [
+    "figs/2015-lq4-1.jpg"
    ]
   },
   {

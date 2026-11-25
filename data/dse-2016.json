@@ -244,8 +244,11 @@
    "topic": "A1",
    "exp": "FTP is a protocol (network/software), not data.",
    "pg": 4,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2016-mc13-1.jpg"
+   ]
   },
   {
    "n": 14,
@@ -541,8 +544,11 @@
    "topic": "C2",
    "exp": "Only A uses valid HTML structure with HEAD and BODY tags.",
    "pg": 8,
-   "fig": false,
-   "code": true
+   "fig": true,
+   "code": true,
+   "figs": [
+    "figs/2016-mc29-1.jpg"
+   ]
   },
   {
    "n": 30,
@@ -615,7 +621,10 @@
    "exp": "An IPO chart shows inputs, process and outputs, not data types or data structures.",
    "pg": 9,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2016-mc33-1.jpg"
+   ]
   },
   {
    "n": 34,
@@ -748,8 +757,11 @@
    "topic": "E",
    "exp": "Voice recognition needs only the microphone; location and contacts are not needed.",
    "pg": 11,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2016-mc40-1.jpg"
+   ]
   }
  ],
  "lq": [
@@ -957,6 +969,9 @@
      "m": 3,
      "ms": "(1×3) Date in row; Store and/or Store manager in the column; Summary information (e.g. total net profit) in the cells.\nSuggested answer: rows = dates 1-2-2016 … 29-2-2016 (plus Grand Total); columns = Central, Wan Chai, …, Lai King (plus Grand Total); values = Sum of Net profit."
     }
+   ],
+   "figs": [
+    "figs/2016-lq4-1.jpg"
    ]
   },
   {

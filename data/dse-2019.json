@@ -216,8 +216,11 @@
    "topic": "A1",
    "exp": "Re-entering the password is verification; the 8-character minimum is validation.",
    "pg": 3,
-   "fig": false,
-   "code": false
+   "fig": true,
+   "code": false,
+   "figs": [
+    "figs/2019-mc11-1.jpg"
+   ]
   },
   {
    "n": 12,
@@ -324,7 +327,10 @@
    "exp": "QR codes have error correction, can mix data types and can be read from any direction.",
    "pg": 4,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2019-mc17-1.jpg"
+   ]
   },
   {
    "n": 18,
@@ -402,7 +408,10 @@
    "exp": "Switches link computers in each LAN; a router links the campus to the Internet.",
    "pg": 5,
    "fig": true,
-   "code": false
+   "code": false,
+   "figs": [
+    "figs/2019-mc21-1.jpg"
+   ]
   },
   {
    "n": 22,
@@ -660,7 +669,10 @@
    "exp": "(P,Q) goes (10,2), (11,4), (12,8), (13,16); then 13 < 16 stops it: 4 times.",
    "pg": 9,
    "fig": true,
-   "code": true
+   "code": true,
+   "figs": [
+    "figs/2019-mc34-1.jpg"
+   ]
   },
   {
    "n": 35,
@@ -865,7 +877,10 @@
      "l": "(b)(i)",
      "q": "A teacher, Mr Li, plans to teach students shot put skills. He uses a search engine to search for videos about shot put skills. He types some keywords and obtains the following search result:<br>[Search box: Shot put] All | Images | Videos | News<br>33,000,000 results<br><b>2017 Eastern District Age Group ...</b><br>https://www.lcsd.gov.hk/ls/dagc/prop/last/b5/1_009_r.pdf PDF File<br>Shot Put Result: 8.56m 8.49m 8.39m Soft Ball Result: 33.28m ...<br>Suggest two ways to improve the search.",
      "m": 2,
-     "ms": "Any two (1×2):<br>Click the 'videos' tab to narrow down the search.<br>Use quotations for the keywords, such as \"shot put\".<br>Use more keywords such as \"shot put skills\" and \"learn shot put\"."
+     "ms": "Any two (1×2):<br>Click the 'videos' tab to narrow down the search.<br>Use quotations for the keywords, such as \"shot put\".<br>Use more keywords such as \"shot put skills\" and \"learn shot put\".",
+     "figs": [
+      "figs/2019-lq2-1.jpg"
+     ]
     },
     {
      "l": "(b)(ii)",
@@ -979,6 +994,9 @@
      "m": 2,
      "ms": "Any two (1×2):<br>Use encryption / secure channels for the data transmission.<br>Set access rights of the cloud storage.<br>Encrypted data in the cloud storage.<br>Use anti-spyware to prevent hackers' attack.<br>Destroy all data after the event.<br>Install a firewall to prevent hackers' attack."
     }
+   ],
+   "figs": [
+    "figs/2019-lq4-1.jpg"
    ]
   },
   {
