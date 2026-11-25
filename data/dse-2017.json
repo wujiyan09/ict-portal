@@ -1,0 +1,1045 @@
+{
+ "year": "2017",
+ "mc": [
+  {
+   "n": 1,
+   "q": "Three plaintext files contain some characters, as shown below:\n\n(1) 2017.   (2) JULY.   (3) 二零一七。\n\nAssume that Unicode (UTF-8) is adopted. Which of the following comparative statements about the file sizes is correct?",
+   "o": [
+    "(1) > (3)",
+    "(2) > (1)",
+    "(2) > (3)",
+    "(3) > (2)"
+   ],
+   "a": "D",
+   "pct": "79%",
+   "topic": "A1",
+   "exp": "In UTF-8, ASCII characters take 1 byte but Chinese characters take 3 bytes, so (3) = 12 bytes > (2) = 5 bytes.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 2,
+   "q": "There are two methods for entering dates into a web page, as shown below:\n\nMethod 1: a pop-up calendar (April 2017) to click a date\nMethod 2: Date: [2017.4.21] [Enter]\n\nWhat are the benefits of using Method 1 instead of Method 2?",
+   "st": [
+    "(1) Reduces input errors.",
+    "(2) It is more user-friendly.",
+    "(3) Detects errors by parity checking."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "89%",
+   "topic": "A1",
+   "exp": "Clicking a date avoids typing errors and is easier; parity checking is unrelated.",
+   "pg": 2,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 3,
+   "q": "Which of the following are the major benefits of using Object Linking and Embedding (OLE) in office automation software?",
+   "st": [
+    "(1) Data from different applications can be included in a single file.",
+    "(2) Data from different applications can remain synchronised.",
+    "(3) Data from different applications can be stored in the same folder."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "43%",
+   "topic": "A1",
+   "exp": "OLE puts data from other apps in one document and linked data stays in sync.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 4,
+   "q": "Amy plans to upload her photos to cloud storage. What is the benefit of using JPG format instead of BMP format in this case?",
+   "o": [
+    "Decreases the width and length of the photos.",
+    "Decreases the file size of the photos.",
+    "Increases the number of pixels in the photos.",
+    "Increases the number of colours in the photos."
+   ],
+   "a": "B",
+   "pct": "88%",
+   "topic": "A1",
+   "exp": "JPG is compressed, so files are smaller and upload faster.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 5,
+   "q": "When a digital photo is printed on photo paper, the top and bottom parts of the photo paper are unused. What is/are the possible reason(s) for this?",
+   "st": [
+    "(1) The aspect ratios of the digital photo and the photo paper are not the same.",
+    "(2) The file size of the digital photo is too large.",
+    "(3) The colour depth of the digital photo is too low."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "90%",
+   "topic": "A1",
+   "exp": "Blank strips appear when the photo's aspect ratio differs from the paper's.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 6,
+   "q": "In a college, the registration form for each student has a unique bar code. The college will digitise the forms and store them in PDF format. What is/are the major benefit(s) of handling the forms in this way?\n\n[Registration Form with a bar code and Name: field]",
+   "st": [
+    "(1) The forms can be retrieved and used in different operating systems.",
+    "(2) Searching for a form can be faster.",
+    "(3) The forms can be printed on high quality paper."
+   ],
+   "o": [
+    "(2) only",
+    "(3) only",
+    "(1) and (2) only",
+    "(1) and (3) only"
+   ],
+   "a": "C",
+   "pct": "70%",
+   "topic": "A1",
+   "exp": "PDF is cross-platform and digital forms (with bar codes) can be searched quickly.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 7,
+   "q": "When creating an online email account, the following step needs to be completed.\n\nEnter password: ********\nRe-enter password: ********\n\nWhat is the purpose of re-entering the password?",
+   "o": [
+    "Data collection",
+    "Data verification",
+    "Data organisation",
+    "Data validation"
+   ],
+   "a": "B",
+   "pct": "76%",
+   "topic": "A1",
+   "exp": "Entering twice and comparing is double-entry verification.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 8,
+   "q": "Which of the following actions involve the conversion of analog to digital data?",
+   "st": [
+    "(1) Using software to convert a spreadsheet file into a PDF file",
+    "(2) Using software to convert speech to text",
+    "(3) Using a digital camera to take photos"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "77%",
+   "topic": "A1",
+   "exp": "Speech (sound) and light are analog and get digitised; spreadsheet→PDF is digital to digital.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 9,
+   "q": "A black-and-white display board uses 8×8 pixels to illustrate a pattern. The upper left 4 pixels must be black at any time. How many different patterns can the display board illustrate?\n\n[8 × 8 grid with the upper-left 2 × 2 pixels black]",
+   "o": [
+    "60",
+    "120",
+    "2³⁶",
+    "2⁶⁰"
+   ],
+   "a": "D",
+   "pct": "57%",
+   "topic": "A1",
+   "exp": "64 − 4 = 60 free pixels, each black or white: 2⁶⁰ patterns.",
+   "pg": 4,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 10,
+   "q": "What is the major benefit of using a form in a database management system?",
+   "o": [
+    "Simplifies data entry.",
+    "Simplifies report printing.",
+    "Saves storage space.",
+    "Filters data in a single database table."
+   ],
+   "a": "A",
+   "pct": "44%",
+   "topic": "A2",
+   "exp": "Forms give a friendly layout for entering data.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 11,
+   "q": "For a chain convenience store, in which of the following examples should 'what-if' scenarios in spreadsheets be used?",
+   "st": [
+    "(1) Estimates monthly expenses by changing different parameters.",
+    "(2) Produces monthly sales analysis.",
+    "(3) Compares sales data from different branches."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "55%",
+   "topic": "A2",
+   "exp": "What-if analysis changes input values to see the effect: estimating expenses.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 12,
+   "q": "The following calculations involve 8-bit numbers using two's complement representation. Which one will generate an overflow error?",
+   "o": [
+    "0001 0101 + 1000 1000",
+    "0111 0011 + 1000 1000",
+    "1100 0110 + 1000 1000",
+    "1111 1100 + 1000 1000"
+   ],
+   "a": "C",
+   "pct": "39%",
+   "topic": "A1",
+   "exp": "1100 0110 = −58 and 1000 1000 = −120; −178 is below −128, so it overflows.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 13,
+   "q": "Read the following survey data on ways of going home:\n<table><tr><th>Ways of going home</th><th>Boys</th><th>Girls</th></tr><tr><td>On foot</td><td>10</td><td>20</td></tr><tr><td>By school bus</td><td>15</td><td>5</td></tr><tr><td>By MTR</td><td>25</td><td>30</td></tr><tr><td>Taxi</td><td>5</td><td>5</td></tr><tr><td>Private car</td><td>2</td><td>4</td></tr></table>\nWhich of the following types of spreadsheet charts can best represent data on the first three ways of going home?",
+   "o": [
+    "Clustered column chart (Boys and Girls side by side)",
+    "Exploded pie chart of six slices",
+    "3-D stacked area chart",
+    "Line chart (Boys and Girls lines)"
+   ],
+   "a": "A",
+   "pct": "91%",
+   "topic": "A2",
+   "exp": "Separate categories comparing two groups suit a clustered column chart; lines imply a trend.",
+   "pg": 5,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 14,
+   "q": "Colour codes are used when defining the background colour on a web page. What is the range of hexadecimal values for the colour codes?",
+   "o": [
+    "0 to 99",
+    "0 to FF",
+    "1 to 64",
+    "1 to AA"
+   ],
+   "a": "B",
+   "pct": "89%",
+   "topic": "C2",
+   "exp": "Each of R, G, B uses one byte: 00 to FF.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 15,
+   "q": "Which of the following items is/are system software?",
+   "st": [
+    "(1) Spreadsheet software",
+    "(2) Operating system",
+    "(3) Driver program"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "64%",
+   "topic": "B",
+   "exp": "The OS and drivers are system software; spreadsheets are application software.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 16,
+   "q": "Consider the following steps in a machine cycle for a particular instruction:\n\n(1) Executes the instruction.\n(2) Writes data in memory.\n(3) Translates the instruction into the operation code and operands.\n(4) Retrieves the instruction from memory.\n\nWhat is the correct order of the steps?",
+   "o": [
+    "(3) → (1) → (2) → (4)",
+    "(3) → (2) → (4) → (1)",
+    "(4) → (1) → (3) → (2)",
+    "(4) → (3) → (1) → (2)"
+   ],
+   "a": "D",
+   "pct": "60%",
+   "topic": "B",
+   "exp": "Fetch (4) → decode (3) → execute (1) → store (2).",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 17,
+   "q": "A computer is used to edit videos. Which of the following specifications have a significant impact on the performance of the computer?",
+   "st": [
+    "(1) Size of RAM",
+    "(2) Number of USB ports",
+    "(3) CPU clock rate"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "B",
+   "pct": "91%",
+   "topic": "B",
+   "exp": "RAM size and CPU speed matter; USB port count does not.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 18,
+   "q": "Which of the following statements about the registers in CPU is correct?",
+   "o": [
+    "Their read/write data transfer rates are high.",
+    "Their functions are the same.",
+    "They are used as secondary storage.",
+    "Their total storage size is usually larger than 1 GB."
+   ],
+   "a": "A",
+   "pct": "58%",
+   "topic": "B",
+   "exp": "Registers are the fastest, tiny storage inside the CPU, each with its own job.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 19,
+   "q": "What information is usually provided by the system monitoring software in an operating system?",
+   "st": [
+    "(1) Current processes",
+    "(2) Memory usage",
+    "(3) Network traffic"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "D",
+   "pct": "66%",
+   "topic": "B",
+   "exp": "System monitors (e.g. Task Manager) show processes, memory and network use.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 20,
+   "q": "Which of the following is/are the government e-services provided by GovHK?",
+   "st": [
+    "(1) Enrolling for community recreation and sports programmes",
+    "(2) Applying for admission to universities in Hong Kong",
+    "(3) Renewing borrowed public library books"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "C",
+   "pct": "78%",
+   "topic": "E",
+   "exp": "Leisure programme enrolment and library renewals are government e-services; university admission is through JUPAS/universities.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 21,
+   "q": "Mary wants to buy a keyboard for her tablet computer. Which of the following connections is/are commonly used for keyboards?",
+   "st": [
+    "(1) Fibre optics",
+    "(2) USB cable",
+    "(3) Bluetooth"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "D",
+   "pct": "79%",
+   "topic": "B",
+   "exp": "Keyboards use USB or Bluetooth; fibre optics is for networks.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 22,
+   "q": "Bank customers can withdraw cash from their accounts through Automated Teller Machines (ATMs). Which of the following systems best describe(s) this operation?",
+   "st": [
+    "(1) Interactive system",
+    "(2) Real-time system",
+    "(3) Batch processing system"
+   ],
+   "o": [
+    "(2) only",
+    "(3) only",
+    "(1) and (2) only",
+    "(1) and (3) only"
+   ],
+   "a": "C",
+   "pct": "57%",
+   "topic": "B",
+   "exp": "The user interacts with the ATM and the balance updates immediately.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 23,
+   "q": "Which of the following is the major function of a switch in a school computer network?",
+   "o": [
+    "Facilitates data transmission between computers.",
+    "Prevents unauthorised access.",
+    "Increases the network bandwidth.",
+    "Provides email services for users."
+   ],
+   "a": "A",
+   "pct": "77%",
+   "topic": "C1",
+   "exp": "A switch forwards data between the computers in a LAN.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 24,
+   "q": "Which of the following is/are the advantage(s) of setting up a wireless network to replace a wired network?",
+   "st": [
+    "(1) Increased network speed.",
+    "(2) Enhanced network security.",
+    "(3) Increased mobility of computers."
+   ],
+   "o": [
+    "(1) only",
+    "(3) only",
+    "(1) and (2) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "88%",
+   "topic": "C1",
+   "exp": "Wireless gives mobility but is usually slower and less secure.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 25,
+   "q": "Amy wants to buy a colour laser printer for use at home. What specifications should she consider?",
+   "st": [
+    "(1) Brightness (lm)",
+    "(2) Printing speed (ppm)",
+    "(3) Resolution (dpi)"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "61%",
+   "topic": "B",
+   "exp": "Printers are rated by ppm and dpi; lumens are for projectors.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 26,
+   "q": "Peter is going to set up a web site for his new company so that customers can access his web site through any one of the following links:\n\nweb.goodcompany.hk\nwww.goodcompany.hk\nwww.goodcompany.com.hk\nwww.goodcompany.com\nweb.goodcompany.com\n\nHow many domain names does he need to register?",
+   "o": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "a": "C",
+   "pct": "36%",
+   "topic": "C1",
+   "exp": "goodcompany.hk, goodcompany.com.hk and goodcompany.com; www/web are just host names under them.",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 27,
+   "q": "A web page of a company displays its eight branches in China, as shown below:\n\nBranches in China:\n1. Hong Kong\n2. Shanghai\n3. Beijing\n4. Shenzhen\n5. Chongqing\n6. Tianjin\n7. Xiamen\n8. Macau (partly hidden; a vertical scroll bar is shown)\n\nWhich of the following modifications can let users clearly view all the branches without using the scroll bar on the right hand side?",
+   "st": [
+    "(1) Reduces the font size.",
+    "(2) Decreases the character spacing.",
+    "(3) Uses a table with multiple columns."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "B",
+   "pct": "59%",
+   "topic": "C2",
+   "exp": "The list is too tall: smaller font or multiple columns cut the height; character spacing only affects width.",
+   "pg": 8,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 28,
+   "q": "A web page displays some images. In addition to the names of the image files, what other information will be included in the HTML code of the web page?",
+   "st": [
+    "(1) The paths of the image files",
+    "(2) The size of the image files",
+    "(3) The IP address of the server that stores the HTML file"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "61%",
+   "topic": "C2",
+   "exp": "<img src> holds the path to the file; file size and the server's IP are not written in the HTML.",
+   "pg": 8,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 29,
+   "q": "The following segment of a flowchart is used to represent a task in a cinema ticket booking system. What is the task?\n\n[Flowchart: input (parallelogram) → decision; 'No' loops back to the input, 'Yes' continues]",
+   "o": [
+    "Prints a ticket.",
+    "Calculates a ticket price.",
+    "Displays a 'welcome' message.",
+    "Validates the number of tickets entered."
+   ],
+   "a": "D",
+   "pct": "74%",
+   "topic": "D1",
+   "exp": "Input followed by a check that loops back on 'No' is an input validation loop.",
+   "pg": 9,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 30,
+   "q": "The problem-solving procedures for developing a computer system are listed below. What is the correct order of the procedures?\n\n(1) Tests the system.\n(2) Defines the problem.\n(3) Designs the algorithm.\n(4) Writes the program codes.",
+   "o": [
+    "(2) → (4) → (3) → (1)",
+    "(2) → (3) → (4) → (1)",
+    "(3) → (2) → (4) → (1)",
+    "(3) → (4) → (2) → (1)"
+   ],
+   "a": "B",
+   "pct": "78%",
+   "topic": "D2",
+   "exp": "Define → design → code → test.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 31,
+   "q": "What is the output of the following algorithm?\n\nK ← 0\nFor N from 1 to 3\n    K ← K + N × N\nOutput K",
+   "o": [
+    "3",
+    "9",
+    "14",
+    "30"
+   ],
+   "a": "C",
+   "pct": "77%",
+   "topic": "D1",
+   "exp": "1 + 4 + 9 = 14.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 32,
+   "q": "Study the following statement:\n\nIf NOT ( X > 30 OR ( Y AND Z ) )\n    Then output '***'\n\nFor which of the following combinations of the values X, Y and Z will '***' be displayed?",
+   "o": [
+    "X: 20, Y: TRUE, Z: TRUE",
+    "X: 30, Y: FALSE, Z: FALSE",
+    "X: 40, Y: FALSE, Z: FALSE",
+    "X: 50, Y: FALSE, Z: TRUE"
+   ],
+   "a": "B",
+   "pct": "41%",
+   "topic": "D1",
+   "exp": "Need X ≤ 30 and (Y AND Z) false: only X = 30, FALSE, FALSE.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 33,
+   "q": "A is an array with A[1], A[2], ..., A[N] storing N non-zero values. What is the purpose of the following algorithm?\n\nInput P\nK ← P\nWhile K <= N-1 do\n    A[K] ← A[K+1]\n    K ← K+1\nN ← N-1",
+   "o": [
+    "Removes the P-th value in A.",
+    "Increases the value of P by 1.",
+    "Swaps the values of A[K] and A[K+1] for K <= N-1.",
+    "Calculates the sum of the values in A."
+   ],
+   "a": "A",
+   "pct": "33%",
+   "topic": "D1",
+   "exp": "Each later value shifts left over position P and N drops by 1: deletes the P-th value.",
+   "pg": 10,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 34,
+   "q": "Which of the following is/are security measure(s) an online bank can use to authenticate customers' identities?",
+   "st": [
+    "(1) Antivirus software",
+    "(2) Security token",
+    "(3) Digital watermark"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "64%",
+   "topic": "C2",
+   "exp": "A security token proves the customer's identity; the others don't authenticate users.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 35,
+   "q": "Which of the following may have security risks?",
+   "st": [
+    "(1) Using a public computer in a coffee shop to log on to an online bank",
+    "(2) Using the Wi-Fi network provided by a shopping centre to check email",
+    "(3) Using a public computer to check the digital certificate of a web site"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "73%",
+   "topic": "C2",
+   "exp": "Logging in on a public computer or public Wi-Fi exposes credentials; just checking a certificate sends no secrets.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 36,
+   "q": "Which of the following behaviours may infringe intellectual property rights?",
+   "st": [
+    "(1) Sending an email with a virus to a friend",
+    "(2) Hacking into an online bank account",
+    "(3) Posting a scanned newspaper on a personal web site",
+    "(4) Uploading a video of a TV programme to the Internet"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (4) only",
+    "(2) and (3) only",
+    "(3) and (4) only"
+   ],
+   "a": "D",
+   "pct": "88%",
+   "topic": "E",
+   "exp": "Copying newspaper and TV content breaks copyright; viruses and hacking are other crimes.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 37,
+   "q": "What changes have been brought about by the emergence of the Information Age?",
+   "st": [
+    "(1) More office space is needed.",
+    "(2) New ICT-related jobs appear and change the job market.",
+    "(3) There are more opportunities to acquire information and to learn new things."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "C",
+   "pct": "89%",
+   "topic": "E",
+   "exp": "New ICT jobs and more learning chances; remote work means less office space, not more.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 38,
+   "q": "Ransomware is malware that encrypts victims' computer files and demands a ransom payment to restore them. How can we minimise the impact of ransomware?",
+   "st": [
+    "(1) Creates backups of computer files regularly.",
+    "(2) Do not open anonymous or phishing email.",
+    "(3) Do not download pirated copies of computer software through p2p software."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "D",
+   "pct": "67%",
+   "topic": "C2",
+   "exp": "Backups let you restore files; avoiding phishing mail and pirated software avoids infection.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 39,
+   "q": "What are the major reasons for applying ergonomic design principles to computers in the work environment?",
+   "st": [
+    "(1) Prevents repetitive strain injury.",
+    "(2) Saves on costs of setting up computers.",
+    "(3) Provides a customised, adjustable setup for meeting different people's needs."
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "B",
+   "pct": "94%",
+   "topic": "E",
+   "exp": "Ergonomics protects health and fits different users; it usually costs more, not less.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 40,
+   "q": "The World Health Organization (WHO) states that 15% of the world's population have disabilities. What can we do for these people to improve the access to ICT significantly?",
+   "o": [
+    "Gives persons with disabilities notebook computers.",
+    "Sets up free computer centres for persons with disabilities to access the Internet.",
+    "Develops appropriate tools for persons with disabilities to access ICT.",
+    "Provides free ICT training for persons with disabilities."
+   ],
+   "a": "C",
+   "pct": "85%",
+   "topic": "E",
+   "exp": "Assistive tools (screen readers, special input devices) let them actually use ICT.",
+   "pg": 11,
+   "fig": false,
+   "code": false
+  }
+ ],
+ "lq": [
+  {
+   "n": 1,
+   "topic": "C2",
+   "pg": [
+    13,
+    14
+   ],
+   "stem": "WAPP company develops an instant messaging application. Mary uses the application in her tablet computer to communicate with her friends.",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "The application provides an encryption function so that all messages can be encrypted before sending. Give a benefit and a drawback of this function.\nBenefit:\nDrawback:",
+     "m": 2,
+     "ms": "Benefit: Messages are protected from eavesdropping and interception. (better data security)\nDrawback: Take time to do the encryption."
+    },
+    {
+     "l": "(b)",
+     "q": "The application allows users to send messages with symbols such as ☺ and 👍. However, the symbols are not represented as images in computer storage. Explain how the symbols are represented and the benefit of representing them in this way.",
+     "m": 2,
+     "ms": "The symbols are encoded and sent as text/characters (character codes) (1) so that the size of the messages (storage required) can be reduced. (1)"
+    },
+    {
+     "l": "(c)",
+     "q": "Mary uses the tablet computer to take a video and send it to her friend, Billy, through the application. She finds that the video Billy receives has a smaller file size than the original. Give two benefits of reducing the file size of the video.",
+     "m": 2,
+     "ms": "Reduce time for file transmission. (network traffic)\nReduce data storage needed for the recipient's device. (storage space)"
+    },
+    {
+     "l": "(d)",
+     "q": "Mary regularly uses the application with the tablet computer for four hours continuously every day in her workplace. Give a health problem that she may encounter and suggest a way to minimise the problem.",
+     "m": 2,
+     "ms": "Mary may suffer from neck pain / fatigue. (Alternatives: eyes, arms) (1)\nShe should take a 5-minute break after using the tablet computer for every 30 minutes. / ergonomically-designed furniture (1)"
+    },
+    {
+     "l": "(e)(i)",
+     "q": "WAPP company requests Mary to store her data, such as contact list, previous messages and multimedia files, in its centralised servers through the application.\nGive two possible uses of the users' data stored in the centralised servers that can benefit Mary.",
+     "m": 2,
+     "ms": "Any two (1×2): It helps the recovery of users' contact lists/previous messages through the Internet. / The data in the tablet computer can be deleted so as to save its storage space. / Maintain the consistency of data for multiple devices."
+    },
+    {
+     "l": "(e)(ii)",
+     "q": "Suggest two possible privacy threats posed by this request.",
+     "m": 2,
+     "ms": "Any two (1×2): WAPP company may distribute/misuse the contact lists of users for other commercial activities. / WAPP company may reveal users' privacy in their private conversations. / The server will attract more hacking as it holds much more private information."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "topic": "A1",
+   "pg": [
+    15,
+    16
+   ],
+   "stem": "Peter participates in a video competition organised by Mr Wong in his school.",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "Mr Wong requires students to submit videos in MP4 or AVI format. Give two major differences between the two video formats.",
+     "m": 2,
+     "ms": "Any two (1×2): The codecs they support are different. / MP4 has a smaller file size. / MP4 is a compressed format. / MP4 has a lower video quality. / MP4 supports streaming. / More portable devices/operating systems support MP4. / HTML5 supports MP4 only. / MP4 supports subtitles/menus."
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Mr Wong does not use system software to play the videos. Why not? Explain your answer with the functions of system software.",
+     "m": 2,
+     "ms": "System software is used to help manage the hardware resources. It includes operating systems, utility programs and driver programs that provide an interface between hardware and users. (Playing videos is a job for application software.)\n1 mark function + 1 mark description / 1 mark each for two functions"
+    },
+    {
+     "l": "(b)",
+     "q": "Peter estimates that 1-second video takes up 25 MB of storage space. Mr Wong only accepts videos with file sizes not larger than 30 GB. How long is the video that Peter could take? Show your calculation and express your answer in minutes.",
+     "m": 2,
+     "ms": "30 × 1024 / 25 = 1228.8 seconds ≈ 20 minutes (30 × 1000 / 25 = 1200 s = 20 minutes also accepted)\n1 mark for answer only (20)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Mr Wong will upload students' videos to a public video sharing web site. Afterwards, the students can play their videos from the web site, as shown in the figure below:\n[Video player with 'Video settings' menu: 1280 × 720, 720 × 405, 240 × 135]\nThe web site uses the streaming method to deliver videos. What is the major benefit of this method? Explain briefly.",
+     "m": 2,
+     "ms": "It can shorten the waiting time to view the videos (1), because users can watch the videos without downloading the entire files. (1)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Why does the web site provide different options, 1280 × 720, 720 × 405 and 240 × 135, in the video settings?",
+     "m": 2,
+     "ms": "Mr Wong can choose 1280 × 720 (high resolution) to view the videos with high quality. / Mr Wong can choose 240 × 135 (low resolution) to view the videos with a shorter waiting time.\nChoose the option according to the bandwidth/video quality/waiting time.\n✗ screen resolution / browser resolution"
+    },
+    {
+     "l": "(d)",
+     "q": "Peter wants to use some videos published to the web site for his work. In order to avoid the infringement of copyright, what should Peter do? Give two examples.",
+     "m": 2,
+     "ms": "Peter should obtain the permission from the copyright owners of the videos before using them (1) and acknowledge the sources of the videos afterward. (1)"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "topic": "D1",
+   "pg": [
+    17,
+    18
+   ],
+   "stem": "A railway company develops a computer system that installs kiosks with touch screen display panels at stations.",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "The kiosks should display the following train information on the display panels and help passengers look for the arrival times and platform numbers of trains.\n• Train numbers, such as 3338 and 0910\n• Destination, such as Shenzhen and Tianjin\n• Arrival time, such as 14:30 and 08:00\n• Platform numbers, such as 3 and 12\nDesign an interactive layout for the kiosks with annotations.",
+     "m": 3,
+     "ms": "1 mark each: Display of all information; Interactive layout; Ease of input\nSuggested answer: a table with columns Train No. / Destination / Arrival time / Platform, large touch buttons to filter by destination or search by train number, and an on-screen keypad for input."
+    },
+    {
+     "l": "(b)(i)",
+     "q": "The data in the kiosks are stored in Electrically Erasable Programmable Read Only Memory (EEPROM), which is a form of flash memory.\nGive one difference between flash memory and RAM.",
+     "m": 1,
+     "ms": "Flash memory (EEPROM) is non-volatile."
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Give one difference between flash memory and ROM.",
+     "m": 1,
+     "ms": "Flash memory (EEPROM) is re-writable."
+    },
+    {
+     "l": "(c)",
+     "q": "On a certain route, there are 10 stations, A to J. The estimated travel time (hours) between any two adjacent stations is shown below. For example, the estimated travel time from station A to station B is 2 hours.\nA —2— B —5— C —3— D —4— E —2— F —3— G —5— H —5— I —1— J\nWhat is the estimated travel time from station D to station G?",
+     "m": 1,
+     "ms": "9"
+    },
+    {
+     "l": "(d)",
+     "q": "In the computer system, the array W with W[1], W[2], ..., W[9] is used to store the 9 estimated travel times respectively. That is W[1]=2, W[2]=5, and so on.\nComplete the following algorithm to generate the estimated travel times from station A to station J.\n<pre>X ← ________\nY ← ________\nT ← 0\nFor i from X to Y\n    T ← ______ + ______\nOutput T</pre>",
+     "m": 4,
+     "ms": "X ← 1 (1)\nY ← 9 (1)\nT ← T + W[i] (1, 1)"
+    },
+    {
+     "l": "(e)",
+     "q": "What is the major advantage of using the variables X and Y instead of constant values in the loop?",
+     "m": 2,
+     "ms": "It is flexible to substitute the index of the respective stations in the algorithm (1) to estimate the travel times for different segments in the route. (1)"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "topic": "A2",
+   "pg": [
+    19,
+    20
+   ],
+   "stem": "John uses a database table STUDENT to store 2017 graduates' information in a school computer system.\nSTUDENT\n<table><tr><th>Field name</th><th>Description</th><th>Example</th></tr><tr><td>REGNO</td><td>Registration number</td><td>20011001</td></tr><tr><td>CLASS</td><td>Class name</td><td>6A</td></tr><tr><td>CLASSNO</td><td>Class number</td><td>1</td></tr><tr><td>HKID</td><td>Hong Kong identity card number</td><td>A123456(3)</td></tr><tr><td>ENAME</td><td>English name</td><td>Wong Siu Fung</td></tr><tr><td>CNAME</td><td>Chinese name</td><td>王小凤</td></tr><tr><td>PNO</td><td>Parent's phone number</td><td>23456789</td></tr></table>",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "John considers creating a primary key for STUDENT so that it can be used for other database tables.\nPNO may not be appropriate for use as primary key. Why not? Explain briefly.",
+     "m": 1,
+     "ms": "Brothers or sisters graduated in the same year may use the same phone number."
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Suggest a primary key for STUDENT, other than HKID and REGNO.",
+     "m": 1,
+     "ms": "CLASS + CLASSNO"
+    },
+    {
+     "l": "(b)",
+     "q": "Give two kinds of validation checks on HKID that John should carry out.",
+     "m": 2,
+     "ms": "Any two (1×2): Character/format/data type check for checking the alphanumeric character at each position / Length check for checking the length of the entered string (presence check) / Check digit / Uniqueness check"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "John cannot use ASCII to represent the data in STUDENT. Why not?",
+     "m": 1,
+     "ms": "ASCII does not include codes of Chinese characters."
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "John needs to use Unicode instead of Big-5 code to represent the data in STUDENT. Why?",
+     "m": 1,
+     "ms": "There are simplified Chinese characters in the data which can be represented by Unicode. / Unicode includes characters of different languages."
+    },
+    {
+     "l": "(c)(iii)",
+     "q": "Compare the storage size requirements of Unicode and Big-5 code.",
+     "m": 1,
+     "ms": "As Unicode can store more characters of different languages, more storage capacity should be required in Unicode than that in Big-5 code. / Unicode uses variable-width encoding (1-4 bytes) while Big-5 uses 2 bytes only."
+    },
+    {
+     "l": "(d)",
+     "q": "Suppose that STUDENT has the following five records.\n<table><tr><th>REGNO</th><th>CLASS</th><th>CLASSNO</th><th>HKID</th><th>ENAME</th><th>CNAME</th><th>PNO</th></tr><tr><td>20011001</td><td>6A</td><td>1</td><td>A123456(3)</td><td>Wong Siu Fung</td><td>王小凤</td><td>23456789</td></tr><tr><td>20011002</td><td>6B</td><td>3</td><td>B234567(1)</td><td>Chan Tai Man</td><td>陳大文</td><td>29876543</td></tr><tr><td>20011003</td><td>6C</td><td>9</td><td>C345678(A)</td><td>Cheung Siu Keung</td><td>張小強</td><td>24567890</td></tr><tr><td>20011004</td><td>6B</td><td>8</td><td>D456789(8)</td><td>Lee Tai Keung</td><td>李大強</td><td>21234567</td></tr><tr><td>20011005</td><td>6A</td><td>2</td><td>E567890(4)</td><td>Wong Ka Ying</td><td>王嘉盈</td><td>22334455</td></tr></table>\nWhat is the output after executing the following SQL command?\n<pre>SELECT CLASS, COUNT(*) FROM STUDENT GROUP BY CLASS</pre>",
+     "m": 2,
+     "ms": "6A 2\n6B 2\n6C 1\n(exactly 3 items, not necessarily in order)"
+    },
+    {
+     "l": "(e)",
+     "q": "John uses a spreadsheet to store students' test marks in various subjects, as shown below:\n<table><tr><th></th><th>A</th><th>B</th><th>C</th></tr><tr><td>1</td><td>Registration Number</td><td>Subject</td><td>Test Mark</td></tr><tr><td>2</td><td>20011001</td><td>Chinese Language</td><td>40</td></tr><tr><td>3</td><td>20011001</td><td>English Language</td><td>50</td></tr><tr><td>4</td><td>20011002</td><td>Chinese Language</td><td>70</td></tr><tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr></table>\nHe wants to convert the table in the spreadsheet into the following format with a summary column:\n<table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr><tr><td>1</td><td>Registration Number</td><td>Chinese Language</td><td>English Language</td><td>Mathematics</td><td>Liberal Studies</td><td>Total</td></tr><tr><td>2</td><td>20011001</td><td>40</td><td>50</td><td>90</td><td>50</td><td>230</td></tr><tr><td>3</td><td>20011002</td><td>70</td><td>80</td><td>70</td><td>60</td><td>280</td></tr><tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr></table>\nJohn attempts to use a pivot table to do the task described above. Complete the following steps for creating the pivot table.\nSet ________ as the columns.\nSet ________ as the rows.\nSet Test Mark as the values with the ________ function.",
+     "m": 3,
+     "ms": "Columns: Subject (1)\nRows: Registration Number (1)\nFunction: sum (1) (✗ total)"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "C1",
+   "pg": [
+    21,
+    22
+   ],
+   "stem": "An online shopping web site provides various services for customers.",
+   "parts": [
+    {
+     "l": "(a)",
+     "q": "Customers carry out some Internet activities on the web site that involve the following protocols. Give an example of the Internet activities for each protocol.\nHTTP:\nSSL:\nSMTP:",
+     "m": 3,
+     "ms": "HTTP: Browses the shopping web site.\nSSL: Do payment on the shopping web site. / Any kind of data that need secure transmission, e.g. personal/sensitive data (member registration, login information) / Secure the data transmission (e.g. HTTPS, SFTP)\nSMTP: Send email to the customer services of the shopping web site."
+    },
+    {
+     "l": "(b)(i)",
+     "q": "The shopping web site sends a promotion email to a group of customers including Eva. Eva receives the email shown below:\n\nFrom: no-reply@shopshop.com.hk\nTo:\ncc:\nSubject: Discount coupon\n\nDear Customers,\nPlease click the following link to collect the discount coupon:\nhttps://shopshop.com.hk/collect.php?ac=1234567890\nCustomer Services Department\n\nWhat is the major difference between 'To' and 'cc' (carbon copy) when sending emails to different recipients?",
+     "m": 2,
+     "ms": "Senders expect actions and attention from the recipients in 'To' (1) while the recipients in 'Carbon Copy' receive the messages for information only. (1)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "In this group email, Eva cannot see the email addresses of other recipients. Why not?",
+     "m": 1,
+     "ms": "The sender has put the email addresses of all recipients in 'bcc'."
+    },
+    {
+     "l": "(b)(iii)",
+     "q": "Someone claims that an IP address instead of 'shopshop.com.hk' should be used in the hyperlink in the email, as shown below:\nhttps://210.0.205.237/collect.php?ac=1234567890\nGive a benefit and a drawback of using an IP address in the hyperlink.\nBenefit:\nDrawback:",
+     "m": 2,
+     "ms": "Benefit: No translation for the domain name is required. / It is not necessary to own (or purchase) a domain name.\nDrawback: It looks like a phishing web site that customers do not want to visit. / It is hard to remember the IP address when compared with a meaningful domain name."
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Customers use usernames and passwords to log on to the web site.\nSuggest two ways to make a login password more secure.",
+     "m": 2,
+     "ms": "Any two (1×2): Password length: long password (8 or more characters) / Password content: a combination of characters, numbers and symbols; not a dictionary word; not an easy-to-guess password / Regularly update the password\n✗ masking the password field; a limited number of login trials; SSL; security tokens, multi-factor authentication, digital certificate"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "The web site plans to adopt tokens to strengthen security. How does a token help with customer authentication?",
+     "m": 2,
+     "ms": "Tokens store cryptographic keys (a passcode / a password / a value) to enhance the security on top of the current security measure (e.g. password). It can be in the form of one-time password, hardware device, contactless device, etc.\n1 mark: what a token is; 1 mark: process/use"
+    }
+   ]
+  }
+ ]
+}
