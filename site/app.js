@@ -157,7 +157,7 @@ const V={};
 V.home=()=>{const chs=allCh();const nc=chs.reduce((a,c)=>a+c.cards.length,0),nm=chs.reduce((a,c)=>a+c.mc.length,0),np=chs.reduce((a,c)=>a+c.pr.length,0);
  return `<h1>S5 ICT</h1><p class="sub">HKDSE ICT · ICT for iGeneration</p>
  <div class="seg"><button class="${EN()?"on":""}" onclick="setLang('en')">全英文</button><button class="${EN()?"":"on"}" onclick="setLang('zh')">英文知识点 + 中文讲解</button></div>
- <div class="list" style="margin-top:16px">
+ <div class="list big" style="margin-top:18px">
  <a href="#learn"><span>${T("Textbook: cards & practice","课本：知识卡与练习")}</span><span>${chs.length} ${T("ch","章")} · ${nc} ${T("cards","卡")} · ${nm} MC${np?` · ${np} ${T("practicals","实操")}`:""}</span></a>
  <a href="#dse"><span>${T("DSE past papers","DSE 真题")}</span><span>${DQ.length} MC · ${LQ.length} ${T("long Qs","长题")}</span></a>
  <a href="#quiz"><span>${T("Quiz zone","测验区")}</span><span>${T("build your own","自选范围")}</span></a>
