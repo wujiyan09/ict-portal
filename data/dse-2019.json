@@ -1,0 +1,1038 @@
+{
+ "year": "2019",
+ "mc": [
+  {
+   "n": 1,
+   "q": "Which of the following statements about two's complement is/are correct?",
+   "st": [
+    "(1) Overflow errors will not occur in arithmetic operations.",
+    "(2) The maximum value for an 8-bit number is 0111 1111.",
+    "(3) The minimum value for an 8-bit number is 1111 1111."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "44%",
+   "topic": "A1",
+   "exp": "Max 8-bit value is 0111 1111 (127); the minimum is 1000 0000 (-128), and overflow can still happen.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 2,
+   "q": "Peter creates a school newsletter and posts it on a web page. The newsletter is in portable document format (PDF) instead of word document format because",
+   "st": [
+    "(1) hyperlinks can be included.",
+    "(2) the newsletter will be displayed in the same way on any device.",
+    "(3) the resolution of images in the newsletter will be higher."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "71%",
+   "topic": "A1",
+   "exp": "PDF keeps the same layout on every device; word files can hold hyperlinks too.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 3,
+   "q": "In order for a factory manager to decide on the number of machines to be bought to produce pencils, he needs to consider time and cost constraints. What spreadsheet feature should he use to do this?",
+   "o": [
+    "Pivot table",
+    "Multiple worksheets",
+    "'What-if' analysis",
+    "Sorting data using multiple criteria"
+   ],
+   "a": "C",
+   "pct": "54%",
+   "topic": "A2",
+   "exp": "What-if analysis (e.g. Goal Seek/Solver) tests different inputs under constraints.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 4,
+   "q": "Mary uses a text editor to enter the following 5 traditional Chinese characters and saves them in a text file. The file size is 10 bytes.<br>世上無難事<br>Which of the following statements about the text file is/are correct?",
+   "st": [
+    "(1) Each Chinese character occupies 2 bytes.",
+    "(2) ASCII code is used to represent the characters.",
+    "(3) The text file does not support Big-5 code."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "75%",
+   "topic": "A1",
+   "exp": "10 bytes ÷ 5 characters = 2 bytes each (e.g. Big-5); ASCII cannot hold Chinese.",
+   "pg": 1,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 5,
+   "q": "The file sizes of the following original files are all 10 MB. After converting them, which converted file has the smallest file size, under normal circumstances?<table><tr><th></th><th>Original file</th><th>Converted file</th></tr><tr><td>A.</td><td>testA.MP4</td><td>testA.AVI</td></tr><tr><td>B.</td><td>testB.MP3</td><td>testB.WAV</td></tr><tr><td>C.</td><td>testC.BMP</td><td>testC.JPG</td></tr><tr><td>D.</td><td>testD.GIF</td><td>testD.BMP</td></tr></table>",
+   "o": [
+    "testA.MP4 → testA.AVI",
+    "testB.MP3 → testB.WAV",
+    "testC.BMP → testC.JPG",
+    "testD.GIF → testD.BMP"
+   ],
+   "a": "C",
+   "pct": "79%",
+   "topic": "A1",
+   "exp": "Only BMP → JPG goes from uncompressed to lossy compressed; the others get bigger.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 6,
+   "q": "Answer Questions 6 and 7 with reference to the following database table STUDENT.<table><tr><th>NAME</th><th>SID</th><th>CLASS</th></tr><tr><td>John Ho</td><td>18110</td><td>1A</td></tr><tr><td>Mary Li</td><td>09544</td><td>2C</td></tr><tr><td>Peter Wong</td><td>17623</td><td>3B</td></tr><tr><td>Greg Li</td><td>06308</td><td>2A</td></tr><tr><td>⋮</td><td></td><td></td></tr></table>What is/are the possible data type(s) for SID in STUDENT?",
+   "st": [
+    "(1) Integer",
+    "(2) Character",
+    "(3) Boolean"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "49%",
+   "topic": "A2",
+   "exp": "SIDs have leading zeros (09544), so they must be stored as characters.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 7,
+   "q": "STUDENT is exported into a spreadsheet. What spreadsheet feature produces a similar output to executing the following SQL command in a DBMS tool?<pre>SELECT CLASS, COUNT(*)\nFROM STUDENT\nGROUP BY CLASS</pre>",
+   "o": [
+    "Sorting",
+    "Cell references in formulas",
+    "Object Linking and Embedding",
+    "Pivot table"
+   ],
+   "a": "D",
+   "pct": "33%",
+   "topic": "A2",
+   "exp": "A pivot table groups rows by a field and counts them, like GROUP BY with COUNT.",
+   "pg": 2,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 8,
+   "q": "Eva creates a report with 200 pages. Which of the following word processing operations can reduce the number of pages used?",
+   "st": [
+    "(1) Change the line spacing of the text.",
+    "(2) Change the text alignment.",
+    "(3) Change the margins of pages.",
+    "(4) Create a table of contents with hyperlinks."
+   ],
+   "o": [
+    "(1) and (3) only",
+    "(1) and (4) only",
+    "(2) and (3) only",
+    "(2) and (4) only"
+   ],
+   "a": "A",
+   "pct": "87%",
+   "topic": "A1",
+   "exp": "Smaller line spacing and margins fit more text per page.",
+   "pg": 2,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 9,
+   "q": "Radio frequency identification (RFID) readers are installed in the door of an office. Amy has an ID badge containing a RFID tag with a 2 KB storage capacity. Her personal information occupies 200 bytes. Every time she enters or leaves the office, a record of 40 bytes is created and stored on her badge. How many records can the badge store?",
+   "o": [
+    "44",
+    "46",
+    "48",
+    "50"
+   ],
+   "a": "B",
+   "pct": "70%",
+   "topic": "A1",
+   "exp": "(2048 − 200) ÷ 40 = 46.2, so 46 records.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 10,
+   "q": "A device is sending 8-bit data in a network where the last bit is a parity bit. One of the following received data has an error. Which one is it?",
+   "o": [
+    "0010 0010",
+    "1111 0000",
+    "0011 0011",
+    "1010 0111"
+   ],
+   "a": "D",
+   "pct": "70%",
+   "topic": "A1",
+   "exp": "The others have an even number of 1s; 1010 0111 has five, so it breaks even parity.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 11,
+   "q": "Study the following online registration form:<br>Username: [ ]<br>Password: [ ] (minimum 8 characters)<br>Re-enter password: [ ]<br>Which of the following is/are involved in the online registration?",
+   "st": [
+    "(1) Data verification",
+    "(2) Data compression",
+    "(3) Data validation"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "C",
+   "pct": "87%",
+   "topic": "A1",
+   "exp": "Re-entering the password is verification; the 8-character minimum is validation.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 12,
+   "q": "An IP address (IPv6) consists of 8 groups of 4-digit hexadecimal numbers separated by colons, as shown in the following example:<pre>2001:08AB:2347:AFF0:1234:CC23:98D2:1A45</pre>How many possible addresses are there in this IP addressing?",
+   "o": [
+    "2<sup>32</sup>",
+    "16<sup>32</sup>",
+    "32<sup>2</sup>",
+    "32<sup>16</sup>"
+   ],
+   "a": "B",
+   "pct": "59%",
+   "topic": "C1",
+   "exp": "8 × 4 = 32 hex digits, each with 16 values: 16^32.",
+   "pg": 3,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 13,
+   "q": "Which of the following is the least important when creating a self-running presentation?",
+   "o": [
+    "Template",
+    "Slide layout",
+    "Insertion of pictures",
+    "Index"
+   ],
+   "a": "D",
+   "pct": "52%",
+   "topic": "A1",
+   "exp": "A self-running show plays in order, so an index for navigation is least needed.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 14,
+   "q": "Susan plans to buy a new computer for video editing. In general, which of the following is the least important factor that she should consider?",
+   "o": [
+    "Computation power",
+    "RAM size",
+    "Number of USB ports",
+    "Hard disk storage capacity"
+   ],
+   "a": "C",
+   "pct": "84%",
+   "topic": "B",
+   "exp": "Video editing needs CPU power, RAM and storage; USB port count matters least.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 15,
+   "q": "Which of the following statements about the accumulator in a CPU is correct?",
+   "o": [
+    "It is used by the Arithmetic and Logic Unit (ALU) for calculation.",
+    "It is used by the Control Unit (CU) to store a memory address temporarily.",
+    "It stores the memory address of the next instruction to be executed.",
+    "It controls the flow of data in a bus."
+   ],
+   "a": "A",
+   "pct": "52%",
+   "topic": "B",
+   "exp": "The accumulator holds the ALU's working results.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 16,
+   "q": "What is the possible outcome of lowering the clock rate of a CPU in a desktop computer?",
+   "o": [
+    "Consumes less electricity.",
+    "Increases the accuracy of computation.",
+    "Enhances the performance of the WiFi connection.",
+    "Increases the protection of the computer from hacking."
+   ],
+   "a": "A",
+   "pct": "85%",
+   "topic": "B",
+   "exp": "A slower clock uses less power.",
+   "pg": 4,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 17,
+   "q": "Peter has an e-ticket for a concert, as shown below: (a QR code shown on a phone screen)<br>Which of the following statements about the barcode on the e-ticket is/are correct?",
+   "st": [
+    "(1) Information on the barcode may be decoded even if part of the barcode is damaged.",
+    "(2) Only one type of data, such as numeric data, can be encoded at a time.",
+    "(3) The barcode can be scanned successfully in a maximum of three directions."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "38%",
+   "topic": "A1",
+   "exp": "QR codes have error correction, can mix data types and can be read from any direction.",
+   "pg": 4,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 18,
+   "q": "Which of the following systems depends on network connectivity?",
+   "o": [
+    "Real-time system",
+    "Single-user system",
+    "Batch processing system",
+    "Distributed processing system"
+   ],
+   "a": "D",
+   "pct": "30%",
+   "topic": "B",
+   "exp": "Distributed processing spreads work over networked computers.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 19,
+   "q": "Arrange the following in ascending order by data transfer rate.",
+   "st": [
+    "(1) Solid State Drive (SSD)",
+    "(2) Memory cache",
+    "(3) RAM"
+   ],
+   "o": [
+    "(1), (3), (2)",
+    "(1), (2), (3)",
+    "(3), (2), (1)",
+    "(3), (1), (2)"
+   ],
+   "a": "A",
+   "pct": "38%",
+   "topic": "B",
+   "exp": "SSD is slowest, then RAM, then cache.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 20,
+   "q": "Which of the following are the major networking functions of a typical computer operating system?",
+   "st": [
+    "(1) Allowing communication between computers",
+    "(2) Controlling the network bandwidth of a connection between two computers",
+    "(3) Providing some measure of network security to protect the computers from unauthorised access"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "B",
+   "pct": "44%",
+   "topic": "B",
+   "exp": "The OS supports communication and basic network security; it does not control link bandwidth.",
+   "pg": 5,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 21,
+   "q": "Below is a typical computer network for a school campus: (several groups of computers each connect to an X; the X devices connect to Y, which connects to the Internet)<br>What are X and Y?",
+   "o": [
+    "X: Switch, Y: Network interface card",
+    "X: Access Point (AP), Y: Network interface card",
+    "X: Router, Y: Access Point (AP)",
+    "X: Switch, Y: Router"
+   ],
+   "a": "D",
+   "pct": "69%",
+   "topic": "C1",
+   "exp": "Switches link computers in each LAN; a router links the campus to the Internet.",
+   "pg": 5,
+   "fig": true,
+   "code": false
+  },
+  {
+   "n": 22,
+   "q": "Which of the following are the advantages of using a LAN over a WAN?",
+   "st": [
+    "(1) Higher data transfer rate",
+    "(2) Larger network coverage",
+    "(3) Lower setup cost"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "B",
+   "pct": "73%",
+   "topic": "C1",
+   "exp": "LANs are faster and cheaper but cover a smaller area.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 23,
+   "q": "The following two URLs can be used to access the same web site:<br>'http://202.8.88.24' and 'http://www.hkedcity.net'<br>Which of the following statements about the two URLs is/are correct?",
+   "st": [
+    "(1) The DNS server may translate 'www.hkedcity.net' to '202.8.88.24'.",
+    "(2) A URL must include HTTP.",
+    "(3) The web pages accessed through the IP address are more secure."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "61%",
+   "topic": "C1",
+   "exp": "DNS maps the domain to the IP; URLs can use other protocols and using an IP is not more secure.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 24,
+   "q": "What is/are the advantage(s) of using a network connection on a leased line instead of by broadband?",
+   "st": [
+    "(1) The connection is more reliable.",
+    "(2) The cost is lower.",
+    "(3) The bandwidth is guaranteed."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "C",
+   "pct": "49%",
+   "topic": "C1",
+   "exp": "A leased line is dedicated: reliable with guaranteed bandwidth, but costly.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 25,
+   "q": "In HTML, which of the following are the attributes of a table (TABLE)?",
+   "st": [
+    "(1) URLs of the contents of cells",
+    "(2) Space between cells",
+    "(3) Media types of the contents of cells",
+    "(4) Background colour"
+   ],
+   "o": [
+    "(1) and (3) only",
+    "(1) and (4) only",
+    "(2) and (3) only",
+    "(2) and (4) only"
+   ],
+   "a": "D",
+   "pct": "56%",
+   "topic": "C2",
+   "exp": "TABLE has attributes such as cellspacing and bgcolor.",
+   "pg": 6,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 26,
+   "q": "Which of the following activities transfers minimal data through the Internet?",
+   "o": [
+    "Sending an email of 10 KB with a 2 MB audio file to 50 receivers",
+    "Uploading and converting an image of 10 MB to JPG format using an online tool",
+    "Updating a web page of 10 KB containing a hyperlink to a 2 GB file",
+    "Watching a 60-minute video of 500 MB online using streaming technology"
+   ],
+   "a": "C",
+   "pct": "55%",
+   "topic": "C1",
+   "exp": "Only the 10 KB page is sent; the linked file is not transferred.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 27,
+   "q": "Which of the following statements about streaming technology is/are correct?",
+   "st": [
+    "(1) A music performance can be viewed live.",
+    "(2) HTTP cannot be used.",
+    "(3) Illegal distribution of movies can be controlled."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "A",
+   "pct": "82%",
+   "topic": "C1",
+   "exp": "Streaming allows live viewing; it can run over HTTP and does not stop piracy.",
+   "pg": 7,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 28,
+   "q": "What are the boundary cases for testing in the following segment of an algorithm?<pre>Input A\nIf A > 5\n   Then B ← 10\n   Else B ← 20\nOutput A, B</pre>",
+   "st": [
+    "(1) 5",
+    "(2) 6",
+    "(3) 10",
+    "(4) 20"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(3) and (4) only",
+    "(2), (3) and (4) only",
+    "(1), (2), (3) and (4)"
+   ],
+   "a": "A",
+   "pct": "54%",
+   "topic": "D2",
+   "exp": "The condition A > 5 changes between 5 and 6.",
+   "pg": 7,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 29,
+   "q": "age is an integer variable and IsStudent is a Boolean variable. Which of the following Boolean expressions produce the same result?",
+   "st": [
+    "(1) (age < 25) AND (IsStudent = TRUE)",
+    "(2) NOT ((age >= 25) OR (IsStudent = FALSE))",
+    "(3) (age > 25) OR (IsStudent = TRUE)"
+   ],
+   "o": [
+    "(1) and (2) only",
+    "(1) and (3) only",
+    "(2) and (3) only",
+    "(1), (2) and (3)"
+   ],
+   "a": "A",
+   "pct": "41%",
+   "topic": "D1",
+   "exp": "By De Morgan's law, (2) equals (1).",
+   "pg": 7,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 30,
+   "q": "What is the output of the following algorithm?<pre>LENGTH  ← 6\nHEIGHT  ← 5\nAREA    ← LENGTH * HEIGHT\nLENGTH  ← 4\nHEIGHT  ← 3\nOutput AREA</pre>",
+   "o": [
+    "12",
+    "20",
+    "24",
+    "30"
+   ],
+   "a": "D",
+   "pct": "81%",
+   "topic": "D1",
+   "exp": "AREA was calculated as 6 × 5 = 30 before the variables changed.",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 31,
+   "q": "N is an array and N[1], N[2], N[3] and N[4] store 1, 3, 5 and 7 respectively. What is the output of the following algorithm?<pre>K ← 6\ni ← 4\nWhile (i > 0 AND N[i-1] > K) do\n      N[i] ← N[i-1]\n      i ← i - 1\nN[i] ← K\nOutput N[4]</pre>",
+   "o": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "a": "C",
+   "pct": "50%",
+   "topic": "D1",
+   "exp": "N[3] = 5 is not > 6, so the loop never runs and N[4] ← 6.",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 32,
+   "q": "Study the following algorithm:<pre>A ← 1\nB ← 1\nRepeat\n      Output B\n      C ← A + B\n      A ← B\n      B ← C\nUntil (B > 10)</pre>How many times will 'Output B' be executed?",
+   "o": [
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "a": "B",
+   "pct": "66%",
+   "topic": "D1",
+   "exp": "It outputs 1, 2, 3, 5, 8; then B = 13 ends the loop.",
+   "pg": 8,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 33,
+   "q": "Y is an array. What is the output of the following algorithm?<pre>Y[1] ← 4\nFor k from 1 to 5 do\n      Y[k+1] ← Y[k] + k\nOutput Y[6]</pre>",
+   "o": [
+    "10",
+    "14",
+    "15",
+    "19"
+   ],
+   "a": "D",
+   "pct": "69%",
+   "topic": "D1",
+   "exp": "Y = 4, 5, 7, 10, 14, 19, so Y[6] = 19.",
+   "pg": 9,
+   "fig": false,
+   "code": true
+  },
+  {
+   "n": 34,
+   "q": "Study the following segment of a flowchart:<pre>P ← 9\nQ ← 1\n→ P >= Q ?\n   Yes: P ← P + 1 ; Q ← Q x 2 ; Display \"A\" ; back to the test\n   No : (exit)</pre>How many \"A\" will be displayed?",
+   "o": [
+    "0",
+    "2",
+    "4",
+    "5"
+   ],
+   "a": "C",
+   "pct": "80%",
+   "topic": "D1",
+   "exp": "(P,Q) goes (10,2), (11,4), (12,8), (13,16); then 13 < 16 stops it: 4 times.",
+   "pg": 9,
+   "fig": true,
+   "code": true
+  },
+  {
+   "n": 35,
+   "q": "ABC Coffee Shop offers free WiFi for customers. The details are:<br>ABC Coffee Shop<br>- A 30-minute session of free WiFi service<br>- SSID: abc; Password: YW$1818abc<br>- Unencrypted connection<br>- 128 Kbps maximum bandwidth<br>Customers should not use the WiFi connection for online banking because",
+   "o": [
+    "the free session is too short.",
+    "the SSID is too short and easily guessed.",
+    "the data passing through the connection is not encrypted.",
+    "the maximum bandwidth is still too low."
+   ],
+   "a": "C",
+   "pct": "94%",
+   "topic": "C2",
+   "exp": "Unencrypted traffic can be sniffed by others on the network.",
+   "pg": 9,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 36,
+   "q": "A photographer posts his photos to a social media web site for the public to look at. Which of the following can be applied to the photo to protect his intellectual property?",
+   "o": [
+    "Hong Kong Public Key Infrastructure (PKI)",
+    "Secure Sockets Layer (SSL)",
+    "Digital certificate",
+    "Digital watermark"
+   ],
+   "a": "D",
+   "pct": "87%",
+   "topic": "E",
+   "exp": "A digital watermark marks the photo's ownership.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 37,
+   "q": "Which of the following will help overcome the digital divide in a city?",
+   "st": [
+    "(1) Implementing a Bring-Your-Own-Device (BYOD) policy in schools to replace desktop computers",
+    "(2) Providing more free WiFi hotspots",
+    "(3) Providing more than one free email account for each citizen"
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "67%",
+   "topic": "E",
+   "exp": "Free WiFi widens Internet access; BYOD can hurt students without devices.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 38,
+   "q": "Ms Li finds that the file server in her company is infected by ransomware. Some important document files have been encrypted and cannot be opened. What should she do?",
+   "st": [
+    "(1) Try to put the encrypted files in another file server and open them.",
+    "(2) Report the incident to the police.",
+    "(3) Pay the ransom to acquire the password."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "81%",
+   "topic": "C2",
+   "exp": "Report it; moving files does not decrypt them and paying is not advised.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 39,
+   "q": "Why do people develop open source software?",
+   "st": [
+    "(1) They want to earn more money from selling their software.",
+    "(2) They want more people to use their software.",
+    "(3) They want to own the copyright of the software."
+   ],
+   "o": [
+    "(1) only",
+    "(2) only",
+    "(1) and (3) only",
+    "(2) and (3) only"
+   ],
+   "a": "B",
+   "pct": "83%",
+   "topic": "E",
+   "exp": "Open source is about wide use and sharing, not sales.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  },
+  {
+   "n": 40,
+   "q": "Which of the following actions will most likely infringe copyright in Hong Kong?",
+   "o": [
+    "Using peer-to-peer file sharing software to share personal videos",
+    "Broadcasting a street view live through a social media web site",
+    "Uploading TV programmes to a personal web site and sharing them with friends",
+    "Using peer-to-peer file sharing software to search for an audio file"
+   ],
+   "a": "C",
+   "pct": "88%",
+   "topic": "E",
+   "exp": "TV programmes are copyright works; uploading them without permission infringes.",
+   "pg": 10,
+   "fig": false,
+   "code": false
+  }
+ ],
+ "lq": [
+  {
+   "n": 1,
+   "topic": "C2",
+   "pg": [
+    11,
+    12
+   ],
+   "stem": "The Government plans to develop a web-based clinic booking system for citizens to book appointments.",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "If the system is a multi-user system, what is the major benefit for citizens?",
+     "m": 1,
+     "ms": "Many users can use the system at the same time. / The waiting time is shorter. (1)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "If the system is a real-time system, what is the major benefit for citizens?",
+     "m": 1,
+     "ms": "The system can response to users' requests as early as possible. (1)"
+    },
+    {
+     "l": "(b)",
+     "q": "Senior citizens will use this e-government service. What are the major concerns when designing the relevant web pages for senior citizens? Give three examples.",
+     "m": 3,
+     "ms": "Any three (1×3): Font size, colour scheme, languages available, simple navigation with a few large buttons (concrete examples)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "The booking system can be accessed through mobile devices using a web browser or via a mobile application.<br>Give two technical considerations when designing the mobile application.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>Screen size<br>The input methods (touch screen)<br>System resources such as notification"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Different versions of the mobile application with the same function will be developed at the same time. Why are different versions needed?",
+     "m": 1,
+     "ms": "It is because there are a number of operating systems for mobile devices. (Support different OSs) (1)"
+    },
+    {
+     "l": "(c)(iii)",
+     "q": "Citizens prefer accessing the system using the mobile application rather than a browser. What is the possible reason for this?",
+     "m": 1,
+     "ms": "Some information has been pre-loaded in the mobile application so that citizens can access the system faster. / Allow users to use the system offline. / Users can directly use the system by clicking the icon of the app. (1)"
+    },
+    {
+     "l": "(d)",
+     "q": "There are 18 districts and each district has more than 10 clinics. A web page in the system allows citizens to book an appointment in any clinic. Draft the layout design of the web page with annotations.",
+     "m": 4,
+     "ms": "(1) illustrate the choices of 18 districts and more than 10 clinics each<br>(1) illustrate the choices of date and time<br>(1) list out available choices<br>(1) a confirmation button"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "topic": "C2",
+   "pg": [
+    13,
+    14
+   ],
+   "stem": "An online enrolment system is developed for students to enrol in events in an athletics meet. Students are provided with an account and an initial password.",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "The system allows students to change their passwords.<br>The system accepts new passwords with letters and digits. Suggest two additional rules for the system which would strengthen password security.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>It should be a long password with at least 8 characters. (password length)<br>It should contain at least one special character. (additional character combination)<br>The latest three passwords cannot be used. (password history)<br>Users need to change passwords periodically. (password life time)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Give an advantage of each of the following security measures for the student accounts.<br>(1) Forcing users to change their password after the first login<br>(2) Showing the previous login date and time when logging into the system",
+     "m": 2,
+     "ms": "(1) It ensures that the password is personalised. / It prevent problems arising from the leak of default password. (1)<br>(2) The account owner can check that the last login is done by himself/herself. (1)"
+    },
+    {
+     "l": "(a)(iii)",
+     "q": "In the system, each character of a password is encrypted as a hexadecimal code, ranging from 0000 to FFFF. How many bits are needed to represent a password with 8 characters? Show your calculation.",
+     "m": 2,
+     "ms": "16 x 8 = 128 bits<br>(1) 16  (1) × 8 = 128"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "A teacher, Mr Li, plans to teach students shot put skills. He uses a search engine to search for videos about shot put skills. He types some keywords and obtains the following search result:<br>[Search box: Shot put] All | Images | Videos | News<br>33,000,000 results<br><b>2017 Eastern District Age Group ...</b><br>https://www.lcsd.gov.hk/ls/dagc/prop/last/b5/1_009_r.pdf PDF File<br>Shot Put Result: 8.56m 8.49m 8.39m Soft Ball Result: 33.28m ...<br>Suggest two ways to improve the search.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>Click the 'videos' tab to narrow down the search.<br>Use quotations for the keywords, such as \"shot put\".<br>Use more keywords such as \"shot put skills\" and \"learn shot put\"."
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Mr Li finds two suitable videos and sends their hyperlinks to his students. On the weekend, a student finds that he cannot watch one of the videos using a computer in a public library. Give two possible reasons for this.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>The web site is blocked. (site accessibility)<br>The video is removed from the web site by the owner. (video availability / share rights)<br>No suitable plugin is installed in the browser. (software compatibility e.g. player, codec)"
+    },
+    {
+     "l": "(b)(iii)",
+     "q": "Mr Li plans to search for some photos and post them on his personal web site. Suggest two ways of handling the relevant copyright issues.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>Ask for a permission for using the photos.<br>Use the photos from the websites that agree for using the photos in further publications.<br>Buy the right for using of the photos."
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "topic": "A2",
+   "pg": [
+    15,
+    16
+   ],
+   "stem": "Ms Wong uses the following spreadsheet to store the list of participating students in an athletics meet:<table><tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th></tr><tr><td>1</td><td>Student ID</td><td>English name</td><td>Chinese name</td><td>Year of birth</td><td>Grade</td></tr><tr><td>2</td><td>8101</td><td>Wong Siu Fun</td><td>王小芬</td><td>2003</td><td></td></tr><tr><td>3</td><td>8102</td><td>Chan Cheung Tai</td><td>陳長大</td><td>2005</td><td></td></tr><tr><td>4</td><td>8201</td><td>Lee Li Li</td><td>李莉莉</td><td>2006</td><td></td></tr><tr><td>5</td><td>8202</td><td>Wong Ka Yee</td><td>黃嘉儀</td><td>2003</td><td></td></tr><tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr><tr><td>1000</td><td>6427</td><td>Cheung Yat Man</td><td>張一文</td><td>2002</td><td></td></tr><tr><td>1001</td><td>6428</td><td>Cheung Yee Man</td><td>張二文</td><td>2002</td><td></td></tr><tr><td>1002</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>1003</td><td>Grade</td><td>Number of Students</td><td></td><td></td><td></td></tr><tr><td>1004</td><td>A</td><td></td><td></td><td></td><td></td></tr><tr><td>1005</td><td>B</td><td></td><td></td><td></td><td></td></tr><tr><td>1006</td><td>C</td><td></td><td></td><td></td><td></td></tr></table>",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "The grade of a student is defined by the year of birth, as shown below:<table><tr><th>Year of birth (Y)</th><th>Grade</th></tr><tr><td>Y < 2004</td><td>A</td></tr><tr><td>2004 ≤ Y ≤ 2005</td><td>B</td></tr><tr><td>2005 < Y</td><td>C</td></tr></table>Ms Wong uses column E to store the grade of each student. She enters a formula in E2 and then copies it to E3:E1001. Complete the formula in E2.<pre>=IF(D2 <_______ ,\"A\",IF(D2 > _______,\"_______\",\"_______\"))</pre>",
+     "m": 2,
+     "ms": "=IF(D2 < 2004,\"A\",IF(D2 > 2005,\"C\",\"B\"))<br>(1) 2004  (1) 2005, \"C\", \"B\""
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Ms Wong uses B1004:B1006 to store the total number of students in each grade. She enters a formula in B1004 and then copies it to B1005:B1006. Write the formula in B1004.",
+     "m": 2,
+     "ms": "=COUNTIF(E$2:E$1001, A1004)  (or E$1:E$1001)<br>(1) COUNTIF( , )  (1) E$2:E$1001, A1004"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Based on the spreadsheet, a database table, STUDENT, is created. Part of STUDENT is shown below:<table><tr><th>SID</th><th>ENAME</th><th>CNAME</th><th>YEAROFBIRTH</th><th>GRADE</th><th>EVENT</th></tr><tr><td>8101</td><td>Wong Siu Fun</td><td>王小芬</td><td>2003</td><td>A</td><td>100M</td></tr><tr><td>8102</td><td>Chan Cheung Tai</td><td>陳長大</td><td>2005</td><td>B</td><td>100M</td></tr><tr><td>8102</td><td>Chan Cheung Tai</td><td>陳長大</td><td>2005</td><td>B</td><td>Shot put</td></tr><tr><td>8201</td><td>Lee Li Li</td><td>李莉莉</td><td>2006</td><td>C</td><td>100M</td></tr><tr><td>8202</td><td>Wong Ka Yee</td><td>黃嘉儀</td><td>2003</td><td>A</td><td>100M</td></tr></table>Give an example to illustrate why SID + ENAME cannot be the primary key for STUDENT.",
+     "m": 1,
+     "ms": "SID + ENAME in the second and the third records are identical. (1)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Give the primary key for STUDENT.",
+     "m": 1,
+     "ms": "SID + EVENT (1)"
+    },
+    {
+     "l": "(c)",
+     "q": "Based on the five records given in STUDENT, what is the output after executing the following SQL command?<pre>SELECT GRADE, EVENT, COUNT(*) FROM STUDENT GROUP BY GRADE, EVENT</pre>",
+     "m": 2,
+     "ms": "<pre>A  100M      2\nB  100M      1\nB  Shot put  1\nC  100M      1</pre>(1) COUNT(*)  (1) GROUP BY"
+    },
+    {
+     "l": "(d)(i)",
+     "q": "Ms Wong has a presentation file about the athletics meet that contains text and images.<br>Suggest two ways of editing the file to make the presentation attractive.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>Use templates.<br>Use transition effects.<br>Insert demonstration videos about the safety guidelines.<br>Others: typeface, colour scheme, background, layout"
+    },
+    {
+     "l": "(d)(ii)",
+     "q": "Ms Wong plans to insert the spreadsheet into this presentation file to show the updated list of participating students. Explain how she can use Object Linking and Embedding (OLE) to complete the task.",
+     "m": 2,
+     "ms": "(1) Use of Object Linking/dynamic link<br>(1) description of updating/synchronisation"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "topic": "C1",
+   "pg": [
+    17,
+    18
+   ],
+   "stem": "Mr Ng organises an e-sport carnival with drones and online game booths in an indoor stadium, as shown below. There are desktop computers in the game booths for participants to try. He needs to set up Internet connections for the booths.<br>(Diagram: a registration counter and two rows of online game booths, an Internet connection, and drones flying in the stadium.)",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "Mr Ng decides to set up wired connections instead of wireless connections for the online game booths. Give two reasons to support his decision.",
+     "m": 2,
+     "ms": "Any two (1×2): stable connections (less interference), lower security risk, higher data transfer rate"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Suggest a common wireless connection method for controlling the drones.",
+     "m": 1,
+     "ms": "WiFi / 802.11ac (1)"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "The drones are used to capture images and videos of the carnival.<br>Some captured images will be sent to a file server through the Internet. Briefly describe how an image file is transmitted over the Internet with reference to the concepts of data packets and the Internet Protocol (IP).",
+     "m": 2,
+     "ms": "(1) Concept of data packets (division of data)<br>(1) Use of IP address (IP address to destination / routing)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Mr Ng plans to broadcast the carnival live for the public using streaming technology. Give two technical issues that he should consider.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>The bandwidth for uploading the live video<br>The ease of access of the live video on the client side<br>The bitrate of the streaming<br>Server loading<br>Video resolution<br>Encoding scheme"
+    },
+    {
+     "l": "(c)",
+     "q": "Give three suggestions for setting up the game booths so as to reduce the health hazard to participants arising from the use of desktop computers in the booths.",
+     "m": 3,
+     "ms": "Lighting environment when using the computer (1)<br>Posture in using the computer (1)<br>Duration of using the computer (1)"
+    },
+    {
+     "l": "(d)",
+     "q": "Participants' personal data will be collected at the registration counter and uploaded to cloud storage. Suggest two measures to protect participants' personal data from hacking.",
+     "m": 2,
+     "ms": "Any two (1×2):<br>Use encryption / secure channels for the data transmission.<br>Set access rights of the cloud storage.<br>Encrypted data in the cloud storage.<br>Use anti-spyware to prevent hackers' attack.<br>Destroy all data after the event.<br>Install a firewall to prevent hackers' attack."
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "D1",
+   "pg": [
+    19,
+    20
+   ],
+   "stem": "Peter designs a program using an algorithm with an array A, as shown below:<pre>N ← 6\nFor I from 1 to N do\n    A[I] ← 1 - A[I]</pre>",
+   "parts": [
+    {
+     "l": "(a)(i)",
+     "q": "Suppose that the initial content of A is:<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></table>What is the content of A after executing the algorithm?<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+     "m": 2,
+     "ms": "<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr></table>(A[6]…A[1] = 110011)"
+    },
+    {
+     "l": "(a)(ii)",
+     "q": "Suppose that the content of A after executing the algorithm is:<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr></table>What is the initial content of A?<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+     "m": 1,
+     "ms": "<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td></tr></table>(A[6]…A[1] = 010101)"
+    },
+    {
+     "l": "(b)(i)",
+     "q": "Peter modifies the algorithm below:<pre>N ← 6\nK ← 2\nFor I from 1 to N do\n    If K = 1 then\n          A[I] ← 1 - A[I]\n    If A[I] = 1 then\n          K ← 1</pre>Suppose that the initial content of A is:<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></table>(1) What is the content of A after executing the algorithm once?<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>(2) What is the content of A after executing the algorithm once again?<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr></table>",
+     "m": 3,
+     "ms": "(1) <table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr></table>(110100) (2)<br>(2) <table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td></tr></table>(001100) (1)"
+    },
+    {
+     "l": "(b)(ii)",
+     "q": "Suppose that the content of A after executing the algorithm is:<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td></tr></table>What is the initial content of A?<table><tr><th>A[6]</th><th>A[5]</th><th>A[4]</th><th>A[3]</th><th>A[2]</th><th>A[1]</th></tr><tr><td>0</td><td>1</td><td>0</td><td></td><td></td><td></td></tr></table>",
+     "m": 2,
+     "ms": "A[3], A[2], A[1] = 1 1 0 (A[6]…A[1] = 010110) (2)"
+    },
+    {
+     "l": "(b)(iii)",
+     "q": "Write down the initial content of A such that the content remains unchanged after executing the algorithm.",
+     "m": 1,
+     "ms": "A[3], A[2], A[1] = 0 0 0 (A[6]…A[1] = 000000) (1)"
+    },
+    {
+     "l": "(c)(i)",
+     "q": "Peter will execute the program millions of times with N >= 64 on his desktop computer and wants to improve the performance of the program execution significantly.<br>Increasing the size of RAM does not help. Why not?",
+     "m": 1,
+     "ms": "The algorithm does not need much memory to be executed. (1)"
+    },
+    {
+     "l": "(c)(ii)",
+     "q": "Suggest a hardware component that should be upgraded.",
+     "m": 1,
+     "ms": "CPU (1)"
+    }
+   ]
+  }
+ ]
+}
