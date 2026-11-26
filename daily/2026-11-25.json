@@ -1,0 +1,239 @@
+{
+ "date": "2026-11-25",
+ "subject": "ICT",
+ "minutes": 30,
+ "marks": 20,
+ "scratch": false,
+ "title": "ICT 每日练习",
+ "scope": "S4 至今（不含 PHP）",
+ "keyPoints": [
+  "**Number systems:** binary ↔ decimal ↔ hexadecimal (group 4 bits per hex digit).",
+  "**Two’s complement (8-bit):** range $-128$ to $127$; negate = invert all bits $+1$. Overflow when two same-sign numbers give a result of opposite sign.",
+  "**Storage:** bitmap size = width × height × colour depth (bits); 1 KB = 1024 B. Sound size = sample rate × bits × channels × seconds.",
+  "**Character coding:** ASCII 7/8-bit; Big-5/GB 2 bytes; Unicode (UTF-8 1–4 bytes) covers all languages.",
+  "**Networking:** IPv4 32 bits; subnet mask decides network/host part; number of usable hosts $= 2^h - 2$.",
+  "**Database:** primary key unique & not null; foreign key links tables. SQL: SELECT … FROM … WHERE … GROUP BY … ORDER BY.",
+  "**Algorithm tracing:** keep a trace table, update one variable per line."
+ ],
+ "examples": [
+  {
+   "title": "例 1（进制/补码）",
+   "question": "用 8 位二进制补码表示 $-45$。",
+   "solution": "$45 = 00101101_2$；取反 $11010010$；加 1 得 $11010011_2$（十六进制 D3）。"
+  },
+  {
+   "title": "例 2（存储计算）",
+   "question": "一张 $800 \\times 600$、24 位色的位图需多少 KB？",
+   "solution": "$800 \\times 600 \\times 24 = 11\\,520\\,000$ bits $= 1\\,440\\,000$ B，$\\div 1024 \\approx 1406.25$ KB。"
+  },
+  {
+   "title": "例 3（子网）",
+   "question": "IP 为 192.168.10.37，子网掩码 255.255.255.224。求网络地址与可用主机数。",
+   "solution": "224 = 11100000，主机位 5 位。\n37 = 00100101，与 11100000 得 00100000 = 32，网络地址 192.168.10.32；\n可用主机 $2^5 - 2 = 30$。"
+  },
+  {
+   "title": "例 4（SQL）",
+   "question": "表 BOOK(BID, TITLE, PRICE, CAT)，列出每类书的平均价格并按平均价从高到低排序。",
+   "solution": "```\nSELECT CAT, AVG(PRICE) FROM BOOK\nGROUP BY CAT ORDER BY AVG(PRICE) DESC;\n```"
+  },
+  {
+   "title": "例 5（算法追踪）",
+   "question": "s←0; for i←1 to 4: if i mod 2=0 then s←s+i else s←s−1，求最后 s。",
+   "solution": "i=1: s=−1；i=2: 1；i=3: 0；i=4: 4。答案 4。"
+  }
+ ],
+ "sections": [
+  {
+   "title": "Section A 选择题（每题 1 分，共 8 分）",
+   "note": "出处：原创，按 DSE ICT 卷一风格编写，对应 DSE 常考点。",
+   "questions": [
+    {
+     "n": "1",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "十六进制 7C 等于十进制多少？",
+     "options": [
+      "112",
+      "124",
+      "126",
+      "76"
+     ],
+     "answer": "B",
+     "solution": "$7 \\times 16 + 12 = 124$",
+     "id": "2026-11-25-q1"
+    },
+    {
+     "n": "2",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "8 位补码 10110110 表示的十进制数是：",
+     "options": [
+      "$-74$",
+      "$-54$",
+      "182",
+      "$-73$"
+     ],
+     "answer": "A",
+     "solution": "取反加一：$01001010 = 74$，故 $-74$。",
+     "id": "2026-11-25-q2"
+    },
+    {
+     "n": "3",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "在 8 位补码中，以下哪个运算会溢出？",
+     "options": [
+      "100 + 20",
+      "90 + 50",
+      "$-60 + (-60)$",
+      "$70 + (-100)$"
+     ],
+     "answer": "B",
+     "solution": "$140 > 127$ 溢出；C 为 $-120$，不溢出。",
+     "id": "2026-11-25-q3"
+    },
+    {
+     "n": "4",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "一段 30 秒、采样率 44.1 kHz、16 位、立体声的未压缩音频大约是：",
+     "options": [
+      "1.3 MB",
+      "2.6 MB",
+      "5.0 MB",
+      "10.1 MB"
+     ],
+     "answer": "C",
+     "solution": "$44100 \\times 16 \\times 2 \\times 30 = 42\\,336\\,000$ bits $\\approx 5.29 \\times 10^6$ B $\\approx 5.0$ MB",
+     "id": "2026-11-25-q4"
+    },
+    {
+     "n": "5",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "以下哪种编码最适合同时储存中文、日文和阿拉伯文？",
+     "options": [
+      "ASCII",
+      "Big-5",
+      "GB2312",
+      "Unicode"
+     ],
+     "answer": "D",
+     "solution": "Unicode 涵盖所有语言的字符。",
+     "id": "2026-11-25-q5"
+    },
+    {
+     "n": "6",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "子网掩码 255.255.255.240 的子网中，可用主机数为：",
+     "options": [
+      "14",
+      "16",
+      "30",
+      "240"
+     ],
+     "answer": "A",
+     "solution": "主机位 4，$2^4 - 2 = 14$。",
+     "id": "2026-11-25-q6"
+    },
+    {
+     "n": "7",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "关于主键，以下哪项正确？\n(1) 值必须唯一　(2) 可以为空值　(3) 可由多个字段组成",
+     "options": [
+      "只有 (1)",
+      "(1)(3)",
+      "(2)(3)",
+      "(1)(2)(3)"
+     ],
+     "answer": "B",
+     "solution": "主键必须唯一且不能为空，可以由多个字段组成（复合键）。",
+     "id": "2026-11-25-q7"
+    },
+    {
+     "n": "8",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "CPU 中负责储存下一条要执行指令地址的寄存器是：",
+     "options": [
+      "MAR",
+      "MDR",
+      "PC",
+      "ACC"
+     ],
+     "answer": "C",
+     "solution": "程序计数器（PC）存放下一条指令的地址。",
+     "id": "2026-11-25-q8"
+    }
+   ]
+  },
+  {
+   "title": "Section B 结构题（共 12 分）",
+   "note": "出处：原创，按 DSE ICT 卷一 Section B 数据库题 / 算法题风格编写。",
+   "questions": [
+    {
+     "n": "9",
+     "type": "written",
+     "marks": 8,
+     "source": "原创",
+     "stem": "学校图书馆数据库有两个表：\nSTUDENT(SID, SNAME, CLASS)\nLOAN(LID, SID, BOOKNAME, LDATE, RETURNED)\n其中 RETURNED 为 'Y' 或 'N'。",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "指出 LOAN 表中的外键，并说明它的作用。",
+       "answer": "SID（1）；连接 STUDENT 表，确保每笔借书记录对应一个存在的学生（参照完整性）（1）。"
+      },
+      {
+       "label": "(b)",
+       "marks": 3,
+       "text": "写 SQL：列出 5A 班所有未还书学生的姓名和书名。",
+       "answer": "```\nSELECT S.SNAME, L.BOOKNAME FROM STUDENT S, LOAN L\nWHERE S.SID = L.SID AND S.CLASS = '5A' AND L.RETURNED = 'N';\n```\n（连接条件 1，两个筛选条件 1，SELECT 字段正确 1）"
+      },
+      {
+       "label": "(c)",
+       "marks": 3,
+       "text": "写 SQL：列出每个班的借书总数，只显示多于 10 本的班。",
+       "answer": "```\nSELECT S.CLASS, COUNT(*) FROM STUDENT S, LOAN L\nWHERE S.SID = L.SID GROUP BY S.CLASS\nHAVING COUNT(*) > 10;\n```\n（连接 + COUNT 1，GROUP BY 1，用 HAVING 而非 WHERE 1）"
+      }
+     ],
+     "id": "2026-11-25-q9"
+    },
+    {
+     "n": "10",
+     "type": "written",
+     "marks": 4,
+     "source": "原创",
+     "stem": "追踪以下伪代码，输入 N = 13：\n```\nR <- \"\"\nwhile N > 0\n    R <- (N mod 2) & R      // & 为字符串连接\n    N <- N div 2\noutput R\n```",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 3,
+       "text": "列出追踪表（每轮 N 和 R 的值），写出输出。",
+       "answer": "| 轮次 | N（结束后） | R |\n|---|---|---|\n| 1 | 6 | 1 |\n| 2 | 3 | 01 |\n| 3 | 1 | 101 |\n| 4 | 0 | 1101 |\n\n输出 1101。"
+      },
+      {
+       "label": "(b)",
+       "marks": 1,
+       "text": "说明这个算法的作用。",
+       "answer": "把十进制正整数转换成二进制字符串。"
+      }
+     ],
+     "id": "2026-11-25-q10"
+    }
+   ]
+  }
+ ],
+ "answerNote": "本卷题目均为原创，答案全部为推导答案，非官方评分标准。",
+ "v": 1
+}

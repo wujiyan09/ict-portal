@@ -1,0 +1,37 @@
+{
+ "v": 1,
+ "days": [
+  {
+   "date": "2026-11-25",
+   "subject": "ICT",
+   "title": "ICT 每日练习",
+   "minutes": 30,
+   "marks": 20,
+   "count": 10
+  },
+  {
+   "date": "2026-11-24",
+   "subject": "Chemistry",
+   "title": "Chemistry Daily Practice",
+   "minutes": 30,
+   "marks": 30,
+   "count": 7
+  },
+  {
+   "date": "2026-11-23",
+   "subject": "M2",
+   "title": "M2 每日练习卷",
+   "minutes": 30,
+   "marks": 35,
+   "count": 7
+  },
+  {
+   "date": "2026-11-22",
+   "subject": "Physics",
+   "title": "Physics Daily Practice",
+   "minutes": 30,
+   "marks": 29,
+   "count": 4
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+ "date": "2026-11-24",
+ "subject": "Chemistry",
+ "minutes": 30,
+ "marks": 30,
+ "scratch": true,
+ "title": "Chemistry Daily Practice",
+ "scope": "S4 + S5 revision (mole, acids & bases, redox, electrolysis)",
+ "keyPoints": [
+  "**Mole:** $n = \\frac{m}{M}$; $c = \\frac{n}{V}$ ($V$ in dm³); molar volume of gas at r.t.p. = 24.0 dm³ mol⁻¹.",
+  "**Titration:** use the mole ratio from the balanced equation: $n_{\\text{acid}} : n_{\\text{base}}$ = coefficient ratio.",
+  "**pH:** $\\text{pH} = -\\log[\\text{H}^+]$. Strong acid fully ionises; weak acid partly ionises, so at equal concentration it has higher pH and reacts more slowly (same total moles of H⁺ available).",
+  "**Redox:** oxidation = loss of electrons / increase in oxidation number; reducing agent gets oxidised.",
+  "**Electrolysis:** cathode = reduction, anode = oxidation. Preferential discharge depends on (1) position in E.C.S., (2) concentration of ions, (3) nature of electrodes.",
+  "**Answer pattern (electrolysis):** name the ion discharged + reason (“Cl⁻ is discharged in preference to OH⁻ because [Cl⁻] ≫ [OH⁻]”) + half equation + observation."
+ ],
+ "examples": [
+  {
+   "title": "例题 1 (mole / gas volume)",
+   "question": "2.4 g of Mg reacts with excess dilute HCl. Find the volume of H₂ at r.t.p.",
+   "solution": "Mg + 2HCl → MgCl₂ + H₂\n$n(\\text{Mg}) = 2.4/24.3 = 0.0988$ mol $\\Rightarrow n(\\text{H}_2) = 0.0988$ mol.\n$V = 0.0988 \\times 24.0 = 2.37$ dm³."
+  },
+  {
+   "title": "例题 2 (titration)",
+   "question": "20.0 cm³ of NaOH needs 16.0 cm³ of 0.100 M H₂SO₄. Find [NaOH].",
+   "solution": "$n(\\text{H}_2\\text{SO}_4) = 0.100 \\times 0.0160 = 1.60 \\times 10^{-3}$.\nRatio H₂SO₄ : NaOH = 1 : 2 $\\Rightarrow n(\\text{NaOH}) = 3.20 \\times 10^{-3}$.\n$c = 3.20 \\times 10^{-3} / 0.0200 = 0.160$ M."
+  },
+  {
+   "title": "例题 3 (pH, strong vs weak)",
+   "question": "Compare 0.1 M HNO₃ and 0.1 M HCOOH.",
+   "solution": "HNO₃ is a strong acid, fully ionised: [H⁺] = 0.1, pH = 1. HCOOH is weak, partly ionised, so [H⁺] < 0.1 M and pH > 1."
+  },
+  {
+   "title": "例题 4 (redox)",
+   "question": "In Zn + Cu²⁺ → Zn²⁺ + Cu, state the reducing agent.",
+   "solution": "Zn: O.N. 0 → +2, loses electrons, is oxidised, so Zn is the reducing agent."
+  },
+  {
+   "title": "例题 5 (electrolysis explanation)",
+   "question": "Dilute H₂SO₄ is electrolysed with carbon electrodes. Anode product?",
+   "solution": "Ions at anode: SO₄²⁻, OH⁻. OH⁻ is lower in the E.C.S., so it is preferentially discharged:\n4OH⁻ → O₂ + 2H₂O + 4e⁻\nColourless gas bubbles; oxygen formed."
+  }
+ ],
+ "sections": [
+  {
+   "title": "Section A: MC (1 mark each, 4 marks)",
+   "note": "DSE-style MC in the format of HKDSE Paper 1A (wording written for this paper). No DSE 2023–2025 used.",
+   "questions": [
+    {
+     "n": "1",
+     "type": "mc",
+     "marks": 1,
+     "source": "DSE-style · mole",
+     "stem": "What is the number of oxygen atoms in 0.25 mol of CaCO₃? (Avogadro constant $L$)",
+     "options": [
+      "$0.25L$",
+      "$0.50L$",
+      "$0.75L$",
+      "$1.25L$"
+     ],
+     "answer": "C",
+     "solution": "$3 \\times 0.25 = 0.75$, so $0.75L$.",
+     "id": "2026-11-24-q1"
+    },
+    {
+     "n": "2",
+     "type": "mc",
+     "marks": 1,
+     "source": "DSE-style · acids",
+     "stem": "Which of the following would be the same for 50 cm³ 1 M HCl and 50 cm³ 1 M CH₃COOH each reacting with excess Mg ribbon?\n(1) initial rate　(2) total volume of gas　(3) initial pH",
+     "options": [
+      "(1) only",
+      "(2) only",
+      "(1) and (3) only",
+      "(2) and (3) only"
+     ],
+     "answer": "B",
+     "solution": "Same moles of acid give the same volume of H₂; the weak acid has lower [H⁺], so a slower rate and higher pH.",
+     "id": "2026-11-24-q2"
+    },
+    {
+     "n": "3",
+     "type": "mc",
+     "marks": 1,
+     "source": "DSE-style · redox",
+     "stem": "The oxidation number of Cr in Cr₂O₇²⁻ is",
+     "options": [
+      "+3",
+      "+4",
+      "+6",
+      "+7"
+     ],
+     "answer": "C",
+     "solution": "$2x + 7(-2) = -2 \\Rightarrow x = +6$",
+     "id": "2026-11-24-q3"
+    },
+    {
+     "n": "4",
+     "type": "mc",
+     "marks": 1,
+     "source": "DSE-style · electrolysis",
+     "stem": "Concentrated NaCl solution is electrolysed with carbon electrodes. A few drops of universal indicator are added. Colour near the cathode becomes",
+     "options": [
+      "red",
+      "green",
+      "blue/violet",
+      "colourless"
+     ],
+     "answer": "C",
+     "solution": "H⁺ is discharged at the cathode (2H₂O + 2e⁻ → H₂ + 2OH⁻); OH⁻ builds up, so the solution turns alkaline.",
+     "id": "2026-11-24-q4"
+    }
+   ]
+  },
+  {
+   "title": "Section B: Structured (26 marks)",
+   "note": "Adapted from typical HKDSE Paper 1B structures (older DSE/CE patterns).",
+   "questions": [
+    {
+     "n": "5",
+     "type": "written",
+     "marks": 6,
+     "source": "Adapted from DSE Paper 1B titration pattern",
+     "stem": "2.65 g of anhydrous Na₂CO₃ was dissolved and made up to 250.0 cm³. 25.0 cm³ of this solution needed 22.50 cm³ of dilute HCl (methyl orange).",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 1,
+       "text": "Write the equation for the reaction.",
+       "answer": "Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂ (1)"
+      },
+      {
+       "label": "(b)",
+       "marks": 1,
+       "text": "State the colour change at end point.",
+       "answer": "Yellow to orange (1)"
+      },
+      {
+       "label": "(c)",
+       "marks": 3,
+       "text": "Calculate the concentration of the HCl.",
+       "answer": "$n(\\text{Na}_2\\text{CO}_3) = 2.65/106.0 = 0.0250$ mol in 250 cm³, so 0.00250 mol in 25.0 cm³ (1)\n$n(\\text{HCl}) = 0.00500$ mol (1)\n$c = 0.00500/0.02250 = 0.222$ M (1)"
+      },
+      {
+       "label": "(d)",
+       "marks": 1,
+       "text": "Name the apparatus used to measure exactly 25.0 cm³ of solution.",
+       "answer": "Pipette (1)"
+      }
+     ],
+     "id": "2026-11-24-q5"
+    },
+    {
+     "n": "6",
+     "type": "written",
+     "marks": 10,
+     "source": "Adapted from DSE Paper 1B electrolysis pattern",
+     "stem": "Dilute CuSO₄ solution is electrolysed using copper electrodes.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "Write the half equation at each electrode.",
+       "answer": "Cathode: Cu²⁺ + 2e⁻ → Cu; anode: Cu → Cu²⁺ + 2e⁻ (2)"
+      },
+      {
+       "label": "(b)",
+       "marks": 2,
+       "text": "State the change in mass of each electrode.",
+       "answer": "Cathode gains mass; anode loses mass (by the same amount) (2)"
+      },
+      {
+       "label": "(c)",
+       "marks": 2,
+       "text": "Explain why the blue colour of the solution stays the same.",
+       "answer": "Rate of Cu²⁺ formed at anode = rate of Cu²⁺ discharged at cathode (1), so [Cu²⁺] stays constant (1)."
+      },
+      {
+       "label": "(d)",
+       "marks": 4,
+       "text": "If the copper anode is replaced by a carbon anode, state and explain the observation at the anode, and the change in colour of the solution.",
+       "answer": "Colourless gas bubbles (1); OH⁻ preferentially discharged over SO₄²⁻ as it is lower in E.C.S. (1), 4OH⁻ → O₂ + 2H₂O + 4e⁻; blue colour fades (1) because Cu²⁺ is removed at the cathode and not replaced (1)."
+      }
+     ],
+     "id": "2026-11-24-q6"
+    },
+    {
+     "n": "7",
+     "type": "written",
+     "marks": 10,
+     "source": "Adapted from DSE Paper 1B redox/reactivity pattern",
+     "stem": "Excess zinc powder is added to 50.0 cm³ of 0.200 M CuSO₄ solution.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "State two observations.",
+       "answer": "Reddish-brown solid forms; blue solution fades/becomes colourless (2)"
+      },
+      {
+       "label": "(b)",
+       "marks": 2,
+       "text": "Write the ionic equation and identify the oxidising agent.",
+       "answer": "Zn + Cu²⁺ → Zn²⁺ + Cu (1); oxidising agent Cu²⁺ (1)"
+      },
+      {
+       "label": "(c)",
+       "marks": 2,
+       "text": "Calculate the mass of copper formed. (Cu = 63.5)",
+       "answer": "$n = 0.200 \\times 0.0500 = 0.0100$ mol (1); mass $= 0.0100 \\times 63.5 = 0.635$ g (1)"
+      },
+      {
+       "label": "(d)",
+       "marks": 1,
+       "text": "Explain, in terms of electrons, why zinc is more reactive than copper.",
+       "answer": "Zn loses electrons more readily than Cu (1)"
+      },
+      {
+       "label": "(e)",
+       "marks": 1,
+       "text": "Suggest why the temperature of the mixture rises.",
+       "answer": "The reaction is exothermic (1)"
+      },
+      {
+       "label": "(f)",
+       "marks": 2,
+       "text": "State whether the reaction would occur if silver were used instead of zinc. Explain.",
+       "answer": "No (1): Ag is less reactive than Cu / lower in the reactivity series, so cannot displace Cu (1)."
+      }
+     ],
+     "id": "2026-11-24-q7"
+    }
+   ]
+  }
+ ],
+ "answerNote": "All answers are derived, not official marking schemes.",
+ "v": 1
+}

@@ -1,0 +1,202 @@
+{
+ "date": "2026-11-22",
+ "subject": "Physics",
+ "minutes": 30,
+ "marks": 29,
+ "scratch": true,
+ "title": "Physics Daily Practice",
+ "scope": "Mixed revision: Heat & Gases (incl. gas laws) · Waves · Force & Motion",
+ "keyPoints": [
+  "**Energy balance (mixing):** heat lost by hot body = heat gained by cold body. $Q = mc\\Delta T$; melting at constant temperature: $Q = m\\ell_f$. Melted ice then warms as water: $m\\ell_f + mc_w\\Delta T$.",
+  "**Heat transfer:** conduction (poor conductors, e.g. foam, trapped air), convection (block air movement, e.g. sealed lids/zippers), radiation (shiny/light surfaces are poor emitters & absorbers).",
+  "**Waves:** $v = f\\lambda$. $n$ crests span $(n-1)\\lambda$. Frequency is set by the source and does not change across a boundary.",
+  "**Refraction:** change of wave speed (and wavelength) in a different medium/depth. Water waves are faster in deep water; entering deeper water they bend away from the normal.",
+  "**Ideal gas:** $pV = nRT$ ($T$ in K). Fixed $n, T$: $p_1V_1 = p_2V_2$. Gases mixing at the same $T$: total moles conserved, $n_{\\text{tot}} = \\sum n_i$.",
+  "**Kinetic theory:** pressure comes from molecules colliding with the walls. Same T ⇒ same mean KE/speed; more molecules per unit volume ⇒ more collisions per second ⇒ higher pressure.",
+  "**Moments:** in equilibrium, clockwise moments = anticlockwise moments about the pivot; moment $= F \\times d_\\perp$. Both sides scale with $g$, so a beam balance compares masses.",
+  "**Apparent weight:** spring balance reads $R = m(g + a)$ when accelerating upwards at $a$; in free fall $R = 0$."
+ ],
+ "examples": [
+  {
+   "title": "A. Mixing with melting",
+   "question": "0.2 kg ice at 0 °C is added to 1 kg water at 50 °C. Final temperature T?",
+   "solution": "Heat lost = heat gained:\n$$1(4200)(50 - T) = 0.2(3.34 \\times 10^5) + 0.2(4200)(T - 0)$$\n$$210000 - 4200T = 66800 + 840T \\Rightarrow T = 28.4\\ {}^\\circ\\text{C}$$"
+  },
+  {
+   "title": "B. Heat transfer feature",
+   "question": "Why does a vacuum flask have a silvered wall?",
+   "solution": "Shiny surfaces are poor emitters and absorbers, so heat transfer by radiation is reduced. Always name the process + the material/feature + its effect."
+  },
+  {
+   "title": "C. Waves crossing a boundary",
+   "question": "5 crests span 8 cm; f = 5 Hz. Find λ and v. In a region where v = 6 cm s⁻¹, what happens?",
+   "solution": "$\\lambda = 8/(5-1) = 2$ cm, $v = f\\lambda = 10$ cm s⁻¹.\nIn the region where v = 6 cm s⁻¹: f stays 5 Hz, λ = 1.2 cm; waves slow down so they bend towards the normal (refraction)."
+  },
+  {
+   "title": "D. Connected gas vessels",
+   "question": "Vessel X (V, 3p) joined to empty vessel Y (2V), same T. Final pressure?",
+   "solution": "Moles conserved: $3p \\cdot V = p'(3V) \\Rightarrow p' = p$.\nKinetic theory: same number of molecules in a larger volume ⇒ fewer per unit volume; same T so same speed ⇒ fewer wall collisions per second ⇒ lower pressure."
+  },
+  {
+   "title": "E. Moments + apparent weight",
+   "question": "A 30 g counter-weight balances a load at 4 cm when it sits 12 cm from the pivot. Find the load. A spring balance holds 0.5 kg in a lift accelerating up at 2 m s⁻². Reading?",
+   "solution": "$m(4) = 30(12) \\Rightarrow m = 90$ g.\n$R = 0.5(9.81 + 2) = 5.9$ N."
+  }
+ ],
+ "sections": [
+  {
+   "title": "Questions (29 marks)",
+   "note": "Q1–2: HKDSE 2019 Physics Paper 1B; Q3–4: HKDSE 2018 Physics Paper 1B (HKEAA). Figure for Q3 redrawn as text. Answers to Q1–2 follow the official 2019 marking scheme; answers to Q3–4 are derived.",
+   "questions": [
+    {
+     "n": "1",
+     "type": "written",
+     "marks": 7,
+     "source": "HKDSE 2019 Paper 1B Q1",
+     "official": true,
+     "stem": "An insulated container of negligible heat capacity contains 1.5 kg of tea at a temperature of 60 °C.",
+     "parts": [
+      {
+       "label": "(a)(i)",
+       "marks": 3,
+       "text": "What mass of ice at 0 °C should be added to the tea so that the final temperature of the mixture is lowered to 10 °C? Assume that the specific heat capacity of tea is the same as that of water. Given: specific latent heat of fusion of ice $= 3.34 \\times 10^5$ J kg⁻¹; specific heat capacity of water $= 4200$ J kg⁻¹ °C⁻¹.",
+       "answer": "$(1.5)(4200)(60 - 10) = m(3.34 \\times 10^5) + m(4200)(10 - 0)$ [1M+1M]\n$\\Rightarrow m = 0.838$ kg (accept 0.83–0.84) [1A]"
+      },
+      {
+       "label": "(a)(ii)",
+       "marks": 2,
+       "text": "If the heat capacity of the container is not negligible, explain whether more ice, less ice or the same amount of ice is needed to obtain the final temperature of 10 °C.",
+       "answer": "More ice is needed [1A], because the container also releases heat/thermal energy as it cools [1A]."
+      },
+      {
+       "label": "(b)(i)",
+       "marks": 1,
+       "text": "Some ice cream at −10 °C is put into a ‘thermal bag’, of which the inner layer is made of polyethylene foam coated with aluminium foil. The bag is also equipped with a zipper at the top. The bag is then brought outdoors on a hot sunny day.\nReferring to the heat transfer processes, explain ONE feature of this bag that helps keep the ice cream at a low temperature.",
+       "answer": "Any one: foam is a poor conductor, reducing heat conduction from the surroundings to the ice cream; or the zipper prevents convection between hot outside air and the cool contents; or the shiny inner surface reduces heat transfer by radiation. [1A]"
+      },
+      {
+       "label": "(b)(ii)",
+       "marks": 1,
+       "text": "Suggest ONE modification to this bag that would enhance its ability to keep things stored inside at a low temperature.",
+       "answer": "Make the outer surface of the bag shiny (or another modification of the bag itself, e.g. thicker foam). Adding ice is not accepted. [1A]"
+      }
+     ],
+     "id": "2026-11-22-q1"
+    },
+    {
+     "n": "2",
+     "type": "written",
+     "marks": 7,
+     "source": "HKDSE 2019 Paper 1B Q5",
+     "official": true,
+     "stem": "A ripple tank has a shallow region P and a deep region Q. Straight water wave of frequency 10 Hz is travelling in the shallow region as shown in Figure 5.1 when viewed from above.",
+     "figure": "2026-11-22-q2.png",
+     "parts": [
+      {
+       "label": "(a)(i)",
+       "marks": 1,
+       "text": "The separation between seven crests in the shallow region is found to be 6 cm as shown. Find the wavelength of the wave in the shallow region.",
+       "answer": "$\\lambda = 0.06/(7-1) = 0.01$ m (1 cm) [1A]"
+      },
+      {
+       "label": "(a)(ii)",
+       "marks": 1,
+       "text": "What is the wave speed in the shallow region?",
+       "answer": "$v = f\\lambda = 10 \\times 0.01 = 0.1$ m s⁻¹ [1A]"
+      },
+      {
+       "label": "(b)(i)",
+       "marks": 1,
+       "text": "The water wave then propagates into the deep region where the wavelength of the wave is double that in the shallow region. State the frequency of the water wave in the deep region.",
+       "answer": "10 Hz [1A] (“remains unchanged” alone not accepted)"
+      },
+      {
+       "label": "(b)(ii)",
+       "marks": 2,
+       "text": "On Figure 5.1, sketch the wave pattern in the deep region.",
+       "answer": "Straight wavefronts in Q bend away from the normal to the boundary [1A]; wavelength doubled (2 cm) and wavefronts continuous at the boundary [1A]."
+      },
+      {
+       "label": "(b)(iii)",
+       "marks": 2,
+       "text": "Name the phenomenon occurred across the boundary and explain its cause.",
+       "answer": "Refraction [1A]; caused by the change in wave speed/wavelength in a different depth [1A]."
+      }
+     ],
+     "id": "2026-11-22-q2"
+    },
+    {
+     "n": "3",
+     "type": "written",
+     "marks": 6,
+     "source": "HKDSE 2018 Paper 1B Q2",
+     "stem": "Two vessels, A and B, of volumes 3V and 2V respectively are connected by a narrow tube with a tap. Initially the tap is closed and both vessels are at the same temperature. Vessel A contains helium gas at a pressure p while vessel B contains 0.8 mol helium gas at a pressure 2p. Assume that helium gas can be taken as an ideal gas.\n\nFigure 2.1 (redrawn): A (volume 3V, pressure p) and B (volume 2V, pressure 2p, 0.8 mol) joined by a tube with a tap.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "Deduce the amount of helium gas (in mol) in vessel A.",
+       "answer": "For B: $(2p)(2V) = 0.8RT \\Rightarrow pV/RT = 0.2$ [1M]. For A: $n_A = \\frac{p(3V)}{RT} = 3(0.2) = 0.6$ mol [1A]."
+      },
+      {
+       "label": "(b)(i)",
+       "marks": 2,
+       "text": "Now the tap is open and a steady state is reached. Assume that the temperature remains unchanged. Find the gas pressure inside the vessels in terms of p.",
+       "answer": "Total $n = 0.6 + 0.8 = 1.4$ mol in $5V$ at the same $T$: $p'(5V) = 1.4RT = 1.4(5pV)$ [1M] $\\Rightarrow p' = 1.4p$ [1A]."
+      },
+      {
+       "label": "(b)(ii)",
+       "marks": 2,
+       "text": "Account for the pressure change of the gas in vessel A using kinetic theory.",
+       "answer": "Gas flows from B into A, so the number of molecules per unit volume in A increases [1]. T is unchanged so the mean speed of molecules is the same; collisions with the walls become more frequent, so pressure in A rises (from p to 1.4p) [1]."
+      }
+     ],
+     "id": "2026-11-22-q3"
+    },
+    {
+     "n": "4",
+     "type": "written",
+     "marks": 9,
+     "source": "HKDSE 2018 Paper 1B Q5",
+     "stem": "Figure 5.1 shows the use of a beam balance to measure the mass of a load. Without the load and the counter-weight, the beam with a scale pan at its left end is balanced and remains horizontal. ($g = 9.81$ m s⁻²)",
+     "figure": "2026-11-22-q4.png",
+     "parts": [
+      {
+       "label": "(a)(i)",
+       "marks": 2,
+       "text": "A load is placed on the pan which is 5.0 cm from the pivot. The set-up is in equilibrium when the counter-weight of mass 50 g is 10.0 cm away from the pivot as shown. Find the mass of the load.",
+       "answer": "Moments about pivot: $m(5.0) = 50(10.0)$ [1M] $\\Rightarrow m = 100$ g [1A]."
+      },
+      {
+       "label": "(a)(ii)",
+       "marks": 2,
+       "text": "If the reading of the counter-weight’s position on the beam carries an uncertainty of ±0.1 cm, find the maximum error that corresponds to the result found in (a)(i).",
+       "answer": "$m = 50d/5.0 = 10d$, so $\\Delta m = 10(0.1)$ [1M] $= \\pm 1$ g [1A]."
+      },
+      {
+       "label": "(b)",
+       "marks": 1,
+       "text": "The weight of an identical load is now measured by a spring balance calibrated in newtons. What is the balance’s reading?",
+       "answer": "$W = 0.100 \\times 9.81 = 0.981$ N [1A]"
+      },
+      {
+       "label": "(c)(i)",
+       "marks": 2,
+       "text": "The beam balance set-up in Figure 5.1 and the spring balance with the load in (b) are both brought into a lift. The measurements are then repeated inside the lift which accelerates upwards uniformly. State the change, if any, in the measurements respectively (counter-weight position on beam balance; spring balance reading).",
+       "answer": "Beam balance: counter-weight position unchanged (both sides’ apparent weights increase by the same factor) [1]. Spring balance: reading increases ($R = m(g + a)$) [1]."
+      },
+      {
+       "label": "(c)(ii)",
+       "marks": 2,
+       "text": "A student claims that if the lift falls freely, the beam balance can still be used to measure the mass of the load. Explain whether the claim is correct or not.",
+       "answer": "Incorrect [1]. In free fall the load and counter-weight are both apparently weightless, so they exert no moments; the beam stays balanced for any counter-weight position, so the mass cannot be measured [1]."
+      }
+     ],
+     "id": "2026-11-22-q4"
+    }
+   ]
+  }
+ ],
+ "answerNote": "Q1–2: official HKEAA 2019 marking scheme. Q3–4: derived, not from the marking scheme.",
+ "v": 1
+}

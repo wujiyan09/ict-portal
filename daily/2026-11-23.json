@@ -1,0 +1,153 @@
+{
+ "date": "2026-11-23",
+ "subject": "M2",
+ "minutes": 30,
+ "marks": 35,
+ "scratch": true,
+ "title": "M2 每日练习卷",
+ "scope": "S4 M2 至 Ch7 不定积分（综合复习）",
+ "keyPoints": [
+  "**Mathematical induction:** prove $P(1)$; assume $P(k)$; show $P(k+1)$; conclude for all positive integers $n$.",
+  "**Binomial theorem:** $(a+b)^n = \\sum_{r=0}^{n} \\binom{n}{r} a^{n-r} b^r$. Coefficient of $x^k$ in a product: add all pairs of powers summing to $k$.",
+  "**First principles:** $f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$. For roots, multiply by the conjugate.",
+  "**Implicit differentiation:** differentiate both sides w.r.t. $x$; $\\frac{d}{dx}(y^2) = 2y\\frac{dy}{dx}$, $\\frac{d}{dx}(xy) = y + x\\frac{dy}{dx}$. Tangent: $y - y_0 = m(x - x_0)$.",
+  "**Extreme values:** solve $f'(x) = 0$; $f''(x) < 0 \\Rightarrow$ max, $f''(x) > 0 \\Rightarrow$ min.",
+  "**Trig identities for integration:** $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$, $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\tan^2\\theta = \\sec^2\\theta - 1$ (not $1 - \\sec^2\\theta$!), $\\int \\sec^2 x\\,dx = \\tan x + C$, $\\int \\tan x\\,dx = -\\ln|\\cos x| + C$.",
+  "**Substitution:** let $u = g(x)$, $du = g'(x)\\,dx$; rewrite everything in $u$, integrate, substitute back."
+ ],
+ "examples": [
+  {
+   "title": "例 1（归纳法）",
+   "question": "证明 $1 + 3 + 5 + \\cdots + (2n-1) = n^2$。",
+   "solution": "$n = 1$：左 $= 1 =$ 右。\n设 $n = k$ 成立：$1 + \\cdots + (2k-1) = k^2$。\n则 $n = k+1$：左 $= k^2 + (2k+1) = (k+1)^2$。\n故对所有正整数 $n$ 成立。"
+  },
+  {
+   "title": "例 2（二项式）",
+   "question": "求 $(1+x)^4(1-2x)^3$ 展开式中 $x$ 的系数。",
+   "solution": "$(1+x)^4 = 1 + 4x + \\cdots$，$(1-2x)^3 = 1 - 6x + \\cdots$。\n$x$ 系数 $= 1 \\cdot (-6) + 4 \\cdot 1 = -2$。"
+  },
+  {
+   "title": "例 3（第一原理）",
+   "question": "由第一原理求 $\\frac{d}{dx}(x^2)$。",
+   "solution": "$$\\lim_{h \\to 0} \\frac{(x+h)^2 - x^2}{h} = \\lim_{h \\to 0} \\frac{2xh + h^2}{h} = \\lim_{h \\to 0}(2x + h) = 2x$$"
+  },
+  {
+   "title": "例 4（隐函数求导与切线）",
+   "question": "求曲线 $x^2 + y^2 = 25$ 在 $(3, 4)$ 的切线。",
+   "solution": "$2x + 2y\\frac{dy}{dx} = 0 \\Rightarrow \\frac{dy}{dx} = -\\frac{x}{y} = -\\frac{3}{4}$。\n切线：$y - 4 = -\\frac{3}{4}(x - 3)$，即 $3x + 4y - 25 = 0$。"
+  },
+  {
+   "title": "例 5（极值）",
+   "question": "求 $f(x) = x^3 - 12x$ 的极值。",
+   "solution": "$f'(x) = 3x^2 - 12 = 0 \\Rightarrow x = \\pm 2$。\n$f''(x) = 6x$：$f''(-2) < 0$，极大值 $f(-2) = 16$；$f''(2) > 0$，极小值 $f(2) = -16$。"
+  },
+  {
+   "title": "例 6（三角积分）",
+   "question": "求 $\\int \\sin^2 x\\,dx$ 及 $\\int \\tan^2 x\\,dx$。",
+   "solution": "$\\int \\frac{1 - \\cos 2x}{2}\\,dx = \\frac{x}{2} - \\frac{\\sin 2x}{4} + C$；\n$\\int (\\sec^2 x - 1)\\,dx = \\tan x - x + C$。"
+  },
+  {
+   "title": "例 7（换元积分）",
+   "question": "求 $\\int x(x^2+1)^4\\,dx$。",
+   "solution": "设 $u = x^2 + 1$，$du = 2x\\,dx$：\n$$\\frac{1}{2}\\int u^4\\,du = \\frac{u^5}{10} + C = \\frac{(x^2+1)^5}{10} + C$$"
+  }
+ ],
+ "sections": [
+  {
+   "title": "练习题（共 35 分）",
+   "questions": [
+    {
+     "n": "1",
+     "type": "written",
+     "marks": 4,
+     "source": "DSE M2 卷一归纳法题型（改编）",
+     "stem": "用数学归纳法证明：对所有正整数 $n$，\n$$1 \\cdot 2 + 2 \\cdot 3 + \\cdots + n(n+1) = \\frac{n(n+1)(n+2)}{3}$$",
+     "answer": "$n = 1$：左 $= 2$，右 $= \\frac{1 \\cdot 2 \\cdot 3}{3} = 2$。\n设 $n = k$ 成立。$n = k+1$：\n$$\\text{左} = \\frac{k(k+1)(k+2)}{3} + (k+1)(k+2) = \\frac{(k+1)(k+2)(k+3)}{3} = \\text{右}$$\n故成立。",
+     "id": "2026-11-23-q1"
+    },
+    {
+     "n": "2",
+     "type": "written",
+     "marks": 5,
+     "source": "DSE M2 二项式题型（改编）",
+     "stem": "求 $(1+2x)^5(1-x)^4$ 展开式中 $x^2$ 的系数。",
+     "answer": "$(1+2x)^5 = 1 + 10x + 40x^2 + \\cdots$，$(1-x)^4 = 1 - 4x + 6x^2 - \\cdots$。\n系数 $= 1 \\cdot 6 + 10 \\cdot (-4) + 40 \\cdot 1 = 6$。",
+     "id": "2026-11-23-q2"
+    },
+    {
+     "n": "3",
+     "type": "written",
+     "marks": 4,
+     "source": "DSE M2 第一原理题型（改编）",
+     "stem": "由第一原理求 $\\frac{d}{dx}\\sqrt{x}$。",
+     "answer": "$$\\lim_{h \\to 0} \\frac{\\sqrt{x+h} - \\sqrt{x}}{h} = \\lim_{h \\to 0} \\frac{h}{h(\\sqrt{x+h} + \\sqrt{x})} = \\frac{1}{2\\sqrt{x}}$$",
+     "id": "2026-11-23-q3"
+    },
+    {
+     "n": "4",
+     "type": "written",
+     "marks": 6,
+     "source": "DSE M2 隐函数求导题型（改编）",
+     "stem": "曲线 $C$：$x^2 + xy + y^2 = 7$。",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 3,
+       "text": "求 $\\frac{dy}{dx}$（以 $x, y$ 表示）。",
+       "answer": "$2x + y + x\\frac{dy}{dx} + 2y\\frac{dy}{dx} = 0 \\Rightarrow \\frac{dy}{dx} = -\\frac{2x + y}{x + 2y}$"
+      },
+      {
+       "label": "(b)",
+       "marks": 3,
+       "text": "求 $C$ 在点 $(1, 2)$ 的切线方程。",
+       "answer": "在 $(1, 2)$：斜率 $= -\\frac{4}{5}$。切线 $y - 2 = -\\frac{4}{5}(x - 1)$，即 $4x + 5y - 14 = 0$。"
+      }
+     ],
+     "id": "2026-11-23-q4"
+    },
+    {
+     "n": "5",
+     "type": "written",
+     "marks": 5,
+     "source": "Pearson M2 Vol 1 微分应用练习题型（改编）",
+     "stem": "设 $f(x) = x^3 - 3x^2 - 9x + 5$。求 $f(x)$ 的极大值和极小值，并说明理由。",
+     "answer": "$f'(x) = 3x^2 - 6x - 9 = 3(x-3)(x+1) = 0 \\Rightarrow x = -1, 3$。\n$f''(x) = 6x - 6$。\n$f''(-1) = -12 < 0$：极大值 $f(-1) = 10$；$f''(3) = 12 > 0$：极小值 $f(3) = -22$。",
+     "id": "2026-11-23-q5"
+    },
+    {
+     "n": "6",
+     "type": "written",
+     "marks": 6,
+     "source": "学校 M2 UT2 错题题型（三角积分，改编）",
+     "stem": "求",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 3,
+       "text": "$\\int \\cos^2 3x\\,dx$",
+       "answer": "$\\int \\frac{1 + \\cos 6x}{2}\\,dx = \\frac{x}{2} + \\frac{\\sin 6x}{12} + C$"
+      },
+      {
+       "label": "(b)",
+       "marks": 3,
+       "text": "$\\int \\tan^3 x\\,dx$",
+       "answer": "$\\int \\tan x(\\sec^2 x - 1)\\,dx = \\int \\tan x \\sec^2 x\\,dx - \\int \\tan x\\,dx = \\frac{\\tan^2 x}{2} + \\ln|\\cos x| + C$"
+      }
+     ],
+     "id": "2026-11-23-q6"
+    },
+    {
+     "n": "7",
+     "type": "written",
+     "marks": 5,
+     "source": "Pearson M2 Vol 2 Ch7 代换积分题型（改编）",
+     "stem": "用代换 $u = x - 1$，求 $\\int x\\sqrt{x-1}\\,dx$。",
+     "answer": "$x = u + 1$，$dx = du$：\n$$\\int (u+1)u^{1/2}\\,du = \\frac{2}{5}u^{5/2} + \\frac{2}{3}u^{3/2} + C = \\frac{2}{5}(x-1)^{5/2} + \\frac{2}{3}(x-1)^{3/2} + C$$",
+     "id": "2026-11-23-q7"
+    }
+   ]
+  }
+ ],
+ "answerNote": "所有答案均为推导答案，并非官方评分标准。",
+ "v": 1
+}
