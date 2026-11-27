@@ -2,6 +2,14 @@
  "v": 1,
  "days": [
   {
+   "date": "2026-11-27",
+   "subject": "Physics",
+   "title": "Physics 每日练习卷",
+   "minutes": 30,
+   "marks": 34,
+   "count": 9
+  },
+  {
    "date": "2026-11-26",
    "subject": "Maths Core",
    "title": "Maths Core 每日练习卷",

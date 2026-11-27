@@ -1,0 +1,288 @@
+{
+ "v": 1,
+ "date": "2026-11-27",
+ "subject": "Physics",
+ "title": "Physics 每日练习卷",
+ "scope": "Mixed revision: Heat & Gases (specific/latent heat, gas laws, kinetic theory) · Force & Motion · Waves",
+ "minutes": 30,
+ "marks": 34,
+ "scratch": true,
+ "keyPoints": [
+  "**Specific heat:** $Q = mc\\Delta T$; heat capacity $C = mc$, so $Q = C\\Delta T$. Mixing: heat lost by hot body = heat gained by cold body.",
+  "**Latent heat:** $Q = m\\ell$ at constant temperature. With a heater of power $P$: $Pt = m\\ell$ (no heat loss).",
+  "**Gas laws:** $pV = nRT$ with $T$ in kelvin ($T = \\theta + 273$). Fixed $V$: $\\frac{p_1}{T_1} = \\frac{p_2}{T_2}$. Number of molecules: $pV = NkT$, $k = 1.38 \\times 10^{-23}\\ \\text{J K}^{-1}$.",
+  "**Kinetic theory:** mean KE $= \\frac{3}{2}kT$ depends on $T$ only. $\\frac{1}{2}m\\overline{c^2} = \\frac{3}{2}kT$, so at the same $T$, $c_{rms} \\propto \\frac{1}{\\sqrt{m}}$.",
+  "**Kinematics:** $v = u + at$, $s = ut + \\frac{1}{2}at^2$, $v^2 = u^2 + 2as$ (uniform acceleration only).",
+  "**Newton's 2nd law:** $F_{net} = ma$. With friction $f$: $F - f = ma$; after the push is removed, friction alone decelerates the body.",
+  "**Work and energy:** $W = Fs$; KE $= \\frac{1}{2}mv^2$; GPE $= mgh$. Average stopping force: $F \\times d$ = total energy removed (include $mgd$ if the body still drops by $d$).",
+  "**Waves:** $v = f\\lambda$, $T = \\frac{1}{f}$. $\\lambda$ = distance between adjacent crests. Frequency is set by the source and stays the same in a new medium; $\\lambda$ changes with speed."
+ ],
+ "examples": [
+  {
+   "title": "例 1（加热器与熔解 / heater + latent heat）",
+   "question": "A 200 W heater melts ice at 0 °C. In 4 minutes, 0.15 kg of ice melts. Find the specific latent heat of fusion. A 0.4 kg metal block at 90 °C is then dropped into 0.5 kg of water at 15 °C; the final temperature is 21 °C. Find the heat capacity of the block. ($c_w = 4200$)",
+   "solution": "$Pt = m\\ell \\Rightarrow \\ell = \\frac{200 \\times 240}{0.15} = 3.2 \\times 10^5\\ \\text{J kg}^{-1}$\nHeat lost by block = heat gained by water:\n$$C(90 - 21) = 0.5(4200)(21 - 15)$$\n$$C = \\frac{12600}{69} \\approx 183\\ \\text{J}\\ ^\\circ\\text{C}^{-1}$$"
+  },
+  {
+   "title": "例 2（气体定律与分子动理论 / gas laws + kinetic theory）",
+   "question": "A rigid container of volume $2.0 \\times 10^{-3}$ m³ holds gas at $2.0 \\times 10^5$ Pa and 27 °C. (a) Find the pressure at 87 °C. (b) Find the number of molecules and their mean KE at 27 °C.",
+   "solution": "(a) Fixed $V$: $\\frac{p_2}{360} = \\frac{2.0 \\times 10^5}{300} \\Rightarrow p_2 = 2.4 \\times 10^5$ Pa\n(b) $N = \\frac{pV}{kT} = \\frac{(2.0 \\times 10^5)(2.0 \\times 10^{-3})}{(1.38 \\times 10^{-23})(300)} = 9.66 \\times 10^{22}$\n$E_K = \\frac{3}{2}kT = \\frac{3}{2}(1.38 \\times 10^{-23})(300) = 6.21 \\times 10^{-21}$ J\nA gas with lighter molecules at the same $T$ has the same $E_K$ but a larger $c_{rms}$."
+  },
+  {
+   "title": "例 3（运动学 + 摩擦 / kinematics with friction）",
+   "question": "A 5 kg box at rest is pushed by a 30 N horizontal force against a friction of 10 N for 3 s, then the push is removed. Find the maximum speed and the total distance travelled.",
+   "solution": "$a_1 = \\frac{30 - 10}{5} = 4\\ \\text{m s}^{-2}$; $v = 0 + 4(3) = 12\\ \\text{m s}^{-1}$; $s_1 = \\frac{1}{2}(4)(3^2) = 18$ m\nAfter removal: $a_2 = -\\frac{10}{5} = -2\\ \\text{m s}^{-2}$; $0 = 12^2 + 2(-2)s_2 \\Rightarrow s_2 = 36$ m\nTotal distance = 54 m"
+  },
+  {
+   "title": "例 4（功能原理求平均力 / average force from energy）",
+   "question": "A 60 kg diver drops from rest 2.0 m above a springboard, then pushes it down 0.30 m before stopping. Estimate the average force on the board. ($g = 9.81$)",
+   "solution": "KE on touching = $mgh = 60(9.81)(2.0) = 1177$ J\nWhile pressing down, she also loses GPE $= 60(9.81)(0.30) = 177$ J\n$$F(0.30) = 1177 + 177 \\Rightarrow F \\approx 4.51 \\times 10^3\\ \\text{N}$$\nEnergy transfer: her KE and GPE become elastic PE of the board."
+  },
+  {
+   "title": "例 5（波速公式 / wave equation）",
+   "question": "Adjacent crests of a water wave are 3.0 cm apart and 10 crests pass a point every 2.0 s. Find $f$ and $v$. The wave enters a region where $v = 9.0\\ \\text{cm s}^{-1}$; find the new wavelength.",
+   "solution": "$f = \\frac{10}{2.0} = 5.0$ Hz; $v = f\\lambda = 5.0 \\times 3.0 = 15\\ \\text{cm s}^{-1}$\nFrequency unchanged: $\\lambda' = \\frac{9.0}{5.0} = 1.8$ cm"
+  }
+ ],
+ "sections": [
+  {
+   "title": "Section A  Multiple Choice",
+   "note": "原创 questions",
+   "questions": [
+    {
+     "id": "2026-11-27-q1",
+     "n": "1",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "0.50 kg of water at 80 °C is mixed with 0.30 kg of water at 20 °C in a well-insulated container. What is the final temperature?",
+     "options": [
+      "50.0 °C",
+      "57.5 °C",
+      "62.5 °C",
+      "42.5 °C"
+     ],
+     "answer": "B",
+     "solution": "$0.5c(80 - T) = 0.3c(T - 20) \\Rightarrow 0.8T = 46 \\Rightarrow T = 57.5$ °C"
+    },
+    {
+     "id": "2026-11-27-q2",
+     "n": "2",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "A fixed mass of gas in a sealed rigid container has pressure $p$ at 27 °C. The gas is heated to 127 °C. What is its new pressure?",
+     "options": [
+      "$p$",
+      "$\\frac{3}{4}p$",
+      "$\\frac{4}{3}p$",
+      "$4.7p$"
+     ],
+     "answer": "C",
+     "solution": "Fixed $V$: $\\frac{p'}{400} = \\frac{p}{300} \\Rightarrow p' = \\frac{4}{3}p$. Must use kelvin, not °C (127/27 = 4.7 is the trap)."
+    },
+    {
+     "id": "2026-11-27-q3",
+     "n": "3",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "A car moving at 20 m s⁻¹ decelerates uniformly and stops after travelling 50 m. What is the magnitude of its deceleration?",
+     "options": [
+      "4 m s⁻²",
+      "2 m s⁻²",
+      "8 m s⁻²",
+      "0.4 m s⁻²"
+     ],
+     "answer": "A",
+     "solution": "$0 = 20^2 - 2a(50) \\Rightarrow a = 4\\ \\text{m s}^{-2}$"
+    },
+    {
+     "id": "2026-11-27-q4",
+     "n": "4",
+     "type": "mc",
+     "marks": 1,
+     "source": "原创",
+     "stem": "A wave source vibrates at 50 Hz. The distance between two adjacent crests is 4 cm. What is the wave speed?",
+     "options": [
+      "0.08 m s⁻¹",
+      "12.5 m s⁻¹",
+      "200 m s⁻¹",
+      "2 m s⁻¹"
+     ],
+     "answer": "D",
+     "solution": "$v = f\\lambda = 50 \\times 0.04 = 2\\ \\text{m s}^{-1}$ (convert cm to m)."
+    }
+   ]
+  },
+  {
+   "title": "Section B  Structured (原创)",
+   "note": "原创 DSE-style questions",
+   "questions": [
+    {
+     "id": "2026-11-27-q5",
+     "n": "5",
+     "type": "written",
+     "marks": 7,
+     "source": "原创",
+     "stem": "A block of mass 2.0 kg is initially at rest on a rough horizontal floor. A horizontal force of 10 N pulls the block for 4.0 s and is then removed. The friction acting on the block is 4.0 N throughout.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "Find the acceleration of the block while it is being pulled.",
+       "answer": "$10 - 4 = 2a$ (1)\n$a = 3\\ \\text{m s}^{-2}$ (1)"
+      },
+      {
+       "label": "(b)",
+       "marks": 2,
+       "text": "Find the speed of the block at $t = 4.0$ s and the distance travelled in the first 4.0 s.",
+       "answer": "$v = 3(4) = 12\\ \\text{m s}^{-1}$ (1)\n$s = \\frac{1}{2}(3)(4^2) = 24$ m (1)"
+      },
+      {
+       "label": "(c)",
+       "marks": 2,
+       "text": "Find the distance travelled by the block after the force is removed.",
+       "answer": "Deceleration $= \\frac{4}{2} = 2\\ \\text{m s}^{-2}$ (1)\n$0 = 12^2 - 2(2)s \\Rightarrow s = 36$ m (1)"
+      },
+      {
+       "label": "(d)",
+       "marks": 1,
+       "text": "Find the total work done against friction during the whole motion.",
+       "answer": "$W = 4.0 \\times (24 + 36) = 240$ J (1)"
+      }
+     ]
+    },
+    {
+     "id": "2026-11-27-q6",
+     "n": "6",
+     "type": "written",
+     "marks": 5,
+     "source": "原创",
+     "stem": "A transverse wave travels along a stretched string. The source vibrates at 5.0 Hz and the distance between adjacent crests is 0.80 m.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 1,
+       "text": "Find the speed of the wave.",
+       "answer": "$v = 5.0 \\times 0.80 = 4.0\\ \\text{m s}^{-1}$ (1)"
+      },
+      {
+       "label": "(b)",
+       "marks": 1,
+       "text": "Find the period of vibration of a particle on the string.",
+       "answer": "$T = \\frac{1}{5.0} = 0.20$ s (1)"
+      },
+      {
+       "label": "(c)",
+       "marks": 2,
+       "text": "The wave passes into a heavier string where its speed is 2.0 m s⁻¹. State its frequency and find its wavelength in the heavier string.",
+       "answer": "Frequency unchanged, 5.0 Hz (1)\n$\\lambda = \\frac{2.0}{5.0} = 0.40$ m (1)"
+      },
+      {
+       "label": "(d)",
+       "marks": 1,
+       "text": "State one difference between a transverse wave and a longitudinal wave.",
+       "answer": "Transverse: particles vibrate perpendicular to the direction of wave travel; longitudinal: parallel to it. (1)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Section C  Structured (HKEAA)",
+   "note": "Verbatim from the HKEAA HKDSE Physics Sample Paper (2024 onwards), Paper 1B, which adapts HKDSE 2020–2022 questions",
+   "questions": [
+    {
+     "id": "2026-11-27-q7",
+     "n": "7",
+     "type": "written",
+     "marks": 6,
+     "source": "HKEAA HKDSE Physics Sample Paper (2024 onwards), Paper 1B Q3 (from HKDSE 2020 1B Q5)",
+     "official": true,
+     "stem": "Figure 3.1 shows a trampoline gymnast of mass 50 kg performing a straight jump.  Her feet are 1.5 m above the trampoline at the maximum height.  Neglect air resistance and assume that the gymnast maintains this posture throughout the jump.  ($g = 9.81\\ \\text{m s}^{-2}$)",
+     "figure": "2026-11-27-q7.png",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "Find the kinetic energy of the gymnast just as her feet touch the trampoline on the way down from her jump.",
+       "answer": "KE $= mgh = 50 \\times 9.81 \\times 1.5$ (1)\n$= 736$ J (1)"
+      },
+      {
+       "label": "(b)(i)",
+       "marks": 2,
+       "text": "After touching the trampoline, the gymnast keeps on moving downward for 0.40 m further before she stops.\nDescribe the energy transfer to the trampoline by the gymnast after touching the trampoline.",
+       "answer": "The KE of the gymnast (1) and her loss in GPE (1) are transferred to the elastic potential energy of the trampoline."
+      },
+      {
+       "label": "(b)(ii)",
+       "marks": 2,
+       "text": "Estimate the average force exerted by the gymnast on the trampoline.",
+       "answer": "$F(0.40) = 736 + 50(9.81)(0.40)$ (1)\n$F \\approx 2.33 \\times 10^3$ N (1)"
+      }
+     ]
+    },
+    {
+     "id": "2026-11-27-q8",
+     "n": "8",
+     "type": "written",
+     "marks": 4,
+     "source": "HKEAA HKDSE Physics Sample Paper (2024 onwards), Paper 1B Q1 (from HKDSE 2021 1B Q1)",
+     "official": true,
+     "stem": "A 150 W immersion heater is used to keep the water in a large beaker boiling under standard atmospheric pressure.  In 5 minutes, 0.016 kg of water boils away.  Neglect any heat loss to surroundings.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "Find the specific latent heat of vaporization of water, $\\ell$.",
+       "answer": "$Pt = m\\ell$: $150 \\times 5 \\times 60 = 0.016\\ell$ (1)\n$\\ell = 2.81 \\times 10^6\\ \\text{J kg}^{-1}$ (1)"
+      },
+      {
+       "label": "(b)",
+       "marks": 2,
+       "text": "A student puts a small metal sphere in the boiling water.  After a few minutes, the sphere is quickly transferred to a polystyrene cup containing 100 g of water at a temperature of 20 °C.  The cup of water is stirred gently and its highest temperature attained is 22 °C.\nGiven:  specific heat capacity of water = 4200 J kg⁻¹ °C⁻¹\nEstimate the heat capacity $C$ of the metal sphere.",
+       "answer": "$C(100 - 22) = 0.100 \\times 4200 \\times (22 - 20)$ (1)\n$C \\approx 10.8\\ \\text{J}\\ ^\\circ\\text{C}^{-1}$ (1)"
+      }
+     ]
+    },
+    {
+     "id": "2026-11-27-q9",
+     "n": "9",
+     "type": "written",
+     "marks": 8,
+     "source": "HKEAA HKDSE Physics Sample Paper (2024 onwards), Paper 1B Q10 (from HKDSE 2022 1B Q2)",
+     "official": true,
+     "stem": "A sealed tank of volume $6.0 \\times 10^{-4}$ m³ contains a monatomic gas A at a pressure of $1.0 \\times 10^5$ Pa and at a temperature of 300 K.",
+     "parts": [
+      {
+       "label": "(a)(i)",
+       "marks": 2,
+       "text": "Estimate the number of gas molecules in the tank, $N$.",
+       "answer": "$N = \\frac{pV}{kT} = \\frac{(1.0 \\times 10^5)(6.0 \\times 10^{-4})}{(1.38 \\times 10^{-23})(300)}$ (1)\n$N \\approx 1.45 \\times 10^{22}$ (1)"
+      },
+      {
+       "label": "(a)(ii)",
+       "marks": 2,
+       "text": "Estimate the average kinetic energy of the gas molecules, $E_K$.",
+       "answer": "$E_K = \\frac{3}{2}kT = \\frac{3}{2}(1.38 \\times 10^{-23})(300)$ (1)\n$E_K \\approx 6.21 \\times 10^{-21}$ J (1)"
+      },
+      {
+       "label": "(b)(i)",
+       "marks": 2,
+       "text": "Another identical tank contains monatomic gas B under the same pressure and temperature.  A molecule of gas B has $\\frac{1}{5}$ the mass of a molecule of gas A.\nState whether $N$ and $E_K$ of gas B are larger than, smaller than or the same as the corresponding values of those of gas A found in (a).",
+       "answer": "$N$: the same (1)\n$E_K$: the same (1)"
+      },
+      {
+       "label": "(b)(ii)",
+       "marks": 2,
+       "text": "Given that the root-mean-square speed ($c_{rms}$) of the molecules of gas A is 600 m s⁻¹, estimate $c_{rms}$ of the molecules of gas B.",
+       "answer": "Same $E_K$: $c_{rms} \\propto \\frac{1}{\\sqrt{m}}$, so $c_B = 600\\sqrt{5}$ (1)\n$c_B \\approx 1.34 \\times 10^3\\ \\text{m s}^{-1}$ (1)"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "answerNote": "No official marking scheme is published for the HKEAA 2024 sample paper, so ALL answers on this paper are 推导答案 (derived), including Q7–Q9."
+}
