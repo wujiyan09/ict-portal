@@ -162,7 +162,8 @@ V.home=()=>{const chs=allCh();const nc=chs.reduce((a,c)=>a+c.cards.length,0),nm=
  <a href="#dse"><span>${T("DSE past papers","DSE 真题")}</span><span>${DQ.length} MC · ${LQ.length} ${T("long Qs","长题")}</span></a>
  <a href="#quiz"><span>${T("Quiz zone","测验区")}</span><span>${T("build your own","自选范围")}</span></a>
  <a href="#tools"><span>${T("Tools","工具")}</span><span>SQL · ${T("base","进制")} · subnet</span></a>
- <a href="#progress"><span>${T("Progress","进度")}</span><span></span></a></div>`};
+ <a href="#progress"><span>${T("Progress","进度")}</span><span></span></a>
+ <a href="relearn/"><span>${T("Relearn","重学")}</span><span>${T("diagnostic · SQL lab · web lab","摸底 · SQL Lab · Web Lab")}</span></a></div>`};
 function setLang(l){store.set("lang",l);route()}
 V.learn=()=>{const sec=(f,title)=>`<h2>${title}</h2>`+BK.filter(f).map(b=>`<div class="k" style="margin-top:14px">${esc(b.id)} · ${esc(b.name)}</div><div class="list">${b.chs.map(c=>{const s=stat(c.mc.map(m=>m.key));return `<a href="#ch/${c.id}"><span>Ch${c.n} ${esc(c.t)}</span><span>${s.d?`${s.c}/${s.d}`:""}</span></a>`}).join("")}</div>`).join("");
  return `<h1>${T("Textbook","课本")}</h1>`+sec(b=>!b.elective,T("Compulsory","必修部分"))+sec(b=>b.elective,T("Electives","选修部分"))};
