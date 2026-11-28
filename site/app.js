@@ -1,7 +1,7 @@
 // S5 ICT Learning Portal v2
 const $=s=>document.querySelector(s);const app=$("#app");
 const LT="ABCD";
-const RAW="https://raw.githubusercontent.com/wujiyan09/ict-portal/main/";
+const RAW="./";
 const store={get(k,d){try{const v=JSON.parse(localStorage.getItem("ict:"+k));return v==null?d:v}catch(e){return d}},set(k,v){localStorage.setItem("ict:"+k,JSON.stringify(v))}};
 const esc=s=>String(s??"").replace(/&(?!(lt|gt|amp|quot|#\d+);)/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const hasTag=s=>/<(br|b|i|table|tr|td|pre|code|ul|li|p|span|sub|sup|u)\b/i.test(s||"");
@@ -10,6 +10,7 @@ const wrapT=s=>String(s).replace(/<table/g,'<div class="tw"><table').replace(/<\
 const shuffle=a=>a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1]);
 const EN=()=>store.get("lang","zh")==="en";
 const T=(en,zh)=>EN()?en:zh;
+const figHTML=f=>(f||[]).map(u=>`<a href="${u}" target="_blank"><img class="fig crop" src="${u}" loading="lazy"></a>`).join("");
 const PG=(y,p)=>RAW+"pages/"+String(y).toLowerCase()+"-p1-"+String(p).padStart(2,"0")+".jpg";
 const TOPIC={A1:"A Information Processing: Data Representation & Office Software",A2:"A Information Processing: Spreadsheet & Database",B:"B Computer System Fundamentals",C1:"C Internet and its Applications: Networking & Internet Basics",C2:"C Internet and its Applications: Web Authoring, Security & Privacy",D1:"D Basic Programming Concepts: Problem Solving & Algorithm Design",D2:"D Basic Programming Concepts: Programming, Testing & Debugging",E:"E Social Implications"};
 const tName=t=>TOPIC[t]||t;
@@ -27,9 +28,9 @@ function normBook(b){const nb={id:b.id,name:b.name,nz:b.nz||"",elective:!!b.elec
   nb.chs.push(ch)});return nb}
 function addDSE(d){const y0=String(d.year);const Y=/^(sp|pp)$/i.test(y0)?y0.toUpperCase():y0;const yl=y0.toLowerCase();
  for(let i=DQ.length-1;i>=0;i--)if(DQ[i].y===Y)DQ.splice(i,1);
- (d.mc||[]).forEach(q=>{const it={type:"mc",key:"dse-"+Y+"-"+q.n,y:Y,n:q.n,q:q.q,st:q.st,o:q.o,a:LT.indexOf(q.a),pct:q.pct||((PCT[Y]||[])[q.n-1]||""),topic:q.topic,e:q.exp||"",code:q.code,fig:q.fig?PG(yl,q.pg):"",orig:false,src:yLabel(Y)+" 1A Q"+q.n};
+ (d.mc||[]).forEach(q=>{const it={type:"mc",key:"dse-"+Y+"-"+q.n,y:Y,n:q.n,q:q.q,st:q.st,o:q.o,a:LT.indexOf(q.a),pct:q.pct||((PCT[Y]||[])[q.n-1]||""),topic:q.topic,e:q.exp||"",code:q.code,figs:(q.figs||[]).map(p=>RAW+p),full:q.pg?PG(yl,q.pg):"",fig:q.fig&&!(q.figs||[]).length?PG(yl,q.pg):"",orig:false,src:yLabel(Y)+" 1A Q"+q.n};
   if(q.a==="*")it.cancel=true;IT[it.key]=it;DQ.push(it)});
- (d.lq||[]).forEach(l=>{const it={type:"lq",key:"lq-"+Y+"-"+l.n,y:Y,n:l.n,topic:l.topic,q:l.stem||"",parts:l.parts||[],pg:[].concat(l.pg||[]).map(p=>PG(yl,p)),orig:false,src:yLabel(Y)+" 1B Q"+l.n};IT[it.key]=it;LQ.push(it)});
+ (d.lq||[]).forEach(l=>{const it={type:"lq",key:"lq-"+Y+"-"+l.n,y:Y,n:l.n,topic:l.topic,q:l.stem||"",parts:(l.parts||[]).map(p=>({...p,figs:(p.figs||[]).map(x=>RAW+x)})),figs:(l.figs||[]).map(p=>RAW+p),pg:[].concat(l.pg||[]).map(p=>PG(yl,p)),orig:false,src:yLabel(Y)+" 1B Q"+l.n};IT[it.key]=it;LQ.push(it)});
  const YY=YEARS.find(x=>x.y===Y);if(YY)YY.inapp=true}
 const yLabel=Y=>Y==="SP"?"Sample Paper":Y==="PP"?"Practice Paper":"DSE "+Y;
 function legacyDSE(){DSEQ.forEach(q=>{const [y,n]=q.id.split("-");const Y=y;if(DQ.some(x=>x.y===Y))return;
@@ -51,6 +52,7 @@ const S=()=>store.get("sess",null);
 function saveAns(i,v){const s=S();s.ans[i]=v;store.set("sess",s)}
 function itemQ(it){let h=`<div class="k">${esc(it.src||"")}${it.pct&&!it.orig?" · "+T("% correct","当年答对率")+" "+esc(it.pct):""}</div>`;
  h+=`<div style="margin-top:6px">${rich(it.q,it.code&&!hasTag(it.q))}</div>`;
+ h+=figHTML(it.figs);if(it.figs&&it.figs.length&&it.full)h+=`<div><a class="k" href="${it.full}" target="_blank">${T("View original page","查看原页")}</a></div>`;
  if(it.fig)h+=`<a href="${it.fig}" target="_blank"><img class="fig" src="${it.fig}" loading="lazy"></a>`;
  if(it.st&&it.st.length)h+=`<div style="margin:6px 0">${it.st.map((s,i)=>(/^\s*\(\d\)/.test(s)?"":`(${i+1}) `)+rich(s)).join("<br>")}</div>`;
  return h}
@@ -59,8 +61,8 @@ function vSess(i){const s=S();if(!s)return`<p>${T("No active session.","没有�
  let h=`<p class="k"><a href="${s.back}">← ${T("Quit","退出")}</a> · ${esc(s.title)}</p><div class="dots">${s.keys.map((k,j)=>`<a href="#s/${j}" class="${j===i?"cur":""} ${s.ans[j]!=null&&s.ans[j]!==""?"d":""}">${j+1}</a>`).join("")}</div><div class="box">`;
  h+=itemQ(it);
  if(it.type==="mc")h+=it.o.map((o,j)=>`<button class="opt ${a===j?"sel":""}" onclick="saveAns(${i},${j});route()">${LT[j]}. ${rich(o,it.code&&/\n/.test(o))}</button>`).join("");
- else if(it.type==="sq"||it.type==="lq"){if(it.pg&&it.pg.length)h+=`<p>${it.pg.map((p,j)=>`<a href="${p}" target="_blank">${T("Original page","原卷页面")} ${j+1}</a>`).join(" · ")}</p>`;
-  h+=it.parts.map((p,j)=>`<div style="margin-top:12px"><b>${esc(p.l||"")}</b> ${rich(p.q)} ${p.m?`<span class="k">(${p.m} ${T("marks","分")})</span>`:""}<textarea oninput="sAns(${i},${j},this.value)">${esc((a||{})[j]||"")}</textarea></div>`).join("")}
+ else if(it.type==="sq"||it.type==="lq"){if(it.pg&&it.pg.length)h+=`<p class="k">${it.pg.map((p,j)=>`<a href="${p}" target="_blank">${T("View original page","查看原页")} ${j+1}</a>`).join(" · ")}</p>`;
+  h+=it.parts.map((p,j)=>`<div style="margin-top:12px"><b>${esc(p.l||"")}</b> ${rich(p.q)}${figHTML(p.figs)} ${p.m?`<span class="k">(${p.m} ${T("marks","分")})</span>`:""}<textarea oninput="sAns(${i},${j},this.value)">${esc((a||{})[j]||"")}</textarea></div>`).join("")}
  else if(it.type==="pr")h+=prBody(it,"sp"+i,(a||{}).code,i);
  h+=`</div><div class="nav2"><span>${i>0?`<a class="btn sec" href="#s/${i-1}">← ${T("Prev","上一题")}</a>`:""}${i<s.keys.length-1?`<a class="btn sec" href="#s/${i+1}">${T("Next","下一题")} →</a>`:""}</span><button class="btn" onclick="submitSess()">${T("Submit all","交卷")}</button></div>`;
  return h}
@@ -86,7 +88,7 @@ function vResult(){const s=S();const sc=scoreSess(s);
    h+=`<p class="${ok?"ok":"bad"}">${ok?"✓":"✗"} ${T("Answer","答案")} ${it.cancel?T("(cancelled, mark given)","（题目取消，全部给分）"):LT[it.a]}${a==null?" · "+T("not answered","未作答"):""}</p>`;
    const ex=T(it.e,it.ez||it.e);if(ex)h+=`<p>${rich(ex)}</p>`}
   else if(it.type==="pr"){const r=a||{};h+=`<p class="${r.pass?"ok":"bad"}">${r.pass?"✓ "+T("All tests passed","全部测试通过"):"✗ "+T("Not passed","未通过")}</p><details><summary>${T("Reference solution","参考答案")}</summary><pre>${esc(it.solution||(it.check||{}).model||"")}</pre></details>`}
-  else it.parts.forEach((p,j)=>{const m=+p.m||1;const v=+((s.self[i]||{})[j]||0);h+=`<div style="margin-top:12px"><b>${esc(p.l||"")}</b> ${rich(p.q)}<div class="k">${T("Your answer","你的答案")}</div><div>${esc((a||{})[j]||"—").replace(/\n/g,"<br>")}</div><div class="ms">${rich(p.ms||"")}</div>${T("Marks","得分")}: <select onchange="selfMark(${i},${j},this.value)">${Array.from({length:m+1},(_,x)=>`<option ${x===v?"selected":""}>${x}</option>`).join("")}</select> / ${m}</div>`});
+  else it.parts.forEach((p,j)=>{const m=+p.m||1;const v=+((s.self[i]||{})[j]||0);h+=`<div style="margin-top:12px"><b>${esc(p.l||"")}</b> ${rich(p.q)}${figHTML(p.figs)}<div class="k">${T("Your answer","你的答案")}</div><div>${esc((a||{})[j]||"—").replace(/\n/g,"<br>")}</div><div class="ms">${rich(p.ms||"")}</div>${T("Marks","得分")}: <select onchange="selfMark(${i},${j},this.value)">${Array.from({length:m+1},(_,x)=>`<option ${x===v?"selected":""}>${x}</option>`).join("")}</select> / ${m}</div>`});
   h+="</div>"});return h}
 
 // ---------- practicals ----------
@@ -179,9 +181,11 @@ function relDSE(c){const t=c.book.elective?null:{A1:"A1",A2:"A2",B:"B",C1:"C1",C
  return k.length?`<h2>${T("Related DSE questions","相关 DSE 真题")}</h2><button class="btn sec" onclick='startSession(${JSON.stringify(tName(t))},prio(${JSON.stringify(k)}).slice(0,10),"#ch/${c.id}")'>${k.length} ${T("real questions · start 10","题真题 · 做 10 题")}</button>`:""}
 V.cards=(id,i)=>{const c=chOf(id);if(!c)return"?";i=+i||0;const k=c.cards[i];if(!k)return chTabs(c,"c")+"<p class='sub'>—</p>";
  const seen=store.get("seen",{});seen[c.id+"-"+i]=1;store.set("seen",seen);
- const body=EN()?(k.en||k.zh):(k.zh||k.en);
- return chTabs(c,"c")+`<div class="k">${esc(k.sec||"")} · ${esc(k.ty||"")} · ${i+1}/${c.cards.length}</div><div class="box"><h3>${esc(EN()?k.t:(k.tz?k.tz+" / "+k.t:k.t))}</h3><div>${wrapT(body)}</div>
- ${(k.ex||[]).map((e,j)=>`<div style="margin-top:14px"><b>${T("Example","例题")} ${j+1}</b><div>${rich(e.q)}</div><details><summary>${T("Worked solution","看解答")}</summary><div>${wrapT(EN()?e.a:(e.az?e.a+"<div class='ms'>"+e.az+"</div>":e.a))}</div></details></div>`).join("")}</div>
+ const body=EN()?(k.en||k.zh):(k.zh||k.en);const ty=k.ty==="cheatsheet";
+ const exs=(k.ex||[]).map((e,j)=>{const steps=s=>{const t=String(s||"");return /<ol|<li/.test(t)?wrapT(t):t.split(/\n|<br\s*\/?>(?=\s*(?:Step|\d+[.)]|第))/).filter(x=>x.trim()).length>1?`<ol class="st">${t.split(/\n|<br\s*\/?>(?=\s*(?:Step|\d+[.)]|第))/).filter(x=>x.trim()).map(x=>`<li>${wrapT(x.replace(/^\s*(Step\s*\d+[:.]?|\d+[.)]|第\s*\d+\s*步[:：]?)\s*/i,""))}</li>`).join("")}</ol>`:wrapT(t)};
+  return `<div class="exc ${e.mistake?"mis":""}"><div class="exh">${e.mistake?"⚠️ "+T("Common mistake","常见错误"):T("Example","例题")+" "+(j+1)}</div><div>${rich(e.q)}</div>${(e.code||[]).map(codeBlock).join("")}<details ${e.mistake?"open":""}><summary>${e.mistake?T("Why it's wrong & the fix","为什么错、怎样改"):T("Worked solution","看解答")}</summary>${steps(e.a)}${!EN()&&e.az?`<div class="ms">${steps(e.az)}</div>`:""}</details></div>`}).join("");
+ return chTabs(c,"c")+`<div class="k">${esc(k.sec||"")} · ${esc(k.ty||"")} · ${i+1}/${c.cards.length}</div><div class="box card3"><h3>${esc(EN()?k.t:(k.tz?k.t+" · "+k.tz:k.t))}</h3>${ty?cheat(k):`<div class="prose">${wrapT(body)}</div>`}
+ ${[].concat(k.code||[]).map(codeBlock).join("")}${[].concat(k.demo||[]).map(demo).join("")}${exs}</div>
  <div class="nav2"><span>${i>0?`<a class="btn sec" href="#cards/${id}/${i-1}">←</a>`:""}<select onchange="location.hash='#cards/${id}/'+this.value">${c.cards.map((x,j)=>`<option value="${j}" ${j===i?"selected":""}>${j+1}. ${esc(x.t).slice(0,40)}</option>`).join("")}</select></span>${i<c.cards.length-1?`<a class="btn" href="#cards/${id}/${i+1}">${T("Next","下一张")} →</a>`:`<a class="btn" href="#ch/${id}">${T("Practice","去练习")} →</a>`}</div>`};
 V.sq=id=>{const c=chOf(id);const keys=c.sq.map(s=>s.key);return chTabs(c,"s")+`<p class="sub">${T("Write your answers, then compare with the marking points and mark yourself.","先写答案，交卷后对照评分要点自己给分。")}</p>${keys.length?`<button class="btn" onclick='startSession(${JSON.stringify(chName(c)+" · "+T("Structured","结构题"))},prio(${JSON.stringify(keys)}).slice(0,4),"#sq/${c.id}")'>${T("Start 4","做 4 题")}</button><button class="btn sec" onclick='startSession(${JSON.stringify(chName(c))},${JSON.stringify(keys)},"#sq/${c.id}")'>${T("All","全部")} ${keys.length}</button>`:"<p class='sub'>—</p>"}`};
 V.pr=id=>{const c=chOf(id);const h=H();return chTabs(c,"r")+`<div class="list">${c.pr.map((p,i)=>{const e=h[p.key];return `<a href="#p/${c.id}/${i}"><span>${esc(T(p.t,p.tz||p.t))}</span><span>${(p.lang||"").toUpperCase()} ${e?(e.r[e.r.length-1]?"✓":"✗"):""}</span></a>`}).join("")}</div>`};
@@ -192,7 +196,7 @@ V.dse=()=>{const tp=Object.keys(TOPIC);
  <h2>${T("MC by topic","选择题 · 按课题")}</h2><div class="list">${tp.map(t=>{const k=DQ.filter(q=>q.topic===t).map(q=>q.key);const s=stat(k);return k.length?`<a href="javascript:void 0" onclick='startSession(${JSON.stringify(tName(t))},prio(${JSON.stringify(k)}).slice(0,20),"#dse")'><span>${esc(tName(t))}</span><span>${k.length}${s.d?" · "+s.c+"/"+s.d:""}</span></a>`:""}).join("")}</div>
  <h2>${T("Section B long questions by topic","Section B 长题 · 按课题")}</h2><div class="list">${tp.map(t=>{const k=LQ.filter(q=>q.topic===t).map(q=>q.key);return k.length?`<a href="javascript:void 0" onclick='startSession(${JSON.stringify("1B · "+tName(t))},prio(${JSON.stringify(k)}).slice(0,3),"#dse")'><span>${esc(tName(t))}</span><span>${k.length}</span></a>`:""}).join("")}</div>
  <h2>${T("By year","按年份")}</h2><div class="list">${YEARS.map(y=>{const r=store.get("sheet:"+y.y,null);const n=DQ.filter(q=>q.y===y.y).length;return `<a href="#year/${y.y}"><span>${esc(y.label||"HKDSE "+y.y)}</span><span>${n?T("in-site","站内")+" · ":""}${r&&r.done?r.score+"/"+KEYS[y.y].length:""}</span></a>`}).join("")}</div>`};
-V.year=y=>{const Y=YEARS.find(x=>x.y===y);const key=KEYS[y];const pct=PCT[y]||[];const st=store.get("sheet:"+y,{a:{},done:false});
+V.year=y=>{y=String(y||"");y=/^(sp|pp)$/i.test(y)?y.toUpperCase():y;const Y=YEARS.find(x=>x.y===y);if(!Y||!KEYS[y])return V.dse();const key=KEYS[y];const pct=PCT[y]||[];const st=store.get("sheet:"+y,{a:{},done:false});
  const mq=DQ.filter(q=>q.y===y).sort((a,b)=>a.n-b.n).map(q=>q.key);const lq=LQ.filter(q=>q.y===y).sort((a,b)=>a.n-b.n).map(q=>q.key);
  let h=`<p class="k"><a href="#dse">← ${T("Past papers","真题")}</a></p><h1>${esc(Y.label||"HKDSE "+y)} ICT Paper 1</h1><p>`;
  if(mq.length)h+=`<button class="btn" onclick='startSession(${JSON.stringify(yLabel(y)+" 1A")},${JSON.stringify(mq)},"#year/${y}")'>1A ${T("in-site","站内整卷")} (${mq.length})</button>`;
@@ -250,3 +254,4 @@ async function boot(){app.innerHTML="<p class='sub'>Loading…</p>";
  legacyDSE();const ord=["A1","A2","B","C1","C2","D1","D2","E","EA","EB","EC"];BK.sort((a,b)=>ord.indexOf(a.id)-ord.indexOf(b.id));
  route()}
 window.addEventListener("hashchange",route);boot();
+V.preview=(f)=>{f=String(f||"").replace(/[^\w-]/g,"");fetch(RAW+"data/"+f+".json?v="+Date.now()).then(r=>r.json()).then(b=>{const nb=normBook(b);const k=BK.findIndex(x=>x.id===nb.id);if(k>=0)BK[k]=nb;else BK.push(nb);location.hash="#cards/"+nb.chs[0].id+"/0"}).catch(e=>{app.innerHTML=`<p class="sub">${esc(e.message)}</p>`});return `<p class="sub">Loading…</p>`};
