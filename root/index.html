@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Sam · S5 Dashboard</title>
+<style>
+:root{
+  --bg1:#dfe9ff; --bg2:#f6e3ff; --bg3:#ffe9d6;
+  --text:#0b0d12; --sub:rgba(20,24,35,.62); --faint:rgba(20,24,35,.38);
+  --glass:rgba(255,255,255,.38); --glass-strong:rgba(255,255,255,.55);
+  --edge:rgba(255,255,255,.75); --edge-dark:rgba(0,0,0,.06);
+  --shadow:0 10px 40px rgba(40,50,90,.16), 0 2px 8px rgba(40,50,90,.08);
+  --accent:#0a84ff; --done:#8e8e93; --next:#ff375f; --infer:#bf5af2;
+  --maths:#0a84ff; --m2:#5e5ce6; --chem:#30d158; --phys:#ff9f0a; --ict:#64d2ff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg1:#0b1020; --bg2:#1b0f2a; --bg3:#071a1f;
+    --text:#f5f6fa; --sub:rgba(235,238,250,.66); --faint:rgba(235,238,250,.38);
+    --glass:rgba(40,44,60,.38); --glass-strong:rgba(60,64,84,.5);
+    --edge:rgba(255,255,255,.22); --edge-dark:rgba(0,0,0,.4);
+    --shadow:0 10px 40px rgba(0,0,0,.5), 0 2px 8px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Helvetica Neue",sans-serif;
+  color:var(--text); -webkit-font-smoothing:antialiased;
+  background:linear-gradient(140deg,var(--bg1),var(--bg2) 50%,var(--bg3));
+  background-attachment:fixed; overflow-x:hidden;
+  padding:calc(env(safe-area-inset-top) + 28px) 20px 48px;
+}
+/* floating colour blobs behind the glass */
+.blob{position:fixed;border-radius:50%;filter:blur(60px);opacity:.55;z-index:-1;animation:drift 22s ease-in-out infinite alternate}
+.b1{width:420px;height:420px;background:#5e9bff;top:-80px;left:-100px}
+.b2{width:360px;height:360px;background:#ff6fb1;top:30%;right:-120px;animation-duration:26s}
+.b3{width:380px;height:380px;background:#4fe3b0;bottom:-120px;left:20%;animation-duration:30s}
+@media (prefers-color-scheme: dark){.blob{opacity:.35}}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.12)}}
+@media (prefers-reduced-motion: reduce){.blob{animation:none}}
+
+.wrap{max-width:980px;margin:0 auto}
+.glass{
+  position:relative; background:var(--glass);
+  -webkit-backdrop-filter:blur(28px) saturate(180%); backdrop-filter:blur(28px) saturate(180%);
+  border-radius:28px; box-shadow:var(--shadow), inset 0 1px 0 var(--edge), inset 0 -1px 0 var(--edge-dark);
+  border:1px solid rgba(255,255,255,.18);
+}
+/* specular highlight */
+.glass::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(255,255,255,.18) 100%);
+  mix-blend-mode:soft-light;
+}
+header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:22px;gap:16px;flex-wrap:wrap}
+h1{font-size:34px;font-weight:700;letter-spacing:-.02em}
+.date{color:var(--sub);font-size:15px;margin-top:4px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.pill.glass{border-radius:999px}
+
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+@media (max-width:760px){.grid{grid-template-columns:1fr}}
+
+/* Color War hero */
+.hero{padding:26px;display:flex;flex-direction:column;justify-content:space-between;min-height:230px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.hero:active{transform:scale(.98)}
+.hero .tiles{position:absolute;right:-20px;top:-20px;display:grid;grid-template-columns:repeat(4,46px);gap:8px;transform:rotate(12deg);opacity:.85}
+.hero .tiles i{width:46px;height:46px;border-radius:12px;display:block;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.hero h2{font-size:30px;font-weight:800;letter-spacing:.04em}
+.hero p{color:var(--sub);font-size:14px;margin-top:6px;max-width:60%}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;position:relative}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 18px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;color:#fff;background:linear-gradient(180deg,#3d9bff,#0a6cff);box-shadow:0 6px 18px rgba(10,108,255,.35),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn.ghost{color:var(--text);background:var(--glass-strong);box-shadow:inset 0 1px 0 var(--edge),0 2px 8px rgba(0,0,0,.06);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.status{font-size:12px;color:var(--sub);margin-top:12px;position:relative}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#8e8e93;margin-right:6px;vertical-align:1px}
+.dot.ok{background:#30d158;box-shadow:0 0 8px #30d158}
+
+/* Up next */
+.next{padding:22px}
+.next h3,.section h3{font-size:13px;font-weight:600;color:var(--sub);text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px}
+.nitem{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(127,127,127,.15)}
+.nitem:last-child{border-bottom:none}
+.days{min-width:58px;text-align:center;padding:6px 0;border-radius:14px;background:var(--glass-strong);box-shadow:inset 0 1px 0 var(--edge)}
+.days b{display:block;font-size:22px;line-height:1}
+.days span{font-size:10px;color:var(--sub)}
+.ntxt b{font-size:15px}
+.ntxt div{font-size:12.5px;color:var(--sub);margin-top:2px}
+
+/* Subjects */
+.section{padding:22px;margin-top:18px}
+.tabs{display:flex;gap:6px;padding:4px;border-radius:999px;background:var(--glass-strong);box-shadow:inset 0 1px 0 var(--edge);width:max-content;max-width:100%;overflow-x:auto;margin-bottom:18px}
+.tab{border:none;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--sub);padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;transition:all .3s}
+.tab.on{color:var(--text);background:var(--glass);box-shadow:0 2px 10px rgba(0,0,0,.12),inset 0 1px 0 var(--edge)}
+.tl{position:relative;padding-left:22px}
+.tl::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:2px;border-radius:2px;background:rgba(127,127,127,.25)}
+.ev{position:relative;padding:10px 14px;margin-bottom:10px;border-radius:18px;background:var(--glass);box-shadow:inset 0 1px 0 var(--edge);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.ev::before{content:"";position:absolute;left:-21px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px rgba(255,255,255,.6)}
+.ev.done{opacity:.55}
+.ev.done::before{background:var(--done)}
+.ev.now{box-shadow:inset 0 1px 0 var(--edge),0 0 0 2px var(--next),0 8px 24px rgba(255,55,95,.22)}
+.ev .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.ev b{font-size:15px}
+.ev .d{font-size:13px;color:var(--sub);white-space:nowrap}
+.ev .t{font-size:13px;color:var(--sub);margin-top:3px}
+.tag{font-size:11px;font-weight:700;padding:2px 7px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.tag.inf{color:var(--infer);background:rgba(191,90,242,.14)}
+.tag.nx{color:#fff;background:var(--next)}
+.nowline{position:relative;margin:4px 0 14px -22px;padding-left:22px;font-size:12px;font-weight:700;color:var(--next)}
+.nowline::before{content:"";position:absolute;left:0;right:0;top:50%;height:2px;background:linear-gradient(90deg,var(--next),transparent);opacity:.6}
+.nowline span{position:relative;background:transparent;padding-right:8px}
+.note{font-size:12px;color:var(--faint);margin-top:14px;line-height:1.5}
+footer{text-align:center;color:var(--faint);font-size:12px;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Hi Sam</h1>
+      <div class="date" id="today"></div>
+    </div>
+    <div class="pill glass" id="countdown">DSE 2028</div>
+  </header>
+
+  <div class="grid">
+    <a class="glass hero" href="https://wujiyan09.github.io/Color-War-Web/" target="_blank" rel="noopener">
+      <div class="tiles" aria-hidden="true">
+        <i style="background:#ff375f"></i><i style="background:#0a84ff"></i><i style="background:#ff375f"></i><i style="background:#30d158"></i>
+        <i style="background:#ffd60a"></i><i style="background:#ff375f"></i><i style="background:#0a84ff"></i><i style="background:#0a84ff"></i>
+        <i style="background:#30d158"></i><i style="background:#ffd60a"></i><i style="background:#ff375f"></i><i style="background:#30d158"></i>
+      </div>
+      <div style="position:relative">
+        <h2>COLOR WAR</h2>
+        <p>网页版 · 在线房间对战</p>
+      </div>
+      <div>
+        <div class="btnrow">
+          <span class="btn">▶︎ 开始游戏</span>
+          <span class="btn ghost" onclick="event.preventDefault();open('https://github.com/wujiyan09/Color-War-AI','_blank')">iOS 源码</span>
+          <span class="btn ghost" onclick="event.preventDefault();window.open('/dots-analyzer.html','_blank')">Dots Analyzer</span>
+          <span class="btn ghost" onclick="event.preventDefault();window.open('/ict/','_blank')">ICT Learning Portal</span>
+          <span class="btn ghost" onclick="event.preventDefault();window.open('/ict/relearn/','_blank')">ICT 重学</span>
+        </div>
+        <div class="status" id="srv"><span class="dot"></span>正在检查联机服务器…</div>
+      </div>
+    </a>
+
+    <div class="glass next">
+      <h3>接下来的测验</h3>
+      <div id="upnext"></div>
+    </div>
+  </div>
+
+  <div class="glass section">
+    <h3>S5 UT 日程 · 2026/27</h3>
+    <div class="tabs" id="tabs"></div>
+    <div class="tl" id="timeline"></div>
+    <div class="note">UT 日期来自学校 S5 assessments 日历，考试和假期来自 eClass 校历；章节来自数学科 UT 表。上学期考试和期末考试的逐科时间表学校还没公布。标了 <span class="tag inf" style="margin:0">推测</span> 的是根据考卷、文件夹和往年顺序推出来的，以老师通知为准。</div>
+  </div>
+
+  <div class="glass section">
+    <h3>假期和重要日子 · 2026/27</h3>
+    <div class="nitem" id="nexthol"></div>
+    <div class="tl" id="keydates" style="margin-top:12px"></div>
+    <div class="note">来自 eClass 校历。考试期间的逐科时间表学校还没公布（去年是用 iMail 发的）。</div>
+  </div>
+
+  <footer>Made for Sam · 液态玻璃风格 · 支持深色模式</footer>
+</div>
+
+<script>
+const S = {
+  maths:{name:"数学 Core",c:"var(--maths)",ev:[
+    {d:"2026-09-15",n:"UT1",t:"Ch1 More about Equations · Ch2 More about Inequalities"},
+    {d:"2026-10-15",n:"UT2",t:"Ch3 More about Graphs · Ch4 Variation"},
+    {d:"2026-12-08",n:"UT3",t:"Ch5 Combination & Permutation · Ch6 Probability"},
+    {d:"2027-01-05",end:"2027-01-22",n:"上学期考试",t:"S4-S5 Exam · 逐科时间表未公布"},
+    {d:"2027-02-26",n:"UT4",t:"Ch9 Solving Triangles · Ch10 Applications of Trig"},
+    {d:"2027-04-02",n:"UT5",t:"Ch11 Measures of Dispersion"},
+    {d:"2027-05-21",n:"UT6",t:"Ch7 Equations of Circles · Ch8 Locus"},
+    {d:"2027-06-01",end:"2027-06-19",n:"期末考试",t:"S4-S5 Exam · 6月9日端午放假 · 逐科时间表未公布"}]},
+  m2:{name:"M2",c:"var(--m2)",ev:[
+    {d:"2026-10-05",n:"UT1",t:"Differentiation · Applications of Differentiation"},
+    {d:"2026-11-16",n:"UT2",t:"Ch7 Indefinite Integration（积分总结 PDF 对应这次）"},
+    {d:"2027-01-05",end:"2027-01-22",n:"上学期考试",t:"S4-S5 Exam · 逐科时间表未公布"},
+    {d:"2027-03-15",n:"UT3",t:"Definite Integration · Applications of Integration"},
+    {d:"2027-05-03",n:"UT4",t:"Matrices & Determinants"},
+    {d:"2027-06-01",end:"2027-06-19",n:"期末考试",t:"S4-S5 Exam · 6月9日端午放假 · 逐科时间表未公布"}]},
+  chem:{name:"化学",c:"var(--chem)",ev:[
+    {d:"2026-09-10",n:"UT1",t:"Carbon compounds · Microscopic World II"},
+    {d:"2026-10-27",n:"UT2",t:"Redox · Chemical cells（Ch.28–30）"},
+    {d:"2026-12-02",n:"UT3",t:"Electrolysis 等 Topic 7 后半",inf:true},
+    {d:"2027-01-05",end:"2027-01-22",n:"上学期考试",t:"S4-S5 Exam · 逐科时间表未公布"},
+    {d:"2027-06-01",end:"2027-06-19",n:"期末考试",t:"S4-S5 Exam · 6月9日端午放假 · 逐科时间表未公布"}]},
+  phys:{name:"物理",c:"var(--phys)",ev:[
+    {d:"2026-09-18",n:"UT1",t:"Motion · Projectile motion",inf:true},
+    {d:"2026-10-02",n:"UT2",t:"Circular motion · Gravitation",inf:true},
+    {d:"2026-11-17",n:"UT3",t:"Gas laws · Kinetic theory",inf:true},
+    {d:"2026-12-16",n:"UT4",t:"Electrostatics",inf:true},
+    {d:"2027-01-05",end:"2027-01-22",n:"上学期考试",t:"S4-S5 Exam · 逐科时间表未公布"},
+    {d:"2027-06-01",end:"2027-06-19",n:"期末考试",t:"S4-S5 Exam · 6月9日端午放假 · 逐科时间表未公布"}]},
+  ict:{name:"ICT",c:"var(--ict)",ev:[
+    {d:"2026-10-28",n:"UT1",t:"Book E · Elective A Ch.1–3"},
+    {d:"2027-01-05",end:"2027-01-22",n:"上学期考试",t:"S4-S5 Exam · 逐科时间表未公布"},
+    {d:"2027-06-01",end:"2027-06-19",n:"期末考试",t:"S4-S5 Exam · 6月9日端午放假 · 逐科时间表未公布"}]}
+};
+const HK = new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Hong_Kong",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+const TODAY = new Date(HK+"T00:00:00");
+const fmt = s => { const d=new Date(s+"T00:00:00"); return `${d.getMonth()+1}月${d.getDate()}日 周${"日一二三四五六"[d.getDay()]}`; };
+const diff = s => Math.round((new Date(s+"T00:00:00")-TODAY)/864e5);
+const fmtR = e => e.end ? `${fmt(e.d)} – ${fmt(e.end)}` : fmt(e.d);
+const isPast = e => diff(e.end||e.d) < 0;
+
+document.getElementById("today").textContent =
+  TODAY.toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric",weekday:"long"});
+document.getElementById("countdown").textContent = `距 DSE 2028 约 ${Math.round((new Date("2028-04-01")-TODAY)/864e5)} 天`;
+
+// up next
+const all=[];for(const k in S)for(const e of S[k].ev)if(e.d&&!e.end&&diff(e.d)>=0)all.push({...e,s:S[k]});
+all.sort((a,b)=>a.d.localeCompare(b.d));
+document.getElementById("upnext").innerHTML = all.slice(0,5).map(e=>`
+  <div class="nitem"><div class="days"><b>${diff(e.d)}</b><span>${diff(e.d)===0?"今天":"天后"}</span></div>
+  <div class="ntxt"><b style="color:${e.s.c}">${e.s.name}</b> <b>${e.n}</b>${e.inf?'<span class="tag inf">推测</span>':''}
+  <div>${fmt(e.d)} · ${e.t}</div></div></div>`).join("") || '<div class="ntxt"><div>近期没有已排的 UT</div></div>';
+
+// tabs + timeline
+const tabs=document.getElementById("tabs"), tl=document.getElementById("timeline");
+function render(k){
+  [...tabs.children].forEach(b=>b.classList.toggle("on",b.dataset.k===k));
+  const s=S[k]; let html="", placed=false, firstNext=true;
+  for(const e of s.ev){
+    const past = e.d ? isPast(e) : false;
+    if(!placed && !past){html+=`<div class="nowline"><span>● 现在 · ${TODAY.getMonth()+1}月${TODAY.getDate()}日</span></div>`;placed=true;}
+    const isNext = !past && firstNext && e.d; if(isNext) firstNext=false;
+    html+=`<div class="ev ${past?'done':''} ${isNext?'now':''}" style="--c:${s.c}">
+      <div class="top"><b>${e.n}${e.inf?'<span class="tag inf">推测</span>':''}${isNext?`<span class="tag nx">${diff(e.d)>0?diff(e.d)+" 天后":"进行中"}</span>`:''}</b>
+      <span class="d">${e.d?fmtR(e):(e.label||"日期未定")}</span></div>
+      ${e.t?`<div class="t">${e.t}</div>`:''}</div>`;
+  }
+  if(!placed)html+=`<div class="nowline"><span>● 现在</span></div>`;
+  tl.innerHTML=html;
+}
+for(const k in S){const b=document.createElement("button");b.className="tab";b.dataset.k=k;b.textContent=S[k].name;b.onclick=()=>render(k);tabs.appendChild(b);}
+render("m2");
+
+// key dates & holidays (eClass school calendar)
+const K=[
+ {d:"2026-11-20",n:"Sports Day II",k:"ev"},
+ {d:"2026-11-26",end:"2026-11-27",n:"家长日（网上）",k:"ev"},
+ {d:"2026-12-02",end:"2026-12-05",n:"Chinese Tradition & Citizenship Week",k:"ev"},
+ {d:"2026-12-21",n:"Picnic",k:"ev"},
+ {d:"2026-12-22",n:"Christmas Programme（半天）",k:"half"},
+ {d:"2026-12-23",end:"2027-01-02",n:"圣诞及新年假期",k:"hol"},
+ {d:"2027-01-04",n:"Staff Development Day（学生应该不用上学）",k:"hol"},
+ {d:"2027-01-05",end:"2027-01-22",n:"S4-S5 上学期考试",k:"exam"},
+ {d:"2027-02-03",n:"新年庆祝（半天）",k:"half"},
+ {d:"2027-02-04",end:"2027-02-13",n:"农历新年假期",k:"hol"},
+ {d:"2027-02-15",n:"下学期开始",k:"ev"},
+ {d:"2027-02-25",n:"派上学期成绩表",k:"ev"},
+ {d:"2027-03-01",end:"2027-03-05",n:"House Week",k:"ev"},
+ {d:"2027-03-22",end:"2027-03-29",n:"复活节假期",k:"hol"},
+ {d:"2027-04-05",n:"清明节",k:"hol"},
+ {d:"2027-04-06",end:"2027-04-10",n:"S5 CSD Trip",k:"ev"},
+ {d:"2027-04-19",end:"2027-04-21",n:"STEM Week",k:"ev"},
+ {d:"2027-04-22",end:"2027-04-23",n:"家长日",k:"ev"},
+ {d:"2027-05-01",n:"劳动节",k:"hol"},
+ {d:"2027-05-13",n:"佛诞翌日",k:"hol"},
+ {d:"2027-06-01",end:"2027-06-19",n:"S4-S5 期末考试",k:"exam"},
+ {d:"2027-06-09",n:"端午节（考试期间放假）",k:"hol"},
+ {d:"2027-06-24",end:"2027-07-13",n:"考后活动（特别时间表）",k:"ev"},
+ {d:"2027-07-01",n:"回归纪念日",k:"hol"},
+ {d:"2027-07-12",n:"结业礼（半天）",k:"half"},
+ {d:"2027-07-15",n:"暑假开始",k:"hol"}];
+const KC={hol:"#30d158",half:"#ff9f0a",exam:"#ff375f",ev:"#64d2ff"}, KL={hol:"假期",half:"半天",exam:"考试",ev:"活动"};
+const nh=K.find(e=>(e.k==="hol")&&diff(e.end||e.d)>=0);
+document.getElementById("nexthol").innerHTML = nh ? `<div class="days"><b>${Math.max(diff(nh.d),0)}</b><span>${diff(nh.d)<=0?"放假中":"天后"}</span></div>
+  <div class="ntxt"><b>下一个假期：${nh.n}</b><div>${fmtR(nh)}</div></div>` : "";
+let kh="",kp=false;
+for(const e of K){const past=isPast(e);
+  if(!kp&&!past){kh+=`<div class="nowline"><span>● 现在 · ${TODAY.getMonth()+1}月${TODAY.getDate()}日</span></div>`;kp=true;}
+  kh+=`<div class="ev ${past?'done':''}" style="--c:${KC[e.k]}"><div class="top"><b>${e.n}<span class="tag" style="background:${KC[e.k]};color:#fff">${KL[e.k]}</span></b><span class="d">${fmtR(e)}</span></div></div>`;}
+document.getElementById("keydates").innerHTML=kh;
+
+// live server check
+fetch("https://colorwar-server.wujiyan2009.workers.dev/health").then(r=>r.json()).then(j=>{
+  document.getElementById("srv").innerHTML=`<span class="dot ok"></span>联机服务器在线 · protocol v${j.protocolVersion}`;
+}).catch(()=>{document.getElementById("srv").innerHTML=`<span class="dot"></span>联机服务器状态未知`;});
+</script>
+</body>
+</html>
