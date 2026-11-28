@@ -1,0 +1,189 @@
+{
+ "v": 1,
+ "date": "2026-11-28",
+ "subject": "M2",
+ "title": "M2 每日练习卷",
+ "scope": "S4 M2 至 Ch7 不定积分（综合复习）",
+ "minutes": 30,
+ "marks": 32,
+ "scratch": true,
+ "keyPoints": [
+  "**First principles:** $f'(a) = \\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$. With square roots, multiply by the conjugate; cancel $h$ before letting $h \\to 0$.",
+  "**Mathematical induction:** check $n = 1$; assume true for $n = k$; prove for $n = k+1$; conclude for all positive integers $n$. For $\\sum_{k=1}^{2n}$, going from $n$ to $n+1$ adds TWO terms.",
+  "**Sum of a middle block:** $\\sum_{k=11}^{100} a_k = \\sum_{k=1}^{100} a_k - \\sum_{k=1}^{10} a_k$.",
+  "**Product rule with $e^{-x}$:** $\\frac{d}{dx}[p(x)e^{-x}] = [p'(x) - p(x)]e^{-x}$.",
+  "**Point of inflexion:** $f''(x) = 0$ AND $f''(x)$ changes sign there. Since $e^{-x} > 0$, the sign of $f''$ comes from the polynomial factor.",
+  "**Substitution:** let $u = g(x)$, $du = g'(x)\\,dx$, write everything (including $x$) in $u$. Use a given point to find $C$.",
+  "**Odd powers of sin / cos:** $\\sin^3 x = (1 - \\cos^2 x)\\sin x$, then let $u = \\cos x$. Even powers: $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$.",
+  "**Binomial theorem:** $(1+bx)^n = \\sum_{r=0}^{n} \\binom{n}{r} b^r x^r$. Coefficient of $x^k$ in a product = sum over pairs of powers adding to $k$."
+ ],
+ "examples": [
+  {
+   "title": "例 1（第一原理）",
+   "question": "由第一原理求 $f(x) = \\sqrt{x}$ 在 $x = 4$ 的导数。",
+   "solution": "$$f'(4) = \\lim_{h \\to 0} \\frac{\\sqrt{4+h} - 2}{h} = \\lim_{h \\to 0} \\frac{(4+h) - 4}{h(\\sqrt{4+h} + 2)} = \\lim_{h \\to 0} \\frac{1}{\\sqrt{4+h} + 2} = \\frac{1}{4}$$"
+  },
+  {
+   "title": "例 2（归纳法 + 求和）",
+   "question": "证明 $\\sum_{k=1}^{n} (2k+1) = n(n+2)$，并求 $\\sum_{k=6}^{20} (2k+1)$。",
+   "solution": "$n = 1$：左 $= 3$，右 $= 1 \\times 3 = 3$。\n设 $n = k$ 成立：$\\sum_{r=1}^{k}(2r+1) = k(k+2)$。\n$n = k+1$：左 $= k(k+2) + (2k+3) = k^2 + 4k + 3 = (k+1)(k+3)$ = 右。故对所有正整数 $n$ 成立。\n$\\sum_{k=6}^{20} = 20 \\times 22 - 5 \\times 7 = 440 - 35 = 405$。"
+  },
+  {
+   "title": "例 3（二阶导数与拐点）",
+   "question": "设 $y = x^2 e^{-x}$。求 $\\frac{d^2y}{dx^2}$，并判断图像有多少个拐点。",
+   "solution": "$y' = (2x - x^2)e^{-x}$。\n$y'' = [(2 - 2x) - (2x - x^2)]e^{-x} = (x^2 - 4x + 2)e^{-x}$。\n$y'' = 0 \\Rightarrow x = 2 \\pm \\sqrt{2}$（两个不同实根）。$e^{-x} > 0$，二次式在每个根两侧变号，所以 $y''$ 变号，共 2 个拐点。"
+  },
+  {
+   "title": "例 4（换元积分 + 求常数）",
+   "question": "曲线过 $(1, 2)$，且 $\\frac{dy}{dx} = x(x^2 + 3)^2$。求曲线方程。",
+   "solution": "设 $u = x^2 + 3$，$du = 2x\\,dx$：$y = \\frac{1}{2}\\int u^2\\,du = \\frac{(x^2+3)^3}{6} + C$。\n代入 $(1, 2)$：$2 = \\frac{64}{6} + C \\Rightarrow C = -\\frac{26}{3}$。\n$y = \\frac{(x^2+3)^3}{6} - \\frac{26}{3}$。"
+  },
+  {
+   "title": "例 5（三角积分）",
+   "question": "求 $\\int \\cos^3 x\\,dx$ 及 $\\int \\sin^2 2x\\,dx$。",
+   "solution": "$\\int (1 - \\sin^2 x)\\cos x\\,dx$，设 $u = \\sin x$：$= \\sin x - \\frac{\\sin^3 x}{3} + C$。\n$\\int \\frac{1 - \\cos 4x}{2}\\,dx = \\frac{x}{2} - \\frac{\\sin 4x}{8} + C$。"
+  },
+  {
+   "title": "例 6（二项式系数）",
+   "question": "求 $(1+x)^5(1-3x)^2$ 展开式中 $x^2$ 的系数。",
+   "solution": "$(1+x)^5 = 1 + 5x + 10x^2 + \\cdots$，$(1-3x)^2 = 1 - 6x + 9x^2$。\n$x^2$ 系数 $= 10 \\cdot 1 + 5 \\cdot (-6) + 1 \\cdot 9 = -11$。"
+  }
+ ],
+ "sections": [
+  {
+   "title": "Section A 真题（HKDSE 2022 M2，原文）",
+   "note": "HKDSE 2022 Mathematics Extended Part Module 2, Q1, Q3, Q4（官方原题原文）",
+   "questions": [
+    {
+     "n": "1",
+     "type": "written",
+     "marks": 4,
+     "source": "HKDSE 2022 M2 Q1",
+     "official": true,
+     "stem": "Let $g(x) = \\frac{1}{\\sqrt{5x+4}}$, where $x > 0$. Prove that $g(1+h) - g(1) = \\frac{-5h}{3\\sqrt{5h+9}\\,(3 + \\sqrt{5h+9})}$. Hence, find $g'(1)$ from first principles.",
+     "answer": "$g(1+h) - g(1) = \\frac{1}{\\sqrt{5h+9}} - \\frac{1}{3} = \\frac{3 - \\sqrt{5h+9}}{3\\sqrt{5h+9}}$ (1M)\n$= \\frac{9 - (5h+9)}{3\\sqrt{5h+9}\\,(3 + \\sqrt{5h+9})} = \\frac{-5h}{3\\sqrt{5h+9}\\,(3 + \\sqrt{5h+9})}$ (1)\n$g'(1) = \\lim_{h \\to 0} \\frac{-5}{3\\sqrt{5h+9}\\,(3 + \\sqrt{5h+9})}$ (1M)\n$= \\frac{-5}{3(3)(6)} = -\\frac{5}{54}$ (1A)",
+     "id": "2026-11-28-q1"
+    },
+    {
+     "n": "2",
+     "type": "written",
+     "marks": 7,
+     "source": "HKDSE 2022 M2 Q3",
+     "official": true,
+     "stem": "",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 4,
+       "text": "Using mathematical induction, prove that $\\sum_{k=1}^{2n} (-1)^k k^2 = n(2n+1)$ for all positive integers $n$.",
+       "answer": "$n = 1$: L.H.S. $= -1 + 4 = 3$, R.H.S. $= 1(3) = 3$, true. (1)\nAssume true for $n = m$: $\\sum_{k=1}^{2m} (-1)^k k^2 = m(2m+1)$. (1M)\n$\\sum_{k=1}^{2m+2} (-1)^k k^2 = m(2m+1) - (2m+1)^2 + (2m+2)^2$ (1M)\n$= 2m^2 + m + 4m + 3 = (m+1)(2m+3) = (m+1)[2(m+1)+1]$, so true for $n = m+1$. By induction, true for all positive integers $n$. (1)"
+      },
+      {
+       "label": "(b)",
+       "marks": 3,
+       "text": "Using (a), evaluate $\\sum_{k=11}^{100} (-1)^k k^2$.",
+       "answer": "$\\sum_{k=11}^{100} = \\sum_{k=1}^{100} - \\sum_{k=1}^{10}$ (1M)\n$= 50(101) - 5(11)$ (1M)\n$= 4995$ (1A)"
+      }
+     ],
+     "id": "2026-11-28-q2"
+    },
+    {
+     "n": "3",
+     "type": "written",
+     "marks": 6,
+     "source": "HKDSE 2022 M2 Q4",
+     "official": true,
+     "stem": "Let $y = (7x - 2x^2)e^{-x}$.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 3,
+       "text": "Find $\\frac{dy}{dx}$ and $\\frac{d^2y}{dx^2}$.",
+       "answer": "$\\frac{dy}{dx} = (7 - 4x)e^{-x} - (7x - 2x^2)e^{-x} = (2x^2 - 11x + 7)e^{-x}$ (1M+1A)\n$\\frac{d^2y}{dx^2} = (4x - 11)e^{-x} - (2x^2 - 11x + 7)e^{-x} = (-2x^2 + 15x - 18)e^{-x}$ (1A)"
+      },
+      {
+       "label": "(b)",
+       "marks": 3,
+       "text": "Someone claims that there are two points of inflexion of the graph of $y = (7x - 2x^2)e^{-x}$. Do you agree? Explain your answer.",
+       "answer": "$\\frac{d^2y}{dx^2} = -(2x - 3)(x - 6)e^{-x} = 0 \\Rightarrow x = \\frac{3}{2}$ or $x = 6$ (1M)\nSince $e^{-x} > 0$, $\\frac{d^2y}{dx^2}$ changes sign at $x = \\frac{3}{2}$ (− to +) and at $x = 6$ (+ to −). (1M)\nSo there are two points of inflexion; agree. (1A)"
+      }
+     ],
+     "id": "2026-11-28-q3"
+    }
+   ]
+  },
+  {
+   "title": "Section B 原创题",
+   "note": "原创 DSE 风格题（Ch7 不定积分、二项式）",
+   "questions": [
+    {
+     "n": "4",
+     "type": "written",
+     "marks": 5,
+     "source": "原创",
+     "stem": "The slope of the tangent to a curve $C$ at any point $(x, y)$ is $\\frac{x}{\\sqrt{2x+1}}$, where $x > -\\frac{1}{2}$. $C$ passes through $(0, 1)$.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 3,
+       "text": "Using the substitution $u = 2x + 1$, find $\\int \\frac{x}{\\sqrt{2x+1}}\\,dx$.",
+       "answer": "$x = \\frac{u-1}{2}$, $dx = \\frac{du}{2}$: $\\int \\frac{u-1}{4\\sqrt{u}}\\,du$ (1M)\n$= \\frac{1}{4}\\int (u^{\\frac{1}{2}} - u^{-\\frac{1}{2}})\\,du = \\frac{u^{\\frac{3}{2}}}{6} - \\frac{u^{\\frac{1}{2}}}{2} + C$ (1M)\n$= \\frac{(2x+1)^{\\frac{3}{2}}}{6} - \\frac{\\sqrt{2x+1}}{2} + C$ (1A)"
+      },
+      {
+       "label": "(b)",
+       "marks": 2,
+       "text": "Find the equation of $C$.",
+       "answer": "$1 = \\frac{1}{6} - \\frac{1}{2} + C \\Rightarrow C = \\frac{4}{3}$ (1M)\n$y = \\frac{(2x+1)^{\\frac{3}{2}}}{6} - \\frac{\\sqrt{2x+1}}{2} + \\frac{4}{3}$ (1A)"
+      }
+     ],
+     "id": "2026-11-28-q4"
+    },
+    {
+     "n": "5",
+     "type": "written",
+     "marks": 5,
+     "source": "原创",
+     "stem": "Find",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 3,
+       "text": "$\\int \\sin^3 x\\,dx$;",
+       "answer": "$\\int (1 - \\cos^2 x)\\sin x\\,dx$ (1M); let $u = \\cos x$, $du = -\\sin x\\,dx$: $-\\int (1 - u^2)\\,du$ (1M)\n$= -\\cos x + \\frac{\\cos^3 x}{3} + C$ (1A)"
+      },
+      {
+       "label": "(b)",
+       "marks": 2,
+       "text": "$\\int \\cos^2 3x\\,dx$.",
+       "answer": "$\\int \\frac{1 + \\cos 6x}{2}\\,dx$ (1M) $= \\frac{x}{2} + \\frac{\\sin 6x}{12} + C$ (1A)"
+      }
+     ],
+     "id": "2026-11-28-q5"
+    },
+    {
+     "n": "6",
+     "type": "written",
+     "marks": 5,
+     "source": "原创",
+     "stem": "In the expansion of $(1 + ax)^6$, where $a > 0$, the coefficient of $x^2$ is $60$.",
+     "parts": [
+      {
+       "label": "(a)",
+       "marks": 2,
+       "text": "Find $a$.",
+       "answer": "$\\binom{6}{2}a^2 = 15a^2 = 60$ (1M) $\\Rightarrow a = 2$ (1A)"
+      },
+      {
+       "label": "(b)",
+       "marks": 3,
+       "text": "Find the coefficient of $x^3$ in the expansion of $(1 + ax)^6(1 - x)^2$.",
+       "answer": "$(1+2x)^6 = 1 + 12x + 60x^2 + 160x^3 + \\cdots$, $(1-x)^2 = 1 - 2x + x^2$ (1M)\nCoefficient $= 160(1) + 60(-2) + 12(1)$ (1M) $= 52$ (1A)"
+      }
+     ],
+     "id": "2026-11-28-q6"
+    }
+   ]
+  }
+ ],
+ "answerNote": "所有答案均为推导答案（derived），依照 HKDSE 评分方式给分，并非 HKEAA 官方评分参考原文。"
+}
